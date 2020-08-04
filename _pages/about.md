@@ -1,6 +1,10 @@
 ---
 permalink: /about/
-title: "Sobre"
+title: "Curriculum Vitae"
+excerpt: "Uma breve descrição de minhas experiências profissionais"
+header:
+  overlay_image: /assets/images/dna.png
+  overlay_filter: 0.60 # same as adding an opacity of 0.5 to a black background
 ---
 
 Profissional da área química com experiência em gestão de laboratórios, na área ambiental e em pesquisa científica. Atualmente no setor de ensino, buscando integrar ferramentas computacionais ao ensino e a projetos em áreas correlatas utilizando linguagens como Python e ferramentas de tratamento estatístico e ciência de dados.

@@ -21,11 +21,12 @@ email:
 description: Página pessoal de Francisco Lucio S. Bustamante
 twitter_username:
 github_username: chicolucio
-minimal_mistakes_skin: dark
+minimal_mistakes_skin: default
 search: true
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
 permalink: /:categories/:title/
@@ -61,6 +62,8 @@ author:
   name: "Francisco Lucio S. Bustamante"
   avatar: "https://avatars0.githubusercontent.com/u/23560423?s=460&u=a9c13c81ebd32ecfa757e3f3f57c0a39ed6ff35b&v=4"
   bio: "A chemist learning Python, LaTeX and Linux."
+  location: "Rio de Janeiro - Brazil"
+  email: "flsbustamante[at]gmail.com"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
@@ -106,6 +109,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      classes: wide
 
 category_archive:
   type: liquid
