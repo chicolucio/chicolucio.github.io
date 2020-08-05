@@ -17,7 +17,9 @@ Professor de disciplinas de físico-química, química geral e química inorgân
 
 Atualmente buscando integrar ferramentas computacionais no ensino, tanto para visualização de conceitos abstratos quanto para desenvolvimento de projetos de tratamento de dados relacionados à área de química.
 
-Participa de orientação de alunos de estágio à docência e de comissões internas voltadas a atividades de ensino e extensão.
+Participa de orientação de alunos de estágio à docência e de comissões internas voltadas a atividades de ensino, pesquisa e extensão.
+
+Para mais detalhes dos projetos que venho desenvolvendo [clique aqui](projects.md#desenvolvimento-de-materiais-interativos-para-ensino-de-química)
 
 ### 2014 - 2015: Químico na UFF
 
@@ -34,11 +36,15 @@ Treinamentos ministrados
 - Realização de análises espectrofotométricas - Varian Cary 5000
 - Realização de análises espectrofotométricas - FTIR Varian 660
 
+Para mais detalhes dos projetos que desenvolvi quando estava nesse emprego [clique aqui](projects.md#2014---2015-gestão-de-laboratórios-multiusuários-de-uma-central-analítica)
+
 ### 2014: Analista ambiental no INEA
 
 Analista ambiental no INEA - Instituto Estadual do Ambiente do Rio de Janeiro.
 
 Atuei no aprimoramento do sistema de acompanhamento de relatórios do Programa de Autocontrole de Efluentes Líquidos. Locado na GEAG - Gerência de Avaliação de Qualidade de Água.
+
+Para mais detalhes dos projetos que desenvolvi quando estava nesse emprego [clique aqui](projects.md#2014-aprimoramento-de-sistema-de-acompanhamento-de-efluentes-líquidos)
 
 ### 2012 - 2014: Professor na UFF
 
@@ -47,6 +53,8 @@ Professor de disciplinas de química geral e química inorgânica para cursos de
 Orientador de um projeto de monitoria e um de estágio à docência.
 
 ## Formação
+
+### Formação complementar
 
 - 2020
   - Curso Python Pro
@@ -63,7 +71,13 @@ Orientador de um projeto de monitoria e um de estágio à docência.
   - Diversos cursos para utilização e gerenciamento dos equipamentos da Central Analítica do Instituto de Química da qual era responsável na época.
 - 2014
   - Curso de formação de servidores do INEA
+
+### Formação acadêmica
+
+Para mais detalhes dos principais projetos que desenvolvi durante minha formação [clique aqui](projects.md#2008---2013-síntese-e-caracterização-de-compostos-com-atividade-antitumoral).
+
 - 2010 - 2012: Mestrado em Química pela UFF - Universidade Federal Fluminense
+  - Bolsista Nota 10 da FAPERJ - Fundação de Amparo à Pesquisa do Estado do Rio de Janeiro. Bolsa especial concedida a projetos de alunos de mestrado e doutorado com destacado desempenho acadêmico.
   - Atividades e grupos: - Membro do Laboratório de Síntese Organometálica. Estágio à docência realizado na disciplina de química de coordenação.
   - Desenvolvimento do projeto "Complexos de cobalto(III) contendo naftoquinonas como protótipos de pró-drogas biorredutíveis". Três artigos científicos foram publicados derivados desse projeto. Desenvolvi larga experiência na síntese e caracterização de compostos de coordenação utilizando:
     - Espectrofotômetros nas regiões de infravermelho e ultravioleta-visível;
@@ -72,7 +86,7 @@ Orientador de um projeto de monitoria e um de estágio à docência.
     - Difração de Raios X;
     - Modelagem computacional.
 - 2006-2010: Bacharel em Química pela UFF - Universidade Federal Fluminense
-  - Premiado com a Láurea Acadêmica da instituição por ser o formando do curso com melhor rendimento acadêmico.
+  - Premiado com a Láurea Acadêmica da instituição. A Láurea Acadêmica é a maior honraria do corpo discente da UFF, pela dedicação em prol do estudo e resultados alcançados ao longo de todo o curso universitário. Oferecido aos alunos que possuem maior coeficiente de rendimento ao se formarem nos cursos e que não tenham reprovações em seus currículos.
   - Atividades e grupos: Monitor do Departamento de Química Inorgânica durante 1 ano; Bolsista de iniciação científica do Laboratório de Síntese Organometálica por 2 anos, desenvolvendo projetos na área de química de coordenação.
   - Bolsista PIBIC/CNPq. Iniciação científica no Laboratório de Síntese Organometálica do Instituto de Química da Universidade Federal Fluminense. Projeto: "Complexos Heteromultimetálicos: Síntese e Estudos Eletrônicos e Magnéticos"
   - Bolsista Faperj. Iniciação científica no Laboratório de Síntese Organometálica do Instituto de Química da Universidade Federal Fluminense. Projeto: "Síntese e caracterização de novos compostos de coordenação contendo lantanídeos" Orientador: Prof. Mauricio Lanznaster

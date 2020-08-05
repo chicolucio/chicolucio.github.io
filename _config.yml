@@ -111,6 +111,9 @@ defaults:
       author_profile: true
       classes: wide
 
+kramdown:
+  auto_ids: true
+
 category_archive:
   type: liquid
   path: /categories/
