@@ -26,12 +26,15 @@ Exemplos de materiais já desenvolvidos:
 Também desenvolvi um projeto não relacionado ao ensino de química e, sim, ao ensino de lógica matemática: um [gerador de tabelas-verdade](https://github.com/chicolucio/truth-table-generator).
 
 
-<!-- ## Projeto Ciência Programada
+## Projeto Ciência Programada
 
 ![logo_CP](../assets/images/CP_instagram_profile.png){: .align-left}
-Projeto pessoal de desenvolvimento de uma plataforma de divulgação científica, com foco em uso e desenvolvimento de ferramentas tecnológicas.
+Projeto pessoal de uma plataforma de divulgação científica, com foco em uso e desenvolvimento de ferramentas tecnológicas.
+Mostro como podemos utilizar Python e softwares para entender melhor conceitos científicos e situações do cotidiano.
 
-Links do projeto: [site](https://cienciaprogramada.com.br/), [Instagram](https://instagram.com/cienciaprogramada). -->
+Links do projeto: [site](https://cienciaprogramada.com.br/), [Instagram](https://instagram.com/cienciaprogramada),
+[Twitter](https://twitter.com/cienciaprog) e [YouTube](https://www.youtube.com/channel/UCrUs_osDl_GaHgUdU7v3YGw).
+
 
 ## Python no tratamento estatístico de dados
 

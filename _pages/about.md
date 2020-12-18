@@ -7,9 +7,17 @@ header:
   overlay_filter: 0.60 # same as adding an opacity of 0.5 to a black background
 ---
 
-Profissional da área química com experiência em gestão de laboratórios, na área ambiental e em pesquisa científica. Atualmente no setor de ensino, buscando integrar ferramentas computacionais ao ensino e a projetos em áreas correlatas utilizando linguagens como Python e ferramentas de tratamento estatístico e ciência de dados.
+Profissional da área química com experiência em gestão de laboratórios, na área ambiental e em pesquisa científica. Atualmente no setor de ensino, buscando integrar ferramentas computacionais ao ensino e a projetos em áreas correlatas utilizando linguagens como Python e ferramentas de tratamento estatístico e ciência de dados. Sou também o criador do projeto [Ciência Programada](https://cienciaprogramada.com.br/) onde faço comunicação científica utilizando softwares e programação.
 
 ## Experiências profissionais
+
+### 2020 - Atual: Projeto Ciência Programada
+
+Projeto pessoal de uma plataforma de divulgação científica, com foco em uso e desenvolvimento de ferramentas tecnológicas.
+Mostro como podemos utilizar Python e softwares para entender melhor conceitos científicos e situações do cotidiano.
+
+Links do projeto: [site](https://cienciaprogramada.com.br/), [Instagram](https://instagram.com/cienciaprogramada),
+[Twitter](https://twitter.com/cienciaprog) e [YouTube](https://www.youtube.com/channel/UCrUs_osDl_GaHgUdU7v3YGw).
 
 ### 2015 - Atual: Professor no IFRJ
 
