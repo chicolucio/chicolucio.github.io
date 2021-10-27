@@ -16,6 +16,7 @@
 locale: "pt-BR"
 title: Francisco Lucio S. Bustamante
 subtitle: aka Chico Lucio
+logo: "/assets/images/favicon-88x70.png"
 name: Francisco Lucio
 email:
 description: Página pessoal de Francisco Lucio S. Bustamante
@@ -61,7 +62,7 @@ plugins:
 author:
   name: "Francisco Lucio S. Bustamante"
   avatar: "https://avatars0.githubusercontent.com/u/23560423?s=460&u=a9c13c81ebd32ecfa757e3f3f57c0a39ed6ff35b&v=4"
-  bio: "A chemist learning Python, LaTeX and Linux."
+  bio: "A chemist working with Data Science and Python Programming"
   location: "Rio de Janeiro - Brazil"
   email: "flsbustamante[at]gmail.com"
   links:
