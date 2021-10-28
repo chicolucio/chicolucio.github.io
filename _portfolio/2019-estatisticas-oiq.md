@@ -3,7 +3,7 @@ name: Python no tratamento estatístico de dados de uma olimpíada de estudantes
 title: Python no tratamento estatístico de dados de uma olimpíada de estudantes
 image: /assets/images/oiq_small.png
 position: 10
-period: 2018
+period: 2019
 description: |
   Uso de Python e sua biblioteca Pandas para avaliar o
   desempenho de estudantes em uma Olimpíada de Química de uma instituição de
