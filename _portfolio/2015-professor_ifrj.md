@@ -1,13 +1,13 @@
 ---
-name: Desenvolvimento de softwares educacionais & Professor
-title: Desenvolvimento de softwares educacionais & Professor
+name: Desenvolvimento de softwares educacionais
+title: Desenvolvimento de softwares educacionais
 image: /assets/images/animation_small.gif
 period: 2015 até o momento
 position: 9
 description: |
   Pesquisador responsável por grupo de desenvolvimento de softwares educacionais
   interativos, baseados na linguagem de programação Python e na ferramenta 
-  Jupyter Notebook, que auxiliem no aprendizado de disciplinas de química.
+  Jupyter Notebook.
 ---
 
 ![planck_animation](/assets/images/animation_small.gif){: .align-left}
@@ -16,11 +16,11 @@ interativos, baseados na linguagem de programação Python e na ferramenta Jupyt
 Notebook, que auxiliem no aprendizado das disciplinas de química.
 
 Busca-se mostrar a aplicação das ferramentas em exercícios e em problemas
-aplicados e desenvolver nos estudantes, tanto os envolvidos na elaboração do
-projeto quanto nos que terão acesso aos materiais interativos desenvolvidos,
-maior afinidade e desenvoltura com o uso de técnicas computacionais e mostrar
-como podem ser utilizadas para tratar dados e comunicar resultados.
-O seguinte esquema ilustra as ideias principais do projeto:
+aplicados. Também é objetivo desenvolver nos estudantes, tanto os envolvidos na
+elaboração do projeto quanto nos que terão acesso aos materiais interativos
+desenvolvidos, maior afinidade e desenvoltura com o uso de técnicas
+computacionais e mostrar como podem ser utilizadas para tratar dados e comunicar
+resultados.  O seguinte esquema ilustra as ideias principais do projeto:
 
 ![imagem_ensino](/assets/images/edu02.png){: .align-center}
 
