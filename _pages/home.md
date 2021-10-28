@@ -9,24 +9,19 @@ header:
 
 Olá :-)
 
-Sou o criador do projeto [Ciência Programada](https://cienciaprogramada.com.br/)
-onde faço comunicação científica utilizando softwares e programação. Também sou
-professor e pesquisador no IFRJ, na área de físico-química, desenvolvendo
-softwares em Python voltados para o ensino. 
+Sou comunicador científico e cientista de dados com sólido conhecimento em
+Python e bibliotecas como Pandas, NumPy, Matplotlib e Plotly. Focado em resolver
+problemas, desde a identificação até a solução.
 
----
+Escrevo semanalmente no site [Ciência
+Programada](https://cienciaprogramada.com.br/){: .btn .btn--success}.
 
-Sou bacharel e mestre em química, com mais de uma década de experiência na área.
-Já atuei em pesquisa científica, na área ambiental, em gestão de laboratórios e
-no setor de ensino. Durante toda a minha formação e carreira, busquei integrar
-tecnologia a meus projetos. Dessa forma, além das habilidades próprias de minha
-área de formação (síntese de compostos e caracterização dos mesmos pelas mais
-diversas formas analíticas), também desenvolvi habilidades computacionais como
-criação e automatização de planilhas eletrônicas, desenvolvimento de scripts e
-programas em Python para tratamento estatístico e ciência de dados.
+Atualmente atuo no setor educacional, integrando ferramentas computacionais e
+ciência de dados ao ensino. Possuo, também, experiência em gestão de
+laboratórios, na área ambiental e em pesquisa científica.
 
-Para mais detalhes dos projetos que já desenvolvi e participei, veja minha
-[página de projetos](projects.md){: .btn .btn--info}
+Veja [meu portfolio](portfolio.md){: .btn .btn--info} para mais detalhes do que
+agreguei de valor em cada projeto que participei.
 
 Para uma descrição mais detalhada de minhas experiências profissionais, visite
 [meu currículo](about.md){: .btn .btn--info}
