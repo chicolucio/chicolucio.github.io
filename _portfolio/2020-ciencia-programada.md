@@ -22,13 +22,13 @@ Alguns exemplos de artigos:
 - [Analisando dados das Olimpíadas com Pandas e
 Plotly](https://cienciaprogramada.com.br/2021/08/dados-olimpiadas-pandas-plotly/)
 - [Bolt vs Python: determinando a velocidade de um atleta
-olímpico](https://cienciaprogramada.com.br/2020/09/bolt-python-determinando-velocidade-atleta-olimpico/)]
+olímpico](https://cienciaprogramada.com.br/2020/09/bolt-python-determinando-velocidade-atleta-olimpico/)
 - [Estudando nossa atmosfera com
 Python](https://cienciaprogramada.com.br/2020/12/estudando-atmosfera-python/)
 - [Criando um ambiente virtual para seu projeto
 Python](https://cienciaprogramada.com.br/2020/08/ambiente-virtual-projeto-python/)
 - [Git e GitHub: Guia definitivo de
-colaboração](https://cienciaprogramada.com.br/2021/09/guia-definitivo-git-github/)]
+colaboração](https://cienciaprogramada.com.br/2021/09/guia-definitivo-git-github/)
 - [Série de artigos sobre o
 SymPy](https://cienciaprogramada.com.br/category/sympy/)
 
