@@ -6,7 +6,7 @@ pt-BR:
   skip_footer:
   page: "Página"
   pagination_previous: "Anterior"
-  pagination_next: "Próxima"
+  pagination_next: "Próximo"
   breadcrumb_home_label: "Home"
   breadcrumb_separator: "/"
   menu_label:
