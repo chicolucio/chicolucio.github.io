@@ -101,11 +101,11 @@ Orientador de um projeto de monitoria e um de estágio à docência.
     - Habilidades desenvolvidas: linguagem Python; framework Django;
     desenvolvimento orientado por testes (TDD); plataforma Heroku; Docker.
   - Curso Data Science Pro
-    - Habilidades desenvolvidas: linguagem Python com foco em bibliotecas de
+    - Habilidades desenvolvidas: linguagem Python com foco em ferramentas de
     data science como o Pandas; Jupyter Notebooks; Google Colab.
 - 2019
   - Curso Data Science pela Data Bootcamp
-    - Habilidades desenvolvidas: linguagem Python com foco em bibliotecas de
+    - Habilidades desenvolvidas: linguagem Python com foco em ferramentas de
     data science como o Pandas; Jupyter Notebooks; Google Colab.
 - 2018
   - Introduction to Computer Science and Programming Using Python pelo MITx na
@@ -121,13 +121,13 @@ Orientador de um projeto de monitoria e um de estágio à docência.
 
 Para mais detalhes dos principais projetos que desenvolvi durante minha formação
 [clique
-aqui](/portfolio/2008-2012-pesquisa).
+aqui](/portfolio/2008-2013-pesquisa).
 
 - 2010 - 2012: Mestrado em Química pela UFF - Universidade Federal Fluminense
   - Bolsista Nota 10 da FAPERJ - Fundação de Amparo à Pesquisa do Estado do Rio
   de Janeiro. Bolsa especial concedida a projetos de alunos de mestrado e
   doutorado com destacado desempenho acadêmico.
-  - Atividades e grupos: - Membro do Laboratório de Síntese Organometálica.
+  - Atividades e grupos: Membro do Laboratório de Síntese Organometálica.
   Estágio à docência realizado na disciplina de química de coordenação.
   - Desenvolvimento do projeto "Complexos de cobalto(III) contendo naftoquinonas
   como protótipos de pró-drogas biorredutíveis". Três artigos científicos foram
