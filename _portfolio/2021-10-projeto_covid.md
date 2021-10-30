@@ -6,6 +6,7 @@ position: 1
 period: Outubro de 2021
 toc: true
 header:
+  image: /portfolio/projeto_covid_files/covid_banner.jpg
   og_image: /portfolio/projeto_covid_files/covid_logo.jpg
 description: |
   Estamos completando quase 2 anos desde o surgimento do vírus COVID-19. As
@@ -18,8 +19,6 @@ description: |
 Por: [Francisco Bustamante](https://franciscobustamante.com.br/)
 
 ---
-
-![png](../projeto_covid_files/covid_banner.jpg)
 
 A COVID-19 é uma doença infecciosa causada por um recém-descoberto coronavírus.
 
