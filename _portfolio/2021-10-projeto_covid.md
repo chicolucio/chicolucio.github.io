@@ -1,10 +1,11 @@
 ---
 name: Panorama do COVID-19 no mundo
 title: Panorama do COVID-19 no mundo
-image: /assets/images/pesquisa01.gif
+image: /portfolio/projeto_covid_files/covid_logo.jpg
 position: 1
 period: Outubro de 2021
 toc: true
+toc_sticky: true
 description: |
   Estamos completando quase 2 anos desde o surgimento do vírus COVID-19. As
   medidas para controle pandêmico adotadas por governos em todo mundo  afetaram
@@ -13,13 +14,11 @@ description: |
   convívio normal.
 ---
 
-<!-- # Panorama do COVID-19 no mundo -->
-
 Por: [Francisco Bustamante](https://franciscobustamante.com.br/)
 
 ---
 
-TODO banner principal
+![png](../projeto_covid_files/covid_banner.jpg)
 
 A COVID-19 é uma doença infecciosa causada por um recém-descoberto coronavírus.
 
@@ -29,20 +28,23 @@ significativamente a rotina de todos e é de grande interesse acompanharmos a
 evolução da pandemia para saber seus reais efeitos e avaliar o retorno ao
 convívio normal.
 
-<center><img alt="covid_banner" width="70%"
+<center><img alt="covid_banner" width="100%"
 src="https://raw.githubusercontent.com/chicolucio/panorama-covid-mundo/master/images/evolucao_casos_banner.gif"></center>
+<p style="font-size:60%;color:gray">Animações como esta serão usadas no texto.
+Se quiser saber como fazer e ainda interagir com as animações, acompanhe até
+o final</p>
 
 Neste trabalho, uma análise exploratória dos dados fornecidos pela Our World in
 Data (OWID) é feita, mostrando o avanço temporal de casos, óbitos e vacinação.
 Estudos comparativos e busca de correlações são feitos com intuito de melhor
-compreender os dados. Animações como a mostrada acima serão criadas e
+compreender os dados. Animações como a mostrada acima são mostradas e
 interpretadas.
 
-## Obtenção dos dados
+## Obtenção dos dados e bibliotecas utilizadas
 
+<center><img alt="covid_banner" width="20%"
+src="https://ourworldindata.org/uploads/2019/02/OurWorldinData-logo.png"></center>
 
-<left><img alt="covid_banner" width="10%"
-src="https://ourworldindata.org/uploads/2019/02/OurWorldinData-logo.png"></left>
 Como já citado, os dados aqui utilizados são fornecidos pela *Our World in Data*
 (OWID) [neste repositório](https://github.com/owid/covid-19-data), uma
 organização que reúne pesquisadores de todo o mundo para agregar dados de
@@ -59,20 +61,14 @@ veículos de mídia e governantes para população pode variar e ser distorcida 
 depender dos interesses momentâneos dos mesmos.
 
 Assim, durante esse estudo, especial cuidado é destinado em apresentar os dados
-e buscar interpretá-los de forma rigorosa deixando claro eventuais limitações,
+e buscar interpretá-los de forma rigorosa deixando claros eventuais limitações,
 conflitos e condições de contorno de cada análise. E, sempre lembrando,
 correlações não implicam em causalidade.
 
-### Dicionário de variáveis
-
-TODO mudar aqui para uma breve descrição da base de dados, mas sem o dicionário
-em si. Mudar título da seção. Talvez falar um pouco da ausência de alguns dados.
-
-
-### Importando os dados e pacotes necessários
-
-TODO aqui, citar os pacotes e uma breve descrição. Talvez juntar com a seção
-anterior.
+No total, a base de dados possui 65 variáveis e 122.175 entradas. Há ausência
+de muitos dados sobre hospitalização e realização de testes por nem todos os 
+países terem informações oficiais, de forma que essas categorias foram deixadas
+de fora desta análise.
 
 O pacote [Pandas](https://pandas.pydata.org/) foi utilizado para trabalhar com
 os dados e construir matrizes de correlações. Os pacotes
@@ -81,52 +77,8 @@ os dados e construir matrizes de correlações. Os pacotes
 biblioteca `datetime`, presente em uma instalação padrão do Python, foi
 utilizada para lidar com datas. 
 
-    Dimensões da base de dados 
-    Variáveis:  65 
-    Entradas:  122175
-
-
-
-
-### Avaliando ausência de dados
-
-TODO deixar apenas parte da ausência (talvez), juntando com seções anteriores.
-
-
-    
-
-
-Vemos que há maior proporção de dados ausentes nas categorias referentes a
-hospitalizações, testes, vacinações e excesso de mortalidade. Cada categoria
-possui justificativas para as ausências (todas descritas no repositório oficial
-e resumidas a seguir):
-
-- *hospitalizações*: os dados são obtidos apenas de países europeus e de alguns
-poucos países de outros continentes como, por exemplo, os Estados Unidos. Por
-tal restrição, não serão feitas análises com tais dados neste estudo.
-
-- *testes*: ainda há países sem dados oficiais de testagem. Além disso, cada
-país adota um calendário de publicação de dados de testagem distinto, de forma
-que a própria base de dados é atualizada apenas quinzenalmente. Por fim, [nem
-todas as formas de
-testagem](https://ourworldindata.org/coronavirus-testing#our-checklist-for-covid-19-testing-data)
-são consideradas na inclusão na base de dados.
-
-- *vacinações*: há países sem dados oficiais. Além disso, cada país adota um
-calendário de publicação de dados  distinto. E, obviamente, a vacinação começou
-apenas no final de 2020, de forma que as datas anteriores não possuem registros
-de vacinação.
-
-- *excesso de mortalidade*: a depender do país, o número é reportado
-semanalmente ou mensalmente, de forma que há ausência de registro em diversas
-datas. Diversos países não atendem [aos
-critérios](https://github.com/owid/covid-19-data/tree/master/public/data/excess_mortality)
-necessários para a inclusão, não tendo registros na base de dados.
-
-### Fixando uma data limite para as análises
-
-A base de dados baixada apresenta dados até 8 de outubro de 2021, quando foi
-obtida. Porém, como vimos, há alguns dados cuja periodicidade é diferenciada.
+A base de dados baixada apresenta entradas até 8 de outubro de 2021, quando foi
+obtida. Porém, há alguns dados cuja periodicidade é diferenciada.
 Desta forma, vamos considerar como última data para análise 30 de setembro de
 2021 para termos apenas meses fechados, de janeiro de 2020 até setembro de 2021.
 
@@ -139,16 +91,11 @@ Vamos começar nossa análise avaliando a evolução no número total de casos e
 
 ### Total de casos
 
-#### Mundo
-
 Muito do que é exposto nas mídias foca na quantidade total de casos por país ou
 mundialmente. Vamos avaliar o perfil de crescimento no número de casos mundial:
 
-
+![png](../projeto_covid_files/projeto_covid_23_0.png)
     
-![png](projeto_covid_files/projeto_covid_23_0.png)
-    
-
 Vemos que, desde o surgimento em meados de janeiro de 2020, foram necessários
 cerca de 3 meses para atingir 1 milhão de casos e 1 ano para 100 milhões de
 casos. Lembrando que esses são os casos efetivamente computados devido a
@@ -166,61 +113,53 @@ interesse ou preocupante. A OMS também esclarece que os nomes são dados um cer
 tempo depois que as primeiras amostras de cada variante são analisadas, conforme
 a tabela:
 
+
 | Variante | Data da primeira amostra | Data do nome |
 |:------|:--------|:--------|
-| alfa | Setembro/2020 - Reino Unido | Dezembro de 2020 
-| beta | Maio/2020 - África do Sul | Dezembro de 2020 
-| gama | Novembro/2020 - Brasil | Janeiro de 2021
-| delta | Outubro/2020 - Índia | Abril de 2021
-| lambda | Dezembro/2020 - Peru | Junho de 2021
-| mu | Janeiro/2021 - Colômbia | Agosto de 2021
+| alfa | Setembro/2020 - Reino Unido | Dezembro de 2020  | 
+| beta | Maio/2020 - África do Sul | Dezembro de 2020  | 
+| gama | Novembro/2020 - Brasil | Janeiro de 2021 | 
+| delta | Outubro/2020 - Índia | Abril de 2021 | 
+| lambda | Dezembro/2020 - Peru | Junho de 2021 | 
+| mu | Janeiro/2021 - Colômbia | Agosto de 2021 | 
 
 Neste estudo, optou-se por utilizar a data da primeira amostra nos gráficos,
 motivo pelo qual a beta aparece antes da alfa. Tal escolha se deve ao fato de a
 variante já estar se espalhando desde a data de amostra independentemente de ter
 recebido um nome. Vamos adicionar aos gráficos anteriores linhas indicando as
 datas de aparecimento de cada variante:
-
-
     
-![png](projeto_covid_files/projeto_covid_26_0.png)
+![png](../projeto_covid_files/projeto_covid_26_0.png)
     
-
-
 O número de casos teve um acelerado crescimento inicial antes do surgimento da
 primeira variante (beta) e houve um aumento de 10 vezes entre as datas da
 variante beta e da variante alfa, um intervalo de 4 meses. O crescimento se
-torna, então, um mais lento. Nos quatro meses entre as variantes alfa e mu o
+torna, então, mais lento. Nos quatro meses entre as variantes alfa e mu o
 número de casos cresceu 3 vezes.
 
-#### Principais países
-
-Vamos agora olhar os países com mais casos até setembro de 2021. Primeiro, vamos
-visualizar nossa base de dados com base na data desejada (30 de setembro de
-2021):
-
-
-##### Totais absolutos
-
+Vamos agora olhar os países com mais casos até setembro de 2021. 
 Em um primeiro momento, podemos supor que países com maiores populações
 apresentem mais casos. Vamos verificar as maiores populações mundiais:
 
+| País | População |
+|----|----|
+| China |1.444.216.102 |
+| Índia|1.393.409.033 |
+| Estados Unidos |332.915.074 |
+| Indonésia|276.361.788 |
+| Paquistão |225.199.929 |
+| Brasil|213.993.441 |
+| Nigéria|211.400.704 |
+| Bangladesh|166.303.494 |
+| Rússia|145.912.022 |
+| México|130.262.220 |
 
 
 
-
-Agora, vamos organizar uma tabela mostrando os países com mais casos e, também,
-expressar isto graficamente:
-
-
-
-
-
-
+Agora, vamos verificar os países com mais casos:
     
-![png](projeto_covid_files/projeto_covid_42_0.png)
+![png](../projeto_covid_files/projeto_covid_42_0.png)
     
-
 
 Vemos que 4 países dentre os que apresentam maiores populações no mundo também
 figuram entre os com mais casos: Estados Unidos, Índia, Brasil e Rússia. Há a
@@ -250,18 +189,18 @@ países com dificuldades de registro.
 Neste estudo, vamos nos ater ao que é apresentado. Mas é importante notar tais
 situações. 
 
-Vamos montar uma gráfico interativo para avaliar cada país por continente. Para
-isso, precisamos de dois novos dataframes, um para dados acumulados para todo o
-mundo e outro por continente:
+
+No gráfico interativo a seguir temos a situação de cada país por continente:
 
 
+<iframe width="100%" height="500" frameborder="0" scrolling="no"
+src="//plotly.com/~chicolucio/13.embed?autosize=true"></iframe>
 
-TODO interativo
-
-
-
-
-
+<p style="font-size:60%; color:gray">
+Para interagir com o gráfico, clique nos continentes para ter mais 
+detalhes do mesmo. No celular pode ser que o título fique cortado pelo tamanho
+da tela, mas funciona igual. 
+</p>
 
 No gráfico, temos uma ideia da proporção do total de casos de cada país frente
 aos demais de seu continente e do mundo.
@@ -269,23 +208,20 @@ aos demais de seu continente e do mundo.
 Mas será que essa é a melhor métrica para avaliar comparativamente a situação de
 cada país?
 
-##### Totais por milhão de habitantes
+<!-- ###### Totais por milhão de habitantes TODO deixar como negrito? -->
 
 Uma análise do total absoluto de casos não necessariamente reflete a realidade
 de cada país. Afinal, como já dito, países com maiores populações tendem a ter
 maior número de casos. No entanto, isso não significa que países com populações
 pequenas não possam estar em situação pior. Afinal, podem, relativamente ao seu
-número de habitantes, estar com elevado número de casos. E regiões com maiores
-densidades populacionais podem favorecer uma maior taxa de transmissão (hipótese
-que será estudada mais adiante).
+número de habitantes, estar com elevado número de casos considerando suas redes
+de saúde. E regiões com maiores densidades populacionais podem favorecer uma
+maior taxa de transmissão (hipótese que será estudada mais adiante).
 
 Vamos, então, verificar os países com mais casos por milhão de habitantes:
-
     
-![png](projeto_covid_files/projeto_covid_51_0.png)
+![png](../projeto_covid_files/projeto_covid_51_0.png)
     
-
-
 Percebemos uma grande mudança, aparecendo pequenos países. Em primeiro temos
 Seicheles, um país insular do continente africano, tendo um grande fluxo de
 turistas. Já em [maio de 2021](https://www.bbc.com/portuguese/geral-57207566)
@@ -298,11 +234,10 @@ exemplo,
 [Israel](https://www.npr.org/sections/goatsandsoda/2021/08/20/1029628471/highly-vaccinated-israel-is-seeing-a-dramatic-surge-in-new-covid-cases-heres-why).
 Veremos dados de vacinação mais adiante.
 
-Vamos criar um gráfico interativo mostrando cada país por continente:
+Vamos ver em um gráfico interativo mostrando cada país por continente:
 
-
-TODO interativo
-
+<iframe width="100%" height="500" frameborder="0" scrolling="no"
+src="//plotly.com/~chicolucio/15.embed?autosize=true"></iframe>
 
 Veja como a análise proporcional muda significativamente o perfil do gráfico.
 Todos os países que apareciam como líderes em totais absolutos não figuram entre
@@ -315,16 +250,16 @@ Argentina e Uruguai, países que [foram considerados
 modelos](https://www.nexojornal.com.br/expresso/2021/04/15/As-respostas-de-Argentina-e-Uruguai-aos-recordes-de-covid0)
 em diversos estágios da pandemia com suas medidas restritivas e lockdowns.
 
-Vamos construir uma mapa interativo mostrando a evolução do total de casos por
-milhão em cada país. Para isso, vamos construir dois novos dataframes: um para
-dados apenas de países; outro para consolidar mensalmente esses dados. A
-consolidação por mês é apenas para deixar a animação do mapa mais rápida, se
-fosse evolução diária seria uma animação bem demorada.
+Vamos ver um mapa interativo mostrando a evolução do total de casos por
+milhão em cada país. A consolidação foi feita por mês apenas para deixar a
+animação do mapa mais rápida, se fosse evolução diária seria uma animação bem
+demorada.
 
-
-TODO interativo
-
-
+[![gif](../projeto_covid_files/projeto_covid_total_casos_milhao.gif)](https://plotly.com/~chicolucio/11/)
+<p style="font-size:60%;color:gray">
+Caso queira interagir com o mapa, clique na animação que você será redirecionado
+para uma plataforma onde pode verificar mais detalhes. Mas termine de ler o texto
+primeiro ;-) </p>
 
 Vemos no mapa que apenas alguns países da África apresentaram significativa
 evolução no número de casos. Como já escrito anteriormente, provavelmente isso
@@ -343,25 +278,15 @@ afrouxar](https://www.bloomberg.com/news/articles/2021-08-22/n-z-says-delta-rais
 tais políticas por não terem tido o efeito desejado e estarem quebrando suas
 economias.
 
-#### Idade e riqueza
+#### Idade e PIB per capita
 
-Vamos verificar se o número de casos possui alguma relação com a renda per
-capita do país ou a idade da população.
-
-Comecemos verificando os países com maior PIB per capita:
-
-
-TODO interativo
-
-
-Como era de se esperar, vemos apenas países da Ásia e Europa. Vamos criar um
+Para verificar se o número de casos possui alguma relação com o PIB per
+capita do país ou a idade da população, vamos criar um
 gráfico interativo buscando avaliar como os casos variam com a expectativa de
 vida e o PIB per capita:
 
-
-TODO interativo
-
-
+<iframe width="100%" height="500" frameborder="0" scrolling="no"
+src="//plotly.com/~chicolucio/17.embed?autosize=true"></iframe>
 
 No gráfico vemos claramente que os países do continente africano possuem, em sua
 maioria, menores expectativas de vida e menores PIB per capita (menores círculos
@@ -380,15 +305,14 @@ Uma maior expectativa de vida, no entanto, não necessariamente significa que a
 população atual possui mais idosos que jovens. Assim, vamos repetir o gráfico
 substituindo o eixo de expectativa de vida por mediana de idade:
 
-
-TODO interativo
-
+<iframe width="100%" height="500" frameborder="0" scrolling="no"
+src="//plotly.com/~chicolucio/19.embed?autosize=true"></iframe>
 
 Vemos a mesma tendência: população mais velha, mais casos notificados.
 
 ### Novos casos
 
-Até o momento focamos em avaliar a evolução do total de casos no mundo e em cada
+Até o momento, focamos em avaliar a evolução do total de casos no mundo e em cada
 país. Agora, vamos verificar a evolução de novos casos, à medida que foram sendo
 reportados. Assim, podemos verificar em quais momentos houve maior notificação,
 as popularmente chamadas "ondas" de casos.
@@ -398,26 +322,19 @@ média móvel de 7 dias. A média móvel ajuda a visualizar melhor a tendência 
 dados, visto que há grande variação dos dados diários. Vamos começar com os
 casos em todo mundo:
 
-
+![png](../projeto_covid_files/projeto_covid_66_0.png)
     
-![png](projeto_covid_files/projeto_covid_66_0.png)
-    
-
-
 Vemos que está surgindo um padrão de aceleração de casos e máximos. Em 2020
 vimos três grandes saltos em novos casos, por volta de março/abril, por volta de
 junho/julho e por volta de outubro/novembro. Em 2021, já vimos novamente saltos
 em abril e julho, ficando a expectativa de novo crescimento de casos na parte
 final do ano.
 
-Podemos verificar se há algum indício de relação entre novos casos e as variantes:
+Podemos verificar se há algum indício de relação entre novos casos e as
+variantes:
 
-
+![png](../projeto_covid_files/projeto_covid_68_0.png)
     
-![png](projeto_covid_files/projeto_covid_68_0.png)
-    
-
-
 Em 2020, vemos que o aumento de casos entre junho e julho ocorre após o
 surgimento da variante beta. De forma similar, após o surgimento da variante
 delta, ocorre o aumento significativo de casos entre outubro e novembro. Isso
@@ -428,12 +345,8 @@ Agora, sabemos que em estações mais frias usualmente há [mais casos de
 resfriados e gripes](https://www.cdc.gov/flu/about/season/flu-season.htm). Será
 que há alguma relação entre inverno e casos de COVID-19? Vejamos:
 
-
+![png](../projeto_covid_files/projeto_covid_70_0.png)
     
-![png](projeto_covid_files/projeto_covid_70_0.png)
-    
-
-
 Vemos que há uma possível relação, repare os períodos entre junho e setembro de
 ambos os anos e o período entre dezembro de 2020 e março de 2021. No entanto, o
 máximo entre abril e maio de 2021 não encaixa muito bem nessa explicação. 
@@ -441,12 +354,8 @@ máximo entre abril e maio de 2021 não encaixa muito bem nessa explicação.
 Vamos comparar os dados consolidados mundialmente com os dados individuais dos
 países que vimos anteriormente possuir mais casos:
 
-
+![png](../projeto_covid_files/projeto_covid_72_0.png)
     
-![png](projeto_covid_files/projeto_covid_72_0.png)
-    
-
-
 Aqui vemos mais claramente como o pico entre abril e maio de 2021 possui grande
 influência da Índia e talvez seja decorrente de algo específico deste país. Na
 época, [notícias](https://www.nature.com/articles/d41586-021-01059-y) também
@@ -457,12 +366,8 @@ centros urbanos.
 Vamos verificar o perfil de cada continente, ainda comparando com o acumulado
 mundial:
 
-
+![png](../projeto_covid_files/projeto_covid_75_0.png)
     
-![png](projeto_covid_files/projeto_covid_75_0.png)
-    
-
-
 Aqui percebemos que o perfil da Ásia não acompanha fielmente o da Europa e o da
 América do Norte, mesmo estando todos estes continentes no mesmo hemisfério.
 Mas, como vimos, há grande efeito dos números da Índia no continente asiático e
@@ -477,31 +382,33 @@ diferença de população entre os mesmos, além da posição geográfica e de
 possíveis subnotificações já citadas. Não necessariamente pertencer ao mesmo
 hemisfério significa ter estações do ano similares. Além de haver diversos
 fatores relacionados ao microclima de cada país/região e, obviamente, aspectos
-políticos e econômicos muito distinos. Apenas de forma ilustrativa, vejamos a
+políticos e econômicos muito distintos. Apenas de forma ilustrativa, vejamos a
 população de cada continente:
 
-
-TODO tabela
-
+|Continente | População |
+| ---- | ----- |
+|  Oceania | 43.219.954 | 
+|  South America | 434.260.138 | 
+|  North America | 596.581.283 | 
+|  Europe | 747.747.396 | 
+|  Africa | 1.373.486.472 | 
+|  Asia | 4.679.660.580 | 
 
 Já vimos que aparentemente há um caráter sazonal nos casos de COVID-19. Vamos
-criar um mapa que apresente esse perfil para cada país:
+criar um mapa que apresente esse perfil para cada país.
+Assim como já discutido para o total de casos, talvez seja mais elucidativo
+comparar os novos casos por milhão de habitantes, para diminuir eventuais
+efeitos de países com grandes populações:
 
-TODO interativo
-
-
+[![gif](../projeto_covid_files/projeto_covid_novos_casos_milhao.gif)](https://plotly.com/~chicolucio/21/)
+<p style="font-size:60%;color:gray">
+Caso queira interagir com o mapa, clique na animação que você será redirecionado
+para uma plataforma onde pode verificar mais detalhes. Mas termine de ler o texto
+primeiro ;-)</p>
 
 Observe como as cores oscilam para os países enquanto o tempo passa, e como as
 oscilações não são sincronizadas. Compare, por exemplo, os Estados Unidos e o
 Brasil para perceber essa falta de sincronia.
-
-Assim como já discutivo para o total de casos, talvez seja mais elucidativo
-comparar os novos casos por milhão de habitantes, para diminuir eventuais
-efeitos de países com grandes populações:
-
-
-TODO interativo
-
 
 Agora, será que há alguma forma de medir a velocidade de transmissão da doença?
 
@@ -525,24 +432,16 @@ do valor calculado de R é simples:
 Vamos verificar se podemos visualizar alguma relação entre mudanças no valor de
 R e as diversas variantes:
 
-
+![png](../projeto_covid_files/projeto_covid_84_0.png)
     
-![png](projeto_covid_files/projeto_covid_84_0.png)
-    
-
-
 Valores elevados aparecem apenas no início do período. É possível perceber leves
 aumentos coincidentes com os períodos de máximos de novos casos discutidos
 anteriormente. Como se trata dos valores de todo o mundo, a curva pode estar
 sendo balanceada entre países com taxas elevadas e países com taxas baixas.
 Vamos refazer o gráfico com os dados dos cinco países com mais casos:
-
-
     
-![png](projeto_covid_files/projeto_covid_86_0.png)
+![png](../projeto_covid_files/projeto_covid_86_0.png)
     
-
-
 Aqui vemos mais flutuações, especialmente no caso do Reino Unido. Os períodos de
 maiores valores coincidem com os períodos de aumento de novos casos vistos
 anteriormente.
@@ -553,14 +452,16 @@ próximas pode levar à uma maior transmissibilidade. Vamos verificar os países
 com maiores taxas de reprodução efetiva ao fim de setembro de 2021 e verificar
 se há algum sinal de correlação:
     
-![png](projeto_covid_files/projeto_covid_89_0.png)
+![png](../projeto_covid_files/projeto_covid_89_0.png)
     
+<iframe width="100%" height="500" frameborder="0" scrolling="no"
+src="//plotly.com/~chicolucio/23.embed?autosize=true"></iframe>
 
 Vemos que Singapura, localidade com segunda maior densidade populacional do
 mundo, apresentava ao final de setembro de 2021 a maior taxa de reprodução. No
 entanto, Mônaco, maior densidade, está com valor de R < 1. Ao menos pelo
-gráfico, não parece haver uma correlação tão direta entre as duas variáveis, mas
-como são dinâmicas o ideal é fazer uma análise temporal e não estática como no
+gráfico, não parece haver uma correlação tão direta entre as duas variáveis mas,
+como são dinâmicas, o ideal é fazer uma análise temporal e não estática como no
 caso. Perceba, também, que a variável escolhida para o tamanho dos círculos foi
 o total de casos por milhão em cada localidade. Veja que há localidades com
 grande quantidade de casos acumulados mas com R < 1, indicando que já tiveram
@@ -577,66 +478,35 @@ evolução dos números.
 
 ### Total de mortes
 
-#### Mundo 
+<!-- #### Mundo  -->
 
 Começando pelo total de mortes no mundo:
-
-
     
-![png](projeto_covid_files/projeto_covid_94_0.png)
+![png](../projeto_covid_files/projeto_covid_94_0.png)
     
-
 
 Observe que a ordem de grandeza dos eixos é bem menor que a vista no gráfico
 análogo referente ao número de casos. Voltaremos a esse ponto posteriormente.
 
-Vejamos se há alguma possível relação entre o total de óbitos e as variantes:
-
-
-    
-![png](projeto_covid_files/projeto_covid_96_0.png)
-    
-
-
-Embora em ordem de grandeza bem menor, o total de mortes parece seguir as
-tendências apresentadas no estudo de total de casos.
-
-#### Principais países
-
-##### Totais absolutos
-
 Vamos verificar os países que possuem os maiores totais de óbitos até setembro
 de 2021:
-
     
-![png](projeto_covid_files/projeto_covid_99_0.png)
+![png](../projeto_covid_files/projeto_covid_99_0.png)
     
-
-
 Vemos que o Brasil aparece em segundo, atrás apenas dos Estados Unidos. Também
 observamos a presença de dois outros países da América do Sul entre os 10
 países: o Peru e a Colômbia. Como tais países não possuem populações tão
 numerosas quanto os primeiros colocados, é um sinal que a proporção de mortes
 por milhão em tais países é alta, o que veremos mais adiante.
 
-Vamos verificar o total de óbitos até o momento por país de cada continente:
-
-
-TODO interativo
-
-
-##### Totais por milhão de habitantes
+<!-- ##### Totais por milhão de habitantes -->
 
 Como já discutido ao apresentar os dados referentes a casos de COVID-19, números
 absolutos por vezes distorcem nossa percepção sobre os impactos reais em cada
-localidade. Faz mais sentido avaliar os números por milhão de habitantes. Vamos,
-então, construir a tabela e o gráfico:
+localidade. Faz mais sentido avaliar os números por milhão de habitantes. 
 
+![png](../projeto_covid_files/projeto_covid_104_0.png)
     
-![png](projeto_covid_files/projeto_covid_104_0.png)
-    
-
-
 Percebe-se claramente que a situação do Peru é diferenciada. E tal situação vem
 chamando a atenção [da mídia
 mundial](https://www.bbc.com/news/world-latin-america-53150808) e de [periódicos
@@ -649,16 +519,15 @@ principais veículos de mídia mundiais.
 
 Vamos analisar a situação de cada país por continente:
 
-
-TODO interativo
-
+<iframe width="100%" height="500" frameborder="0" scrolling="no"
+src="//plotly.com/~chicolucio/25.embed?autosize=true"></iframe>
 
 Já fiz uma pequena discussão na parte de casos acerca de países que
-provavelmente estão com dados abaixo dos números reais. Mas aqui cabe mais
+provavelmente estão com dados abaixo dos números reais. Mas aqui cabem mais
 algumas observações sobre este tópico.
 
 Começando pela América do Sul, percebemos a quase ausência da Venezuela, com um
-número muito abaixo de seus vizinhos. Obviamente que a situação chamou a atenção
+número muito abaixo de seus vizinhos. Obviamente que tal fato chamou a atenção
 a ponto de a [Nature](https://www.nature.com/articles/d41586-021-02276-1) e o
 periódico [BMJ](https://www.bmj.com/content/371/bmj.m3938) irem verificar a
 situação. Como é de se esperar de regimes ditatoriais, há grande opressão
@@ -672,7 +541,7 @@ habitantes.
 Por fim, um pouco sobre a África e a Ásia. De acordo com as [Nações
 Unidas](https://unstats.un.org/unsd/demographic-social/crvs/#coverage) parte
 significativa dos países africanos e asiáticos não possuem registros de mortes
-eficientes, conforme figura abaixo retirada do site da instituição. Desta forma,
+eficientes, conforme figura abaixo, retirada do site da instituição. Desta forma,
 cuidado deve ser tomado ao se fazer comparações com estes países.
 
 <center><img alt="covid_banner" width="60%"
@@ -683,48 +552,12 @@ respeito dos problemas de registro de óbitos em países africanos.
 
 Vejamos um mapa interativo da evolução das mortes por milhão em cada país:
 
+[![gif](../projeto_covid_files/projeto_covid_total_mortes_milhao.gif)](https://plotly.com/~chicolucio/27/)
+<p style="font-size:60%;color:gray">
+Caso queira interagir com o mapa, clique na animação que você será redirecionado
+para uma plataforma onde pode verificar mais detalhes. Mas termine de ler o texto
+primeiro ;-)</p>
 
-TODO interativo
-
-
-
-#### Idade e riqueza
-
-Vamos verificar se o número de mortes possui alguma relação com a renda per
-capita do país ou a idade da população.
-
-Comecemos verificando os países com maior PIB per capita:
-
-
-
-TODO interativo
-
-
-
-No gráfico, vemos claramente que os países do continente africano possuem, em
-sua maioria, menores expectativas de vida e menores PIB per capita (menores
-círculos no gráfico). Seicheles, que é país africano com maior PIB per capita e
-uma das maiores expectativas de vida do continente e lidera os dados mundiais em
-total de casos por milhão, fica apenas em quarto no continente no que diz
-respeito a mortes por milhão.
-
-Vemos uma tendência em outros continentes de maiores expectativas de vida
-apresentarem mais óbitos. Obviamente que países mais ricos tendem a ter
-populações mais velhas ou, melhor dizendo, maior parcela da população com idade
-avançada e, como a doença afeta mais pessoas idosas, é de se esperar maior
-quantidade de óbitos nesses países. No entanto, cabe destacar que há notáveis
-exceções nessa tendência como, por exemplo, o Japão. Singapura também é uma
-notável exceção, sendo que vimos anteriormente que é o país com maior taxa de
-reprodução efetiva ao fim de setembro de 2021. 
-
-Uma maior expectativa de vida, no entanto, não necessariamente significa que a
-população atual possui mais idosos que jovens. Assim, vamos repetir o gráfico
-substituindo o eixo de expectativa de vida por mediana de idade:
-
-
-TODO interativo
-
-Vemos a mesma tendência: população mais idosa, mais mortes.
 
 ### Novas mortes
 
@@ -737,68 +570,35 @@ A base de dados apresenta as entradas na forma de dados diários e na forma de
 média móvel de 7 dias. A média móvel ajuda a visualizar melhor a tendência dos
 dados, visto que há grande variação dos dados diários. Vamos começar com as
 mortes em todo mundo:
-
-
     
-![png](projeto_covid_files/projeto_covid_116_0.png)
+![png](../projeto_covid_files/projeto_covid_116_0.png)
     
-
-
 Vemos que os novos óbitos acompanham o perfil de novos casos já discutido
 anteriormente, notando-se apenas uma grande diminuição na ordem de grandeza.
 Desta forma, as mesmas discussões e relações observadas com as datas de
-variantes e épocas de inverno se mantêm:
-
-
-    
-![png](projeto_covid_files/projeto_covid_118_0.png)
-    
-
-
-
-    
-![png](projeto_covid_files/projeto_covid_119_0.png)
-    
-
+variantes e épocas de inverno se mantêm.
 
 Da mesma maneira, as comparações com os países com mais casos e com os
 continentes individuais feitas na discussão sobre os casos continuam válidas
-para os óbitos:
-
-
+para os óbitos. Assim como a sazonalidade observada para novos casos. 
+Para o artigo não ficar muito longo, retirei os gráficos desta parte. Caso 
+queira verificar todos os gráficos e análises, veja o repositório linkado ao 
+fim do artigo.
     
-![png](projeto_covid_files/projeto_covid_121_0.png)
-    
-
-
-
-    
-![png](projeto_covid_files/projeto_covid_122_0.png)
-    
-
-
-A sazonalidade pode ser observada nos mapas interativos de novas mortes e novas
-mortes por milhão:
-
-
-TODO interativo
-
-
 ## Evolução no número de vacinados
 
 <center><img alt="covid_banner" width="50%"
 src="https://image.freepik.com/free-photo/close-up-hand-holding-coronavirus-vaccine_23-2149012368.jpg"></center>
 
-Certamente um dos pontos mais discutidos recentemente no contexto da pandemia. Vamos verificar a evolução.
+Certamente um dos pontos mais discutidos recentemente no contexto da pandemia.
+Vamos verificar a evolução.
 
 ### Total de vacinados
 
-
+Começando pelo total de vacinados:
     
-![png](projeto_covid_files/projeto_covid_129_0.png)
+![png](../projeto_covid_files/projeto_covid_129_0.png)
     
-
-
 Os gráficos começam em dezembro de 2020, quando as primeiras doses foram
 aplicadas ao redor do mundo. Vemos que, até setembro de 2021, cerca de 3,5
 bilhões de pessoas já receberam ao menos uma dose da vacina, praticamente metade
@@ -806,51 +606,25 @@ da população mundial. Os saltos nos gráficos se devem a questões de
 disponibilização dos dados.
 
 Vejamos quantas pessoas já receberam todas as doses protocolares:
-
-
     
-![png](projeto_covid_files/projeto_covid_131_0.png)
+![png](../projeto_covid_files/projeto_covid_131_0.png)
     
-
-
-Vejamos quais países possuem mais pessoas vacinadas com ao menos uma dose:
-
-
-
+Agora, quais países possuem mais pessoas vacinadas com ao menos uma dose:
     
-![png](projeto_covid_files/projeto_covid_134_0.png)
+![png](../projeto_covid_files/projeto_covid_134_0.png)
     
-
-
 Vemos aqui que a Índia, considerando sua imensa população, já vacinou com ao
 menos uma dose cerca de metade das pessoas. Brasil e Estados Unidos também
 possuem quantidades significativas de pessoas vacinadas. Lembrando que não
 necessariamente o número a ser buscado é 100 % tendo em vista que os protocolos
 atuais não preveem vacinações em crianças.
 
-Vamos verificar cada país por continente:
-
-
-TODO interativo
-
-
-
-Observe que o gráfico acima possui menos países que os mostrados anteriormente
-para casos e óbtidos. Isto se deve ao fato de que nem todos os países possuem
-registros oficiais de vacinados de onde a OWID possa obter dados. O intervalo de
-disponibilização dos dados também é distinto para cada país, de forma que
-comparações devem ser feitas com cautela.
-
 Assim como para casos e óbitos, análises comparativas fazem mais sentido com
-números relativos ao total da população de cada localidade. Vejamos então os
+números relativos ao total da população de cada localidade. Vejamos, então, os
 locais com maior percentual da população vacinada:
-
-
     
-![png](projeto_covid_files/projeto_covid_139_0.png)
+![png](../projeto_covid_files/projeto_covid_139_0.png)
     
-
-
 Obviamente que o valor para Gibraltar está equivocado. [De acordo com a
 OWID](https://ourworldindata.org/covid-vaccinations#frequently-asked-questions),
 valores maiores do que 100 % podem ocorrer quando os valores para população
@@ -862,18 +636,20 @@ Como era de se esperar, vemos o predomínio de localidades relativamente pequena
 no que diz respeito ao número de habitantes. Vejamos um gráfico de países por
 continente:
 
+<iframe width="100%" height="500" frameborder="0" scrolling="no"
+src="//plotly.com/~chicolucio/29.embed?autosize=true"></iframe>
 
-TODO interativo
-
-
+Observe que o gráfico acima possui menos países que os mostrados anteriormente
+para casos e óbitos. Isto se deve ao fato de que nem todos os países possuem
+registros oficiais de vacinados de onde a OWID possa obter dados. O intervalo de
+disponibilização dos dados também é distinto para cada país, de forma que
+comparações devem ser feitas com cautela.
 
 Vejamos se há alguma relação entre quantidade de vacinados e PIB per capita e se
 países com pessoas mais velhas estão se vacinando mais:
 
-
-TODO interativo
-
-
+<iframe width="100%" height="500" frameborder="0" scrolling="no"
+src="//plotly.com/~chicolucio/31.embed?autosize=true"></iframe>
 
 Como já discutido anteriormente, países com maior PIB per capita tendem a ter
 uma população mais velha e, pelo gráfico, uma maior parcela da população
@@ -886,13 +662,9 @@ vacinação.
 
 Já vimos a evolução dos números totais, vejamos agora a evolução de novas
 vacinações:
-
-
     
-![png](projeto_covid_files/projeto_covid_147_0.png)
+![png](../projeto_covid_files/projeto_covid_147_0.png)
     
-
-
 Vemos que há uma tendência decrescente. Podemos considerar algumas hipóteses
 para este declínio que, provavelmente, ocorrem em conjunto:
 
@@ -930,23 +702,15 @@ src="https://image.freepik.com/free-photo/close-up-pen-market-research_1098-3465
 Já analisamos casos, óbitos e vacinações de forma separada. Vamos começar a
 buscar comparações e correlações. Primeiro, vamos comparar a ordem de grandeza
 entre casos, mortes e vacinações:
-
-
     
-![png](projeto_covid_files/projeto_covid_151_0.png)
+![png](../projeto_covid_files/projeto_covid_151_0.png)
     
-
-
 Como já abordado brevemente anteriormente, há uma diferença de cerca de duas
 ordens de grandeza entre casos e mortes. Podemos ver isto também em um gráfico
 com os mesmos dados por milhão de habitantes:
-
-
     
-![png](projeto_covid_files/projeto_covid_153_0.png)
+![png](../projeto_covid_files/projeto_covid_153_0.png)
     
-
-
 Esta observação está coerente com estudos que indicam que a mortalidade da
 COVID-19 fica em torno de 1 a 2 %. Cabe ressaltar que há diferentes formas de
 cálculo e interpretações para mortalidade [como mostra esse material da
@@ -971,22 +735,14 @@ de correlação](https://en.wikipedia.org/wiki/Correlation), se há correlaçõe
 positivas ou negativas entre variáveis. Comecemos procurando relações entre
 totais de casos/óbitos com vacinação, indicadores de riqueza e indicadores de
 idade:
-
-
     
-![png](projeto_covid_files/projeto_covid_156_0.png)
+![png](../projeto_covid_files/projeto_covid_156_0.png)
     
-
-
 Podemos criar matriz similar mas para novos casos/óbitos/vacinações e suas
 relações com índices que variam no tempo:
-
-
     
-![png](projeto_covid_files/projeto_covid_158_0.png)
+![png](../projeto_covid_files/projeto_covid_158_0.png)
     
-
-
 Nas figuras acima temos algumas correlações mais óbvias e que já foram
 discutidas no decorrer do estudo, que são:
 
@@ -1013,18 +769,14 @@ medidas restritivas.
 
 Muito se fala sobre o efeito de comorbidades, vamos verificar se há correlações
 envolvendo as variáveis referentes a doenças:
-
-
     
-![png](projeto_covid_files/projeto_covid_160_0.png)
+![png](../projeto_covid_files/projeto_covid_160_0.png)
     
-
-
-Curiosamente há relação negativa entre taxa de mortalidade por doenças
+Curiosamente, há correlação negativa entre taxa de mortalidade por doenças
 cardiovasculares (lembrando que os dados são de 2017) e casos e óbitos. E há
-relação positiva entre mulheres fumantes e casos e óbitos, assim como para
+correlação positiva entre mulheres fumantes e casos e óbitos, assim como para
 homens mas com valores menores. Não se pode fazer análises muito profundas com
-base nestes dados pois não significa que as pessoas que tiveram os casos ou
+base nestes dados pois não significam que as pessoas que tiveram os casos ou
 morreram tinham as doenças ou fumavam. Os dados de fumantes e doenças são para
 cada localidade e não para cada indivíduo.
 
@@ -1034,45 +786,32 @@ cada localidade e não para cada indivíduo.
 src="https://image.freepik.com/free-photo/realistic-shot-waving-flag-brazil-with-interesting-textures_181624-11214.jpg"></center>
 
 Para terminar, vamos abordar um pouco da situação brasileira. Em alguns momentos
-durante o estudo alguns comentários já foram feitos acerca do país, então apenas
-complementaremos com o que ficou faltando. 
+durante o estudo, comentários já foram feitos acerca do país, então apenas
+complementaremos com mais informações. 
 
 Comecemos verificando como a evolução de novos casos se relaciona com as datas
 de surgimento de novas variantes e com os períodos de inverno:
-
-
     
-![png](projeto_covid_files/projeto_covid_164_0.png)
+![png](../projeto_covid_files/projeto_covid_164_0.png)
     
-
-
-No gráfico há um aumento significativo de casos logo após a variante gama, cujo
+No gráfico há um aumento significativo de casos logo após a variante gama, cuja
 primeira amostra foi no país. No entanto, cabe ressaltar que as variantes podem
 demorar um certo tempo para se espalhar pelo mundo, de forma que as datas das
 outras variantes não necessariamente são estas no país.
 
-Há picos de casos nos invernos, porém o maior pico foi entre março e maio de
-2021. E no último inverno tivemos um pico no início da estação mas um perfil
+Há picos de casos nos invernos, porém o maior pico foi entre março e maio de 2021. 
+E no último inverno tivemos um pico no início da estação mas, um perfil
 decrescente na parte final.
 
 Vejamos o perfil de novos óbitos:
-
-
     
-![png](projeto_covid_files/projeto_covid_166_0.png)
+![png](../projeto_covid_files/projeto_covid_166_0.png)
     
-
-
 Vemos que o perfil de novos óbitos segue o de novos casos, mas em menor ordem de
 grandeza.
 
-Infelizmente a base de dados é bem incompleta para o Brasil. Vejamos:
-
-
-TODO resolver o que colocar aqui,
-
-
-Vemos que há diversos dados ausentes referentes a hospitalizações e testes. Em
+Infelizmente a base de dados é bem incompleta para o Brasil. 
+Há ausência de diversos dados referentes a hospitalizações e testes. Em
 breve farei um estudo focado no país utilizando dados oficias governamentais.
 Acompanhe meu [perfil no LinkedIn](https://www.linkedin.com/in/flsbustamante/)
 para saber quando eu divulgar. 
@@ -1083,7 +822,7 @@ para saber quando eu divulgar.
 <center><img alt="covid_banner" width="50%"
 src="https://image.freepik.com/free-photo/digital-world-map-hologram-blue-background_1379-901.jpg"></center>
 
-Foi um longo estudo, mas espero que tenha sido proveitoso e que tenha trazido
+Foi uma longa análise, mas espero que tenha sido proveitoso e que tenha trazido
 novas visões a respeito da pandemia. Busquei colocar links para diversas
 notícias e estudos com o intuito de embasar afirmações e facilitar a compreensão
 por parte dos leitores. Vamos fazer uma breve recaptulação do que foi mostrado:
@@ -1098,3 +837,13 @@ Caso tenha dúvidas, comentários e/ou críticas construtivas me procure:
 - [LinkedIn](https://www.linkedin.com/in/flsbustamante/)
 - [GitHub](https://github.com/chicolucio)
 - [Site](https://franciscobustamante.com.br/)
+- [Telegram](https://t.me/chicolucio)
+
+Veja o [repositório no
+GitHub](https://github.com/chicolucio/panorama-covid-mundo) para ter acesso 
+ao código e à análise completa. Ou, se preferir, clique no ícone abaixo
+para abrir o trabalho completo no Google Colab:
+
+[![Abra no Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/chicolucio/panorama-covid-mundo/blob/master/projeto_covid_colab.ipynb)
+
+Conheça [meu portfolio](https://franciscobustamante.com.br/portfolio/).
