@@ -389,11 +389,11 @@ população de cada continente:
 |Continente | População |
 | ---- | ----- |
 |  Oceania | 43.219.954 | 
-|  South America | 434.260.138 | 
-|  North America | 596.581.283 | 
-|  Europe | 747.747.396 | 
-|  Africa | 1.373.486.472 | 
-|  Asia | 4.679.660.580 | 
+|  América do Sul | 434.260.138 | 
+|  América do Norte | 596.581.283 | 
+|  Europa | 747.747.396 | 
+|  África | 1.373.486.472 | 
+|  Ásia | 4.679.660.580 | 
 
 Já vimos que aparentemente há um caráter sazonal nos casos de COVID-19. Vamos
 criar um mapa que apresente esse perfil para cada país.
