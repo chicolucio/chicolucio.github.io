@@ -5,7 +5,8 @@ image: /portfolio/projeto_covid_files/covid_logo.jpg
 position: 1
 period: Outubro de 2021
 toc: true
-toc_sticky: true
+header:
+  og_image: /portfolio/projeto_covid_files/covid_logo.jpg
 description: |
   Estamos completando quase 2 anos desde o surgimento do vírus COVID-19. As
   medidas para controle pandêmico adotadas por governos em todo mundo  afetaram
