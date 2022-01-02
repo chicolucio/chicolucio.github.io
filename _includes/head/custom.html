@@ -7,3 +7,8 @@
 <meta name="msapplication-TileColor" content="#2b5797">
 <meta name="msapplication-config" content="/assets/images/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
+
+{% if page.mathjax %}
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+{% endif %}
