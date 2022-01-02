@@ -2,7 +2,7 @@
 name: Panorama do COVID-19 no mundo
 title: Panorama do COVID-19 no mundo
 image: /portfolio/projeto_covid_files/covid_logo.jpg
-position: 1
+position: 2
 period: Outubro de 2021
 toc: true
 header:
