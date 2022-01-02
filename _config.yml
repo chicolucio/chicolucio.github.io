@@ -14,8 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 locale: "pt-BR"
-title: Francisco Bustamante
-# subtitle: aka Chico Lucio
+title: Francisco Lucio S. Bustamante
+subtitle: aka Chico Lucio
 logo: "/assets/images/favicon-88x70.png"
 name: Francisco Bustamante
 email:
@@ -23,7 +23,7 @@ description: Página pessoal de Francisco Lucio S. Bustamante
 twitter_username:
 github_username: chicolucio
 minimal_mistakes_skin: default
-search: false
+search: true
 
 # Build settings
 markdown: kramdown
