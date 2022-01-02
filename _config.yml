@@ -17,7 +17,7 @@ locale: "pt-BR"
 title: Francisco Lucio S. Bustamante
 subtitle: aka Chico Lucio
 logo: "/assets/images/favicon-88x70.png"
-name: Francisco Lucio
+name: Francisco Bustamante
 email:
 description: Página pessoal de Francisco Lucio S. Bustamante
 twitter_username:
@@ -75,33 +75,36 @@ author:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://cienciaprogramada.com.br"
-    - label: "YouTube"
-      icon: "fab fa-fw fa-youtube"
-      url: "https://www.youtube.com/channel/UCrUs_osDl_GaHgUdU7v3YGw"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/cienciaprog"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/cienciaprogramada"
+    # - label: "YouTube"
+    #   icon: "fab fa-fw fa-youtube"
+    #   url: "https://www.youtube.com/channel/UCrUs_osDl_GaHgUdU7v3YGw"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/cienciaprog"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/cienciaprogramada"
 
 footer:
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/chicolucio"
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin-in"
+      url: "https://www.linkedin.com/in/flsbustamante/"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://cienciaprogramada.com.br"
-    - label: "YouTube"
-      icon: "fab fa-fw fa-youtube"
-      url: "https://www.youtube.com/channel/UCrUs_osDl_GaHgUdU7v3YGw"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/cienciaprog"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/cienciaprogramada"
+    # - label: "YouTube"
+    #   icon: "fab fa-fw fa-youtube"
+    #   url: "https://www.youtube.com/channel/UCrUs_osDl_GaHgUdU7v3YGw"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://twitter.com/cienciaprog"
+    # - label: "Instagram"
+    #   icon: "fab fa-fw fa-instagram"
+    #   url: "https://instagram.com/cienciaprogramada"
 
 defaults:
   # _posts
