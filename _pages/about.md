@@ -8,155 +8,111 @@ header:
   overlay_filter: 0.60 # same as adding an opacity of 0.5 to a black background
 ---
 
-## Resumo 
+## Abstract 
+<!-- TODO verify if this is the correct word for this  -->
 
-Sou comunicador científico e cientista de dados com sólido conhecimento em
-Python e bibliotecas como Pandas, NumPy, Matplotlib e Plotly. Focado em resolver
-problemas, desde a identificação até a solução.
+Science communicator and data scientist with a sound understanding of Python and
+packages such as Pandas, Matpltolib and Plotly. Currently working in the
+education industry solving educational problems with programming. Launched
+Ciência Programada, a science communication project in Brazilian Portuguese
+combining science and programming.
 
-Escrevo semanalmente no site [Ciência
-Programada](https://cienciaprogramada.com.br/).
+## Professional Experience
 
-Atualmente atuo no setor educacional, integrando ferramentas computacionais e
-ciência de dados ao ensino. Possuo, também, experiência em gestão de
-laboratórios, na área ambiental e em pesquisa científica.
+### 2020 - Present: Science communicator at Ciência Programada
 
-## Experiências profissionais
+- Science communication with programming
+- Wrote articles and recorded videos about Python and packages such as Pandas,
+Matplotlib and others to:
+    - Understand phenomena;
+    - Explore data sets; 
+    - Explain programming concepts.
+- Wrote articles and recorded videos about coding best practices, Git and tests
+- Website with thousands of views per month
 
-### 2020 - Atual: Comunicador científico no Ciência Programada
+[Project site](https://cienciaprogramada.com.br/) (Brazilian Portuguese)
 
-Projeto pessoal de uma plataforma de divulgação científica, com foco em uso e
-desenvolvimento de ferramentas tecnológicas.  Mostro como podemos utilizar
-Python e softwares para entender melhor conceitos científicos e situações do
-cotidiano.
+### 2015 - Present: Research and teacher at IFRJ - Instituto Federal de
+Educação, Ciência e Tecnologia do Rio de Janeiro (Brazil)
 
-Links do projeto: [site](https://cienciaprogramada.com.br/),
-[Instagram](https://instagram.com/cienciaprogramada),
-[Twitter](https://twitter.com/cienciaprog) e
-[YouTube](https://www.youtube.com/channel/UCrUs_osDl_GaHgUdU7v3YGw).
+- Launched a research group to develop educational software using Python to meet
+the following criteria:
+    - Visual appeal with Matplotlib and Plotly
+    - Data analysis and processing with Pandas, NumPy and Scipy
+    - Best practices with Git and automated tests
+- Coordinated projects with Trello
+- Taught physical-chemistry lessons
 
-### 2015 - Atual: Programador e professor no IFRJ
+To see the projects I've develop related to this experience [click
+here](/portfolio/2015-professor_ifrj)
 
-Professor de disciplinas de físico-química, química geral e química inorgânica
-para cursos de graduação e de nível técnico no Instituto Federal de Educação,
-Ciência e Tecnologia do Rio de Janeiro - IFRJ.
+### 2014 - 2015: Chemist - Laboratory manager at UFF - Universidade Federal
+Fluminense  (Brazil)
 
-Atualmente buscando integrar ferramentas computacionais no ensino, tanto para
-visualização de conceitos abstratos quanto para desenvolvimento de projetos de
-tratamento de dados relacionados à área de química.
+- Managed the Central Analytical Facility of the Chemistry Institute of the
+university
+- Automated the analyses scheduling process with Google Suite
+    - Increased the availability of laboratory equipment by 100 %
+- Automated the equipment usage report with Google Spreadsheets 
+- Launched equipment training and data analysis courses
+    - More than 100 students, technicians and teachers trained
+- Built and implemented the standardization and process workflow for access and
+training on each laboratory and all equipment of the Facility
 
-Participa de orientação de alunos de estágio à docência e de comissões internas
-voltadas a atividades de ensino, pesquisa e extensão.
+To see the projects I've develop related to this experience [click
+here](/portfolio/2014-2015-quimico_uff)
 
-Para mais detalhes dos projetos que venho desenvolvendo [clique
-aqui](/portfolio/2015-professor_ifrj)
+### 2014: Environmental analyst at INEA - Instituto Estadual do Ambiente do Rio
+de Janeiro  (Brazil)
 
-### 2014 - 2015: Químico na UFF
+- Automated environmental indicator reports with Excel
+    - Improved team productivity by 25 %
+- Collaborator in the implementation process of ISO/IEC 17025 at Environmental
+Analysis Laboratory
 
-Responsável pela gestão da Central Analítica do Instituto de Química da UFF -
-Universidade Federal Fluminense.
+To see the projects I've develop related to this experience [click
+here](/portfolio/2014-2014-inea)
 
-- Elaboração de Procedimentos Operacionais Padrão (POPs) para os equipamentos;
-- Criação de sistema de agendamento de análises;
-- Manutenção dos sites dos laboratórios.
+### 2012 - 2014: Researcher and teacher at UFF - Universidade Federal
+Fluminense  (Brazil)
 
-Treinamentos ministrados
-- Realização de análises de espalhamento de luz dinâmico e potencial zeta e
-tratamento dos dados - Malvern Zetasizer Nano ZS90
-- Realização de análises termogravimétricas e tratamento dos dados - Shimadzu
-DTG-60
-- Realização de análises espectrofotométricas - Varian Cary 50
-- Realização de análises espectrofotométricas - Varian Cary 5000
-- Realização de análises espectrofotométricas - FTIR Varian 660
+- Supervised two projects regarding the creation of new low-cost educational
+resources 
+- Taught chemistry lessons
 
-Para mais detalhes dos projetos que desenvolvi quando estava neste cargo
-[clique
-aqui](/portfolio/2014-2015-quimico_uff)
+## Education
 
-### 2014: Analista ambiental no INEA
-
-Analista ambiental no INEA - Instituto Estadual do Ambiente do Rio de Janeiro.
-
-Atuei no aprimoramento do sistema de acompanhamento de relatórios do Programa de
-Autocontrole de Efluentes Líquidos. Locado na GEAG - Gerência de Avaliação de
-Qualidade de Água.
-
-Para mais detalhes dos projetos que desenvolvi quando estava neste cargo
-[clique
-aqui](/portfolio/2014-2014-inea)
-
-### 2012 - 2014: Professor na UFF
-
-Professor de disciplinas de química geral e química inorgânica para cursos de
-graduação na UFF - Universidade Federal Fluminense
-
-Orientador de um projeto de monitoria e um de estágio à docência.
-
-## Formação
-
-### Formação complementar
+### Licenses & certifications
+<!-- TODO see the correct word for "extracurricular"  -->
 
 - 2020
-  - Curso Python Pro
-    - Habilidades desenvolvidas: linguagem Python; framework Django;
-    desenvolvimento orientado por testes (TDD); plataforma Heroku; Docker.
-  - Curso Data Science Pro
-    - Habilidades desenvolvidas: linguagem Python com foco em ferramentas de
-    data science como o Pandas; Jupyter Notebooks; Google Colab.
+  - Course: Python Pro
+    - Skills: Python; Django framework; Test Driven Development (TDD); 
+    Heroku; Docker.
+  - Course: Data Science Pro
+    - Skills: Python data science tools such as Pandas; Jupyter Notebooks;
+    Google Colab; Matplotlib.
 - 2019
-  - Curso Data Science pela Data Bootcamp
-    - Habilidades desenvolvidas: linguagem Python com foco em ferramentas de
-    data science como o Pandas; Jupyter Notebooks; Google Colab.
+  - Course: Data Science by Data Bootcamp
+    - Skills: Python data science tools such as Pandas; Jupyter Notebooks;
+    Google Colab; Matplotlib.
 - 2018
-  - Introduction to Computer Science and Programming Using Python pelo MITx na
-  plataforma edX
-    - Habilidades desenvolvidas: aprofundamento na linguagem Python
-- 2015
-  - Diversos cursos para utilização e gerenciamento dos equipamentos da Central
-  Analítica do Instituto de Química da qual era responsável na época.
-- 2014
-  - Curso de formação de servidores do INEA
+  - Introduction to Computer Science and Programming Using Python by MITx at edX
 
-### Formação acadêmica
+### Academic experience
 
-Para mais detalhes dos principais projetos que desenvolvi durante minha formação
-[clique
-aqui](/portfolio/2008-2013-pesquisa).
+To see the projects I've develop during my education [click
+here](/portfolio/2008-2013-pesquisa).
+<!-- TODO make an entry about my "monitoria" -->
+<!-- TODO maybe an entry for each project below -->
 
-- 2010 - 2012: Mestrado em Química pela UFF - Universidade Federal Fluminense
-  - Bolsista Nota 10 da FAPERJ - Fundação de Amparo à Pesquisa do Estado do Rio
-  de Janeiro. Bolsa especial concedida a projetos de alunos de mestrado e
-  doutorado com destacado desempenho acadêmico.
-  - Atividades e grupos: Membro do Laboratório de Síntese Organometálica.
-  Estágio à docência realizado na disciplina de química de coordenação.
-  - Desenvolvimento do projeto "Complexos de cobalto(III) contendo naftoquinonas
-  como protótipos de pró-drogas biorredutíveis". Três artigos científicos foram
-  publicados derivados desse projeto. Desenvolvi larga experiência na síntese e
-  caracterização de compostos de coordenação utilizando:
-    - Espectrofotômetros nas regiões de infravermelho e ultravioleta-visível;
-    - Análises de Ressonância Magnética Nuclear (RMN) de hidrogênio e carbono-13;
-    - Análise térmica;
-    - Difração de Raios X;
-    - Modelagem computacional.
-- 2006-2010: Bacharel em Química pela UFF - Universidade Federal Fluminense
-  - Premiado com a Láurea Acadêmica da instituição. A Láurea Acadêmica é a maior
-  honraria do corpo discente da UFF, pela dedicação em prol do estudo e
-  resultados alcançados ao longo de todo o curso universitário. Oferecido aos
-  alunos que possuem maior coeficiente de rendimento ao se formarem nos cursos e
-  que não tenham reprovações em seus currículos.
-  - Atividades e grupos: Monitor do Departamento de Química Inorgânica durante 1
-  ano; Bolsista de iniciação científica do Laboratório de Síntese Organometálica
-  por 2 anos, desenvolvendo projetos na área de química de coordenação.
-  - Bolsista PIBIC/CNPq. Iniciação científica no Laboratório de Síntese
-  Organometálica do Instituto de Química da Universidade Federal Fluminense.
-  Projeto: "Complexos Heteromultimetálicos: Síntese e Estudos Eletrônicos e
-  Magnéticos"
-  - Bolsista Faperj. Iniciação científica no Laboratório de Síntese
-  Organometálica do Instituto de Química da Universidade Federal Fluminense.
-  Projeto: "Síntese e caracterização de novos compostos de coordenação contendo
-  lantanídeos" Orientador: Prof. Mauricio Lanznaster
-  - Monitor do Departamento de Química Inorgânica do Instituto de Química.
-  Projeto GQI001- Desenvolvimento de experimentos para as aulas práticas de
-  química geral. Disciplina Química Geral Experimental B - GQI00023. Trabalho
-  apresentado: "Experimentos de oxidação de etanol, baseados nas reações
-  principais de um bafômetro, utilizando materiais de baixo custo".
+#### Masters Degree in Chemistry, Universidade Federal Fluminense - 2010-2012
+
+- Experienced with data analysis using Excel and Origin software
+- Three scientific papers published in international peer-reviewed journals
+- Organizing committee member of two scientific symposiums 
+
+#### Bachelor of Chemistry, Universidade Federal Fluminense - 2006-2010
+
+- One scientific paper published in national peer-reviewed journal
+- Winner of the Alumni Laureate Award due to high academic performance 
