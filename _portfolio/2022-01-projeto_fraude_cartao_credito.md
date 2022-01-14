@@ -11,9 +11,9 @@ mathjax: true
 header:
   image: https://raw.githubusercontent.com/chicolucio/credit-card-fraud-detection/master/img/fraud.jpg
 description: |
-  Neste trabalho, utilizaremos uma base com dados de transações feitas com cartões
-  de crédito e estudaremos diferentes algoritmos que podem ser utilizados para
-  classificar uma determinada transação como fraudulenta ou não.
+  In this work, we will use a credit card transactions database to study 
+  different algorithms which can be used to classify a given transaction 
+  as fraudulent or not.
 ---
 
 Por: [Francisco Bustamante](https://franciscobustamante.com.br/)

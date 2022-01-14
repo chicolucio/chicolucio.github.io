@@ -5,9 +5,8 @@ image: /assets/images/animation_small.gif
 period: 2015 até o momento
 position: 9
 description: |
-  Pesquisador responsável por grupo de desenvolvimento de softwares educacionais
-  interativos, baseados na linguagem de programação Python e na ferramenta 
-  Jupyter Notebook.
+  Researcher responsible for development group of intereactive educational softwares,
+  based on Python programming language and Jupyter Notebook tool
 ---
 
 ![planck_animation](/assets/images/animation_small.gif){: .align-left}

@@ -9,12 +9,12 @@ header:
   image: /portfolio/projeto_covid_files/covid_banner.jpg
   og_image: /portfolio/projeto_covid_files/covid_logo.jpg
 description: |
-  Estamos completando quase 2 anos desde o surgimento do vírus COVID-19. As
-  medidas para controle pandêmico adotadas por governos em todo mundo  afetaram
-  significativamente a rotina de todos e é de grande interesse acompanharmos a
-  evolução da pandemia para saber seus reais efeitos e avaliar o retorno ao
-  convívio normal.
----
+  It has been almost 2 years since the emergence of COVID-19 virus.
+  The pandemic control measures adopted by governments around the world have 
+  significantly affected everyone's routine. With that in mind, it is of great 
+  interest to follow and evaluate the evolution of pandemic to know its real 
+  effects and to consider the return to normal life.
+ ---
 
 Por: [Francisco Bustamante](https://franciscobustamante.com.br/)
 
