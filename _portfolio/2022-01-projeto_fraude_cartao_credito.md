@@ -1,9 +1,9 @@
 ---
-name: Detecção de fraudes em cartões de crédito
+name: Credit card fraud detection
 title: Detecção de fraudes em cartões de crédito
 image: /portfolio/projeto_fraude_cartao_credito_files/fraud_logo.jpg
 position: 1
-period: Janeiro de 2022
+period: January 2022
 toc: true
 toc_min_header: 2
 toc_max_header: 3

@@ -1,12 +1,12 @@
 ---
-name: Desenvolvimento de softwares educacionais
+name: Educational software development
 title: Desenvolvimento de softwares educacionais
 image: /assets/images/animation_small.gif
-period: 2015 até o momento
+period: 2015 - present
 position: 9
 description: |
-  Researcher responsible for development group of intereactive educational softwares,
-  based on Python programming language and Jupyter Notebook tool
+  Researcher responsible for development group of interactive educational
+  softwares, based on Python programming language and Jupyter Notebook tool
 ---
 
 ![planck_animation](/assets/images/animation_small.gif){: .align-left}

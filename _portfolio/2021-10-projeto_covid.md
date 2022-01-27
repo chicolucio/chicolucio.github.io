@@ -1,9 +1,9 @@
 ---
-name: Panorama do COVID-19 no mundo
+name: Global overview of COVID-19
 title: Panorama do COVID-19 no mundo
 image: /portfolio/projeto_covid_files/covid_logo.jpg
 position: 2
-period: Outubro de 2021
+period: October 2021
 toc: true
 header:
   image: /portfolio/projeto_covid_files/covid_banner.jpg
@@ -14,7 +14,7 @@ description: |
   significantly affected everyone's routine. With that in mind, it is of great 
   interest to follow and evaluate the evolution of pandemic to know its real 
   effects and to consider the return to normal life.
- ---
+---
 
 Por: [Francisco Bustamante](https://franciscobustamante.com.br/)
 

@@ -1,7 +1,7 @@
 ---
 permalink: /about/
 title: "Curriculum Vitae"
-excerpt: "Uma breve descrição de minhas experiências profissionais"
+excerpt: "My professional experience and education"
 toc: true
 header:
   overlay_image: /assets/images/dna.png
@@ -32,8 +32,7 @@ Matplotlib and others to:
 
 [Project site](https://cienciaprogramada.com.br/) (Brazilian Portuguese)
 
-### 2015 - Present: Research and teacher at IFRJ - Instituto Federal de
-Educação, Ciência e Tecnologia do Rio de Janeiro (Brazil)
+### 2015 - Present: Research and teacher at IFRJ - Instituto Federal de Educação, Ciência e Tecnologia do Rio de Janeiro (Brazil)
 
 - Launched a research group to develop educational software using Python to meet
 the following criteria:
@@ -46,8 +45,7 @@ the following criteria:
 To see the projects I've develop related to this experience [click
 here](/portfolio/2015-professor_ifrj)
 
-### 2014 - 2015: Chemist - Laboratory manager at UFF - Universidade Federal
-Fluminense  (Brazil)
+### 2014 - 2015: Chemist - Laboratory manager at UFF - Universidade Federal Fluminense  (Brazil)
 
 - Managed the Central Analytical Facility of the Chemistry Institute of the
 university
@@ -62,8 +60,7 @@ training on each laboratory and all equipment of the Facility
 To see the projects I've develop related to this experience [click
 here](/portfolio/2014-2015-quimico_uff)
 
-### 2014: Environmental analyst at INEA - Instituto Estadual do Ambiente do Rio
-de Janeiro  (Brazil)
+### 2014: Environmental analyst at INEA - Instituto Estadual do Ambiente do Rio de Janeiro  (Brazil)
 
 - Automated environmental indicator reports with Excel
     - Improved team productivity by 25 %
@@ -73,8 +70,7 @@ Analysis Laboratory
 To see the projects I've develop related to this experience [click
 here](/portfolio/2014-2014-inea)
 
-### 2012 - 2014: Researcher and teacher at UFF - Universidade Federal
-Fluminense  (Brazil)
+### 2012 - 2014: Researcher and teacher at UFF - Universidade Federal Fluminense  (Brazil)
 
 - Supervised two projects regarding the creation of new low-cost educational
 resources 

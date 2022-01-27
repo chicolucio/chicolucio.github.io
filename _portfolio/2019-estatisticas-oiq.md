@@ -1,11 +1,11 @@
 ---
-name: Python no tratamento estatístico de dados de uma olimpíada de estudantes
+name: Statistical analysis of student grades with Python
 title: Python no tratamento estatístico de dados de uma olimpíada de estudantes
 image: /assets/images/oiq_small.png
 position: 10
 period: 2019
 description: |
-  Use of Pyhton and Pandas library to evaluate the students performance in a 
+  Use of Python and Pandas library to evaluate the students performance in a 
   Chemistry Olympiad at an educational Institution.
 ---
 

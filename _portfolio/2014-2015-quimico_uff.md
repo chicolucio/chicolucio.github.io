@@ -1,8 +1,8 @@
 ---
-name: Gestor de laboratório
+name: Laboratory manager
 title: Gestor de laboratório
 image: /assets/images/cary_5000.jpg
-period: 2014 a 2015
+period: 2014 - 2015
 position: 98
 description: |
   Manager of Central Analytical Facility in Chemistry Institute at UFF.

@@ -1,13 +1,13 @@
 ---
-name: Comunicação científica no Ciência Programada
+name: Science communication at Ciência Programada
 title: Comunicação científica no Ciência Programada
 image: /assets/images/CP_instagram_profile.png
-period: 2020 até o momento
+period: 2020 - present
 position: 8
 description: |
-  Personal project of scientific divulgation platform, focused on usage and 
-  development of technological tools. I demonstrate how we can use Python 
-  and other softwares for better understanding of scientific concepts and 
+  Personal project of a scientific communication platform, focused on usage and 
+  development of technological tools. I show how we can use Python 
+  and other software for better understanding of scientific concepts and 
   daily situations. I also cover Data Science topics and coding best practices.
 ---
 

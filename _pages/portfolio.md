@@ -3,14 +3,14 @@ title: Portfolio
 layout: single
 permalink: /portfolio/
 collection: portfolio
-excerpt: "Portfolio de projetos que desenvolvi ou participei"
+excerpt: "Projects I have worked on"
 header:
   overlay_image: /assets/images/dna.png
   overlay_filter: 0.60 # same as adding an opacity of 0.5 to a black background
 ---
 
-Abaixo estão meus principais projetos e uma breve descrição. Clicando nos links
-você será redirecionado para mais detalhes de cada um.
+Here you can find projects I have worked on with a brief description.
+Follow the links to more details about each one.
 
 {% assign ordered_pages = site.portfolio | sort: "position" %}
 {% for project in ordered_pages %}
