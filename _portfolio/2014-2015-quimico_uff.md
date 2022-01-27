@@ -5,10 +5,9 @@ image: /assets/images/cary_5000.jpg
 period: 2014 a 2015
 position: 98
 description: |
-  Gestor da Central Analítica do Instituto de Química da UFF. Durante o 
-  período trabalhei na automatização do agendamento de análises e dos 
-  relatórios de utilização dos equipamentos. Além de ministrar treinamentos
-  sobre a utilização dos equipamentos e análise dos dados.
+  Manager of Central Analytical Facility in Chemistry Institute at UFF.
+  I worked in automation of equipments usage scheduling and usage reports,
+  besides providing training on how to use equipment and data analysis. 
 ---
 
 ![imagem_quimico_uff](/assets/images/cary_5000.jpg){: .align-left}

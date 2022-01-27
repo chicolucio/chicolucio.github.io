@@ -5,10 +5,10 @@ image: /assets/images/CP_instagram_profile.png
 period: 2020 até o momento
 position: 8
 description: |
-  Projeto pessoal de uma plataforma de divulgação científica, com foco em uso e
-  desenvolvimento de ferramentas tecnológicas.  Mostro como podemos utilizar
-  Python e softwares para entender melhor conceitos científicos e situações do
-  cotidiano. Abordo também temas de Data Science e boas práticas de programação.
+  Personal project of scientific divulgation platform, focused on usage and 
+  development of technological tools. I demonstrate how we can use Python 
+  and other softwares for better understanding of scientific concepts and 
+  daily situations. I also cover Data Science topics and coding best practices.
 ---
 
 ![logo_CP](/assets/images/CP_instagram_profile.png){: .align-left}
