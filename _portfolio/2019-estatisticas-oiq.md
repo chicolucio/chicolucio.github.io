@@ -5,8 +5,8 @@ image: /assets/images/oiq_small.png
 position: 10
 period: 2019
 description: |
-  Use of Python and Pandas library to evaluate the students performance in a 
-  Chemistry Olympiad at an educational Institution.
+  Use of Python and Pandas library to evaluate the students' performance in a 
+  Chemistry Olympiad at an educational institution.
 ---
 
 ![logo_CP](/assets/images/oiq_small.png){: .align-left}

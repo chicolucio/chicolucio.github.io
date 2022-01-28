@@ -5,9 +5,10 @@ image: /assets/images/cary_5000.jpg
 period: 2014 - 2015
 position: 98
 description: |
-  Manager of Central Analytical Facility in Chemistry Institute at UFF.
-  I worked in automation of equipments usage scheduling and usage reports,
-  besides providing training on how to use equipment and data analysis. 
+  Manager of Central Analytical Facility at the Chemistry Institute at UFF.
+  I worked in the automation of the analyses scheduling process using Google
+  Suite. I have also implemented the standardization and process workflow
+  for access and training on each laboratory and all equipment of the Facility.
 ---
 
 ![imagem_quimico_uff](/assets/images/cary_5000.jpg){: .align-left}

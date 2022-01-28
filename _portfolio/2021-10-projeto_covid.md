@@ -9,10 +9,10 @@ header:
   image: /portfolio/projeto_covid_files/covid_banner.jpg
   og_image: /portfolio/projeto_covid_files/covid_logo.jpg
 description: |
-  It has been almost 2 years since the emergence of COVID-19 virus.
+  It has been almost 2 years since the emergence of the COVID-19 virus.
   The pandemic control measures adopted by governments around the world have 
   significantly affected everyone's routine. With that in mind, it is of great 
-  interest to follow and evaluate the evolution of pandemic to know its real 
+  interest to follow and evaluate the evolution of the pandemic to know its real 
   effects and to consider the return to normal life.
 ---
 

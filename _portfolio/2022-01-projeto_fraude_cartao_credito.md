@@ -12,8 +12,9 @@ header:
   image: https://raw.githubusercontent.com/chicolucio/credit-card-fraud-detection/master/img/fraud.jpg
 description: |
   In this work, we will use a credit card transactions database to study 
-  different algorithms which can be used to classify a given transaction 
-  as fraudulent or not.
+  different algorithms, which can be used to classify a given transaction 
+  as fraudulent or not. We will see how to deal with unbalanced databases
+  in Scikit Learn.
 ---
 
 Por: [Francisco Bustamante](https://franciscobustamante.com.br/)
