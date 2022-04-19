@@ -2,7 +2,7 @@
 name: Educational software development
 title: Desenvolvimento de softwares educacionais
 image: /assets/images/animation_small.gif
-period: 2015 - present
+period: 2015 - 2022
 position: 9
 description: |
   I'm the researcher responsible for a development group of interactive

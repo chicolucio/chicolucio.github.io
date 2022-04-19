@@ -32,7 +32,7 @@ Matplotlib and others to:
 To see the project website [click
 here](https://cienciaprogramada.com.br/) (Brazilian Portuguese)
 
-### 2015 - Present: Researcher and teacher at IFRJ - Instituto Federal de Educação, Ciência e Tecnologia do Rio de Janeiro (Brazil)
+### 2015 - 2022: Researcher and teacher at IFRJ - Instituto Federal de Educação, Ciência e Tecnologia do Rio de Janeiro (Brazil)
 
 - Launched a research group to develop educational software using Python to have
 the following characteristics:
