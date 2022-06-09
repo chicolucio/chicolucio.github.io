@@ -1,26 +1,27 @@
 ---
 name: Statistical analysis of student grades with Python
-title: Python no tratamento estatístico de dados de uma olimpíada de estudantes
+title: Statistical analysis of student grades with Python
 image: /assets/images/oiq_small.png
 position: 10
 period: 2019
 description: |
-  Use of Python and Pandas library to evaluate the students' performance in a 
+  Use of Python and Pandas package to evaluate the students' performance in a 
   Chemistry Olympiad at an educational institution.
 ---
 
 ![logo_CP](/assets/images/oiq_small.png){: .align-left}
-Demonstração de como usar Python e sua biblioteca Pandas para avaliar o
-desempenho de estudantes em uma Olimpíada de Química. O material é aberto para a
-comunidade com o intuito de mostrar as potencialidades de uso para os
-professores e alunos da instituição envolvida e outras que também façam
-atividades similares e que gostariam de avaliar seus resultados. 
+Use of Python and Pandas package to evaluate the students’ performance in a
+Chemistry Olympiad at an educational institution.
 
-Destaques do projeto:
+The project is open to the institution staff and students. The aim is to show
+how data analysis can be made with Python and how it can provide useful
+insights.
 
-- Uso de estatística descritiva em um projeto real e que pode ser utilizado em
-disciplinas da própria instituição
-- Demonstração de análise de dados com Pandas
-- Construção de gráficos com Matplotlib
+Project highlights:
 
-[Link do projeto](https://github.com/chicolucio/estatisticas-oiq-2019).
+- descriptive statistics in a real-world project
+- the data can be used in the statistics courses of the institution
+- demonstration of data analysis using Pandas
+- demonstration of high-quality visualizations using Matplotlib
+
+[Project repository](https://github.com/chicolucio/estatisticas-oiq-2019).
