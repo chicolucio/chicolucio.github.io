@@ -1,6 +1,6 @@
 ---
 name: Laboratory manager
-title: Gestor de laboratório
+title: Laboratory manager
 image: /assets/images/cary_5000.jpg
 period: 2014 - 2015
 position: 98
@@ -12,34 +12,27 @@ description: |
 ---
 
 ![imagem_quimico_uff](/assets/images/cary_5000.jpg){: .align-left}
-Durante meu período como químico responsável pela Central Analítica do Instituto
-de Química da UFF - Universidade Federal Fluminense tive o grande desafio de
-tornar mais acessível e eficiente o fluxo de análises dos diversos laboratórios
-que compunham a Central. Para isso:
+Managed the Central Analytical Facility of the Chemistry Institute at UFF -
+Universidade Federal Fluminense, a Brazilian federal university. Increased the
+availability of the laboratory equipment. Automated the scheduling and usage
+report processes. Launched training courses.
 
-- desenvolvi, com o auxílio de ferramentas gratuitas como o Google Calendar e
-Google Forms devido a restrições orçamentárias, um sistema simples, mas
-eficiente, de agendamento e controle de uso dos equipamentos de cada laboratório
-parte da Central Analítica; 
-- fui instrutor de diversos treinamentos para uso dos equipamentos e tratamento
-dos resultados com softwares como o [Origin](https://www.originlab.com/)
-- organizei a elaboração de Procedimentos Operacionais Padrões (POPs) para
-diversos equipamentos;
-- por ter conhecimentos de desenvolvimento web, passei a compor a equipe de
-elaboração dos sites dos laboratórios, atualizando as páginas já existentes para
-apresentarem os POPs e o sistema de agendamento.
+Highlights:
 
-Os laboratórios ainda utilizam o sistema desenvolvido atualmente (2020 quando 
-escrevo) como, por exemplo, o [Laboratório Multiusuário de Caracterização de
-Materiais](http://www.lamate.uff.br/index.php/formularios-new) e o [Laboratório
-Multiusuário de Espectroscopia](http://www.lame.uff.br/index.php/formularios).
+- Automated the analyses scheduling process with Google Suite
+    - Increased the availability of laboratory equipment by 100 %
+- Automated the equipment usage report with Python
+- Launched equipment training and data analysis courses
+    - More than one hundred students, technicians, and teachers trained
+- Built and implemented the standardization and process workflow for access and
+training on each laboratory and all equipment of the Facility
 
-Treinamentos ministrados:
+Training courses offered by me:
 
-- Tratamento de dados com software Origin
-- Realização de análises de espalhamento de luz dinâmico e potencial zeta e 
-tratamento dos dados - Malvern Zetasizer Nano ZS90
-- Realização de análises termogravimétricas e tratamento dos dados - Shimadzu DTG-60
-- Realização de análises espectrofotométricas - Varian Cary 50
-- Realização de análises espectrofotométricas - Varian Cary 5000
-- Realização de análises espectrofotométricas - FTIR Varian 660
+- Data analysis with Excel
+- Data analysis with Origin
+- Zeta potential and particle size analyses - Malvern Zetasizer Nano ZS90
+- Thermogravimetric analyses - Shimadzu DTG-60
+- Spectrophotometric analyses - Varian Cary 50
+- Spectrophotometric analyses - Varian Cary 5000
+- Spectrophotometric analyses - FTIR Varian 660
