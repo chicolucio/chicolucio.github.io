@@ -1,6 +1,6 @@
 ---
 name: Educational software development
-title: Desenvolvimento de softwares educacionais
+title: Educational software development
 image: /assets/images/animation_small.gif
 period: 2015 - 2022
 position: 9
@@ -11,40 +11,30 @@ description: |
 ---
 
 ![planck_animation](/assets/images/animation_small.gif){: .align-left}
-Pesquisador responsável por grupo de estudos no IFRJ para desenvolver materiais
-interativos, baseados na linguagem de programação Python e na ferramenta Jupyter
-Notebook, que auxiliem no aprendizado das disciplinas de química.
+Researcher responsible for a development group of interactive educational
+software, based on the Python programming language and the Jupyter Notebook
+tool. The developed pieces of software are used in chemistry classes.
 
-Busca-se mostrar a aplicação das ferramentas em exercícios e em problemas
-aplicados. Também é objetivo desenvolver nos estudantes, tanto os envolvidos na
-elaboração do projeto quanto nos que terão acesso aos materiais interativos
-desenvolvidos, maior afinidade e desenvoltura com o uso de técnicas
-computacionais e mostrar como podem ser utilizadas para tratar dados e comunicar
-resultados.  O seguinte esquema ilustra as ideias principais do projeto:
+The group aims to show how computational tools can be used in real chemical
+problems. Jupyter Notebooks were chosen because they provide an easy way to
+integrate text, calculations, and visualizations.
+
+The following chart and bullet points summarize the research group philosophy:
 
 ![imagem_ensino](/assets/images/edu02.png){: .align-center}
 
-Habilidades desenvolvidas pelos integrantes:
-- Programação em Python com boas práticas (testes automatizados, controle de
-versão com Git)
-- Trabalho em equipe e gerenciamento de projetos com Trello e GitHub
-- Principais bibliotecas científicas do Python: Numpy, Scipy, Sympy, Pandas
-- Principais bibliotecas de construção de gráficos do Python: Matplotlib e
-Plotly
+- Good practices (automated tests, version control with Git)
+- Team management with Trello and GitHub
+- Main scientific Python packages: NumPy, SciPy, SymPy, and Pandas
+- Main visualization Python packages: Matplotlib and Plotly
 
-Exemplos de materiais já desenvolvidos:
+Here are some products of the project:
 
-- [Demonstração interativa da Lei de
-Planck](https://github.com/chicolucio/planck) 
-- [Diagramas de fases interativos](https://github.com/chicolucio/PhaseDiagram)
-- [Diagramas de espécies interativos](https://github.com/chicolucio/pH-diagrams)
-- [Visualização das diferenças entre modelos de carga nuclear 
-efetiva](https://github.com/chicolucio/zeff) 
-- [Visualização da superfície pressão x volume x temperatura em gases
-ideais](https://github.com/chicolucio/ideal_gases) 
-- [Visualização e comparação de dados de solubilidade de compostos 
-inorgânicos](https://github.com/chicolucio/solutions)
+- [Planck's Law interactive plot](https://github.com/chicolucio/planck)
+- [Interactive phase diagrams](https://github.com/chicolucio/PhaseDiagram)
+- [Interactive species diagrams](https://github.com/chicolucio/pH-diagrams)
+- [Effective nuclear charge diagrams](https://github.com/chicolucio/zeff)
+- [Ideal gases pressure x volume x temperature surface](https://github.com/chicolucio/ideal_gases)
+- [Comparing the solubility of inorganic compounds](https://github.com/chicolucio/solutions)
 
-Também desenvolvi um projeto não relacionado ao ensino de química e, sim, ao
-ensino de lógica matemática: um [gerador de tabelas-
-verdade](https://github.com/chicolucio/truth-table-generator).
+I have made some math related projects too, that can be seen [here](/portfolio/2019-math_projects/).
