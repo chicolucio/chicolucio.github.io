@@ -24,7 +24,7 @@ Follow the links to more details about each one.
     {{ project.period }}
   </p>
 
-  ![image-left]({{ project.image }}){: .align-left} {{ project.description }}
+  ![image-left]({{ project.image }}){: .align-left width="250"} {{ project.description }}
 
   <div class="full" style="clear:both">
   </div>
