@@ -3,7 +3,7 @@ name: Educational software development
 title: Educational software development
 image: /assets/images/animation_small.gif
 period: 2015 - 2022
-position: 9
+position: 5
 description: |
   I'm the researcher responsible for a development group of interactive
   educational software, based on the Python programming language and the Jupyter
@@ -21,7 +21,7 @@ integrate text, calculations, and visualizations.
 
 The following chart and bullet points summarize the research group philosophy:
 
-![imagem_ensino](/assets/images/edu02.png){: .align-center}
+![imagem_ensino](/assets/images/edu02_english.png){: .align-center}
 
 - Good practices (automated tests, version control with Git)
 - Team management with Trello and GitHub
