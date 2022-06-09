@@ -32,7 +32,7 @@ Matplotlib and others to:
 To see the project website [click
 here](https://cienciaprogramada.com.br/) (Brazilian Portuguese)
 
-### 2015 - 2022: Researcher and teacher at IFRJ - Instituto Federal de Educação, Ciência e Tecnologia do Rio de Janeiro (Brazil)
+### 2015 - 2022: Researcher and Professor at IFRJ - Instituto Federal de Educação, Ciência e Tecnologia do Rio de Janeiro (Brazil)
 
 - Launched a research group to develop educational software using Python to have
 the following characteristics:
@@ -70,7 +70,7 @@ Analysis Laboratory
 To see the projects I've developed related to this experience [click
 here](/portfolio/2014-2014-inea)
 
-### 2012 - 2014: Researcher and teacher at UFF - Universidade Federal Fluminense  (Brazil)
+### 2012 - 2014: Researcher and Professor at UFF - Universidade Federal Fluminense  (Brazil)
 
 - Supervised two projects regarding the creation of new low-cost educational
 resources 
@@ -96,10 +96,8 @@ resources
 
 ### Academic experience
 
-To see the projects I've develop during my education [click
+To see the projects I've developed during my education [click
 here](/portfolio/2008-2013-pesquisa).
-<!-- TODO make an entry about my "monitoria" -->
-<!-- TODO maybe an entry for each project below -->
 
 #### Master's Degree in Chemistry, Universidade Federal Fluminense - 2010-2012
 
