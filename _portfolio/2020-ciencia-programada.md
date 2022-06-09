@@ -20,7 +20,7 @@ I also cover Data Science topics and coding best practices.
 The website and the YouTube channel have thousands of views per month.
 
 Below, there are some articles from the website. I translated the titles to
-English, but the texts are in Brazilian Portuguese.
+English, but the texts are written in Brazilian Portuguese.
 
 - [Analyzing Olympics data with Pandas and Plotly](https://cienciaprogramada.com.br/2021/08/dados-olimpiadas-pandas-plotly/)
 - [Usain Bolt vs. Python: calculating the speed of an athlete](https://cienciaprogramada.com.br/2020/09/bolt-python-determinando-velocidade-atleta-olimpico/)
