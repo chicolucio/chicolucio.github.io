@@ -2,7 +2,7 @@
 name: Global overview of COVID-19
 title: Panorama do COVID-19 no mundo
 image: /portfolio/projeto_covid_files/covid_logo.jpg
-position: 8
+position: 9
 period: October 2021
 toc: true
 header:
@@ -16,9 +16,24 @@ description: |
   effects and to consider the return to normal life.
 ---
 
-Por: [Francisco Bustamante](https://franciscobustamante.com.br/)
+A **new version** of this study [can be found here](/portfolio/2022-04-project_covid/).
 
 ---
+
+## Abstract
+
+It has been almost 2 years since the emergence of the COVID-19 virus.
+The pandemic control measures adopted by governments around the world have 
+significantly affected everyone's routine. With that in mind, it is of great 
+interest to follow and evaluate the evolution of the pandemic to know its real 
+effects and to consider the return to normal life. In this study, OWID data
+was used to see the evolution of cases, deaths, and vaccination. The impact of
+new variants on cases and deaths was shown as well as a possible relation
+with winter season.
+
+The following page is written in Brazilian Portuguese.
+
+## Introdução
 
 A COVID-19 é uma doença infecciosa causada por um recém-descoberto coronavírus.
 

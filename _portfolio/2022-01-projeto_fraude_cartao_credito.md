@@ -17,9 +17,16 @@ description: |
   in Scikit Learn.
 ---
 
-Por: [Francisco Bustamante](https://franciscobustamante.com.br/)
+## Abstract
 
----
+In this work, we will use a credit card transactions database to study 
+different algorithms, which can be used to classify a given transaction 
+as fraudulent or not. We will see how to deal with unbalanced databases
+in Scikit Learn.
+
+The following page is written in Brazilian Portuguese.
+
+## Resumo
 
 Nas últimas décadas, com o aumento constante de operações financeiras
 realizadas, fraudes com cartões de crédito têm se tornado um problema
@@ -1423,17 +1430,13 @@ dataset original:
 ![png](../projeto_fraude_cartao_credito_files/projeto_fraude_cartao_credito_79_0.png)
     
 
-<!-- TODO corrigir figura a seguir... -->
 
-    
 ![png](../projeto_fraude_cartao_credito_files/projeto_fraude_cartao_credito_80_0.png)
     
 
 Observa-se o mesmo comportamento.
 
 Comecemos, então, a verificar como foi o treinamento dos modelos.
-
-<!-- TODO mudar tempos verbais do texto -->
 
 ## Avaliando modelos
 

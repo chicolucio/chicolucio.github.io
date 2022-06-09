@@ -16,10 +16,21 @@ description: |
   we learn from COVID data?
 ---
 
-Por: [Francisco Bustamante](https://franciscobustamante.com.br/)
+## Abstract
 
+It has been 2 years since the emergence of the COVID-19 virus.
+The pandemic control measures adopted by governments around the world have 
+significantly affected everyone's routine. Now, most governments are
+relaxing COVID restrictions despite high omicron variant spread. 
+In this study, Our World in Data (OWID) database was used to see the evolution of
+cases, deaths, and vaccination. The impact of new variants on cases and deaths
+was shown as well as a possible relation with winter season. Some countries were
+selected to a more detailed view in order to compare the ones that did not adopt
+restrict measures with those that did.
 
----
+The following page is written in Brazilian Portuguese.
+
+## Introdução
 
 A COVID-19 é uma doença infecciosa causada por um recém-descoberto coronavírus.
 
