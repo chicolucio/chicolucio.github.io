@@ -1,6 +1,6 @@
 ---
 name: Science communication at Ciência Programada
-title: Comunicação científica no Ciência Programada
+title: Science communication at Ciência Programada
 image: /assets/images/CP_instagram_profile.png
 period: 2020 - present
 position: 7
@@ -12,27 +12,25 @@ description: |
 ---
 
 ![logo_CP](/assets/images/CP_instagram_profile.png){: .align-left}
-Projeto pessoal de uma plataforma de divulgação científica, com foco em uso e
-desenvolvimento de ferramentas tecnológicas.  Mostro como podemos utilizar
-Python e softwares para entender melhor conceitos científicos e situações do
-cotidiano. Abordo também temas de Data Science e boas práticas de programação.
+This is a personal project of a scientific communication platform, focused on
+usage and development of technological tools. I show how we can use Python and
+software for a better understanding of scientific concepts and daily situations.
+I also cover Data Science topics and coding best practices.
 
-Alguns exemplos de artigos:
+The website and the YouTube channel have thousands of views per month.
 
-- [Analisando dados das Olimpíadas com Pandas e
-Plotly](https://cienciaprogramada.com.br/2021/08/dados-olimpiadas-pandas-plotly/)
-- [Bolt vs Python: determinando a velocidade de um atleta
-olímpico](https://cienciaprogramada.com.br/2020/09/bolt-python-determinando-velocidade-atleta-olimpico/)
-- [Estudando nossa atmosfera com
-Python](https://cienciaprogramada.com.br/2020/12/estudando-atmosfera-python/)
-- [Criando um ambiente virtual para seu projeto
-Python](https://cienciaprogramada.com.br/2020/08/ambiente-virtual-projeto-python/)
-- [Git e GitHub: Guia definitivo de
-colaboração](https://cienciaprogramada.com.br/2021/09/guia-definitivo-git-github/)
-- [Série de artigos sobre o
-SymPy](https://cienciaprogramada.com.br/category/sympy/)
+Below, there are some articles from the website. I translated the titles to
+English, but the texts are in Brazilian Portuguese.
 
-Links do projeto: [site](https://cienciaprogramada.com.br/),
-[Instagram](https://instagram.com/cienciaprogramada),
-[Twitter](https://twitter.com/cienciaprog) e
-[YouTube](https://www.youtube.com/channel/UCrUs_osDl_GaHgUdU7v3YGw).
+- [Analyzing Olympics data with Pandas and Plotly](https://cienciaprogramada.com.br/2021/08/dados-olimpiadas-pandas-plotly/)
+- [Usain Bolt vs. Python: calculating the speed of an athlete](https://cienciaprogramada.com.br/2020/09/bolt-python-determinando-velocidade-atleta-olimpico/)
+- [Studying our atmosphere with Python](https://cienciaprogramada.com.br/2020/12/estudando-atmosfera-python/)
+- [Creating a virtual environment for your Python project](https://cienciaprogramada.com.br/2020/08/ambiente-virtual-projeto-python/)
+- [Git and GitHub: definite guide to collaboration](https://cienciaprogramada.com.br/2021/09/guia-definitivo-git-github/)
+- [SymPy tutorials](https://cienciaprogramada.com.br/category/sympy/)
+- [Chemical process mass balance with Python](https://cienciaprogramada.com.br/2022/04/balanco-massa-python-sympy/)
+- [Top 3 chemistry Python packages](https://cienciaprogramada.com.br/2022/02/top-3-bibliotecas-python-quimica/)
+
+Project links:
+- [Site](https://cienciaprogramada.com.br/)
+- [YouTube](https://www.youtube.com/channel/UCrUs_osDl_GaHgUdU7v3YGw).
