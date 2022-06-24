@@ -5,16 +5,16 @@ image: https://github.com/Ciencia-Programada/articles-images/blob/master/churn/1
 position: 1
 period: June 2022
 toc: true
+mathjax: true
 header:
   image: https://github.com/Ciencia-Programada/articles-images/blob/master/churn/churn-prediction-article-banner.jpg?raw=true
   og_image: https://github.com/Ciencia-Programada/articles-images/blob/master/churn/1.jpg?raw=true
 description: |
   Churn is a measure of how many customers stop using a service or product,
-  often evaluated for a specific period of time. One of the biggest difficulties
-  in telecommunication industry is to retain the customers and prevent the
-  churn. In this study, a churn level prediction process is carried out using
-  machine learning. A dataset with over 7000 customers of a telecom company is
-  used. An action plan for the company is designed based on the results.
+  often evaluated for a specific period of time. In this study, a churn level
+  prediction process is carried out using machine learning. A dataset with over
+  7000 customers of a telecom company is used. An action plan for the company is
+  designed based on the results.
 ---
 
 ## Abstract
@@ -30,6 +30,11 @@ The complete dataset and auxiliary files can be found in the project repository 
 [<center><img alt="GitHub" width="10%" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png
 "></center>](https://github.com/chicolucio/customer-churn-prediction)
 
+The full project notebook, with all the code, can also be seen on Deepnote:
+[<img src="https://deepnote.com/buttons/launch-in-deepnote.svg">](https://deepnote.com/@flsbustamante/customer-churn-prediction-8eac729e-7ba2-4fb2-9ce0-7018e476d572)
+
+In this article, all the discussion, results, and outputs of the Jupyter Notebook used to develop the study will be shown. The code can be seen on the links above.
+
 ## Contextualization
 
 ![churn](https://github.com/Ciencia-Programada/articles-images/blob/master/churn/1.jpg?raw=true)
@@ -44,7 +49,7 @@ Churn management involves, among many others:
 
 But why do customers churn? [[4](https://www.productplan.com/glossary/churn/)]
 
-There is no unique answer. However we can think of a few likely causes:
+There is no unique answer. However, we can think of a few likely causes:
 
 - customer no longer values the product
 - motivating factors to use the product no longer exists
@@ -94,8 +99,7 @@ The following libraries were used. A Conda environment file is available at the 
     
     Python version: 3.9.12
 
-
-The following cell imports all the classes and functions needed. Some custom functions were developed, as well as a custom Matplotlib style. Their code is in the `scripts` folder at the project repository [[7](https://github.com/chicolucio/customer-churn-prediction)].
+In this article all the results and outputs of the Jupyter Notebook used to develop the study will be shown. The complete code can be found on the project repository [[7](https://github.com/chicolucio/customer-churn-prediction)].
 
 ## Summarizing data and understanding the problem in hand
 
@@ -169,9 +173,9 @@ We can now enhance our methodology flow chart with all these steps, as shown in 
 
 
 
-### Basic info
+### Basic info and data wrangling
 
-Let's get some basic info about our dataset to get familiarized with it:
+Let's get some basic info about our dataset to get familiarized with it. The following table has the first 5 entries of the dataset:
 
 
 <div>
@@ -188,7 +192,7 @@ Let's get some basic info about our dataset to get familiarized with it:
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -341,142 +345,20 @@ Let's get some basic info about our dataset to get familiarized with it:
 </div>
 
 
-There is an inconsistent representation of the categorical column `SeniorCitizen`. All other categorical columns have strings as entries, like *Yes* or *No*. In the `SeniorCitizen` column, *0* means *No* and *1* means *Yes*. We will deal with it later.
-
-Let's check the size of the dataset and the types of each column:
+Let's check the size of the dataset:
 
     Number of instances (rows):       7043
     Number of attributes (columns):    21
 
+The dataset has the following problems that were solved (see [notebook on GitHub](https://github.com/chicolucio/customer-churn-prediction) for details):
 
-    <class 'pandas.core.frame.DataFrame'>
-    RangeIndex: 7043 entries, 0 to 7042
-    Data columns (total 21 columns):
-     #   Column            Non-Null Count  Dtype  
-    ---  ------            --------------  -----  
-     0   customerID        7043 non-null   object 
-     1   gender            7043 non-null   object 
-     2   SeniorCitizen     7043 non-null   int64  
-     3   Partner           7043 non-null   object 
-     4   Dependents        7043 non-null   object 
-     5   tenure            7043 non-null   int64  
-     6   PhoneService      7043 non-null   object 
-     7   MultipleLines     7043 non-null   object 
-     8   InternetService   7043 non-null   object 
-     9   OnlineSecurity    7043 non-null   object 
-     10  OnlineBackup      7043 non-null   object 
-     11  DeviceProtection  7043 non-null   object 
-     12  TechSupport       7043 non-null   object 
-     13  StreamingTV       7043 non-null   object 
-     14  StreamingMovies   7043 non-null   object 
-     15  Contract          7043 non-null   object 
-     16  PaperlessBilling  7043 non-null   object 
-     17  PaymentMethod     7043 non-null   object 
-     18  MonthlyCharges    7043 non-null   float64
-     19  TotalCharges      7043 non-null   object 
-     20  Churn             7043 non-null   object 
-    dtypes: float64(1), int64(2), object(18)
-    memory usage: 1.1+ MB
+- inconsistent representation of the categorical column `SeniorCitizen`
+- wrong data type, `object` in `TotalCharges` due to spaces (` `) that should be null entries
+  - the spaces were converted to `NaN` revealing that 11 entries were null ones
+  - these null entries were filled with the median value of the column
+  - the final data type of the column was `float64`, as expect for a numeric column
 
-
-It appears that there are no missing values. However, the `TotalCharges` column should be float type. Probably it is being recognized as object due to some empty entries recorded as strings with spaces. Let's check:
-
-
-
-
-    11
-
-
-
-There are 11 entries in `TotalCharges` with empty spaces. Before dealing with it, it is wise to check if this issue happens in other columns:
-
-    customerID           0
-    gender               0
-    Partner              0
-    Dependents           0
-    PhoneService         0
-    MultipleLines        0
-    InternetService      0
-    OnlineSecurity       0
-    OnlineBackup         0
-    DeviceProtection     0
-    TechSupport          0
-    StreamingTV          0
-    StreamingMovies      0
-    Contract             0
-    PaperlessBilling     0
-    PaymentMethod        0
-    TotalCharges         11
-    Churn                0
-
-
-Only the `TotalCharges` column has spaces.
-
-### Data wrangling
-
-As seen before, we have an inconsistent representation problem and spaces in a column that should be numerical. We are going to replace the 0/1 representation in the `SeniorCitizen` column by *No/Yes* so that this column in correctly addressed as a categorical one during the EDA. Later in this study, all categorical columns will be encoded, as many algorithms need numerical inputs. All the spaces will be replaced by `NaN` and the `to_numeric` method of Pandas will be applied in all the dataset columns to force numeric types where they are needed:
-
-Let's confirm that all previous entries with spaces are now recognized as null entries:
-
-    <class 'pandas.core.frame.DataFrame'>
-    RangeIndex: 7043 entries, 0 to 7042
-    Data columns (total 21 columns):
-     #   Column            Non-Null Count  Dtype  
-    ---  ------            --------------  -----  
-     0   customerID        7043 non-null   object 
-     1   gender            7043 non-null   object 
-     2   SeniorCitizen     7043 non-null   object 
-     3   Partner           7043 non-null   object 
-     4   Dependents        7043 non-null   object 
-     5   tenure            7043 non-null   int64  
-     6   PhoneService      7043 non-null   object 
-     7   MultipleLines     7043 non-null   object 
-     8   InternetService   7043 non-null   object 
-     9   OnlineSecurity    7043 non-null   object 
-     10  OnlineBackup      7043 non-null   object 
-     11  DeviceProtection  7043 non-null   object 
-     12  TechSupport       7043 non-null   object 
-     13  StreamingTV       7043 non-null   object 
-     14  StreamingMovies   7043 non-null   object 
-     15  Contract          7043 non-null   object 
-     16  PaperlessBilling  7043 non-null   object 
-     17  PaymentMethod     7043 non-null   object 
-     18  MonthlyCharges    7043 non-null   float64
-     19  TotalCharges      7032 non-null   float64
-     20  Churn             7043 non-null   object 
-    dtypes: float64(2), int64(1), object(18)
-    memory usage: 1.1+ MB
-
-
-
-
-
-    customerID           0
-    gender               0
-    SeniorCitizen        0
-    Partner              0
-    Dependents           0
-    tenure               0
-    PhoneService         0
-    MultipleLines        0
-    InternetService      0
-    OnlineSecurity       0
-    OnlineBackup         0
-    DeviceProtection     0
-    TechSupport          0
-    StreamingTV          0
-    StreamingMovies      0
-    Contract             0
-    PaperlessBilling     0
-    PaymentMethod        0
-    MonthlyCharges       0
-    TotalCharges        11
-    Churn                0
-    dtype: int64
-
-
-
-All the null entries are in the `TotalCharges` column, a numeric column. With the `describe` method, we can generate descriptive statistics to all numeric columns:
+After the due wrangling of the dataset, we can generate descriptive statistics to all numeric columns:
 
 
 <div>
@@ -493,7 +375,7 @@ All the null entries are in the `TotalCharges` column, a numeric column. With th
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -556,366 +438,10 @@ All the null entries are in the `TotalCharges` column, a numeric column. With th
 </div>
 
 
-As expected, `TotalCharges` has a broad range of values. Let's see the proportion of empty entries in this column and see the correspondent entries in other columns:
-
-
-
-
-    0.1561834445548772
-
-
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>customerID</th>
-      <th>gender</th>
-      <th>SeniorCitizen</th>
-      <th>Partner</th>
-      <th>Dependents</th>
-      <th>tenure</th>
-      <th>PhoneService</th>
-      <th>MultipleLines</th>
-      <th>InternetService</th>
-      <th>OnlineSecurity</th>
-      <th>...</th>
-      <th>DeviceProtection</th>
-      <th>TechSupport</th>
-      <th>StreamingTV</th>
-      <th>StreamingMovies</th>
-      <th>Contract</th>
-      <th>PaperlessBilling</th>
-      <th>PaymentMethod</th>
-      <th>MonthlyCharges</th>
-      <th>TotalCharges</th>
-      <th>Churn</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>488</th>
-      <td>4472-LVYGI</td>
-      <td>Female</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>0</td>
-      <td>No</td>
-      <td>No phone service</td>
-      <td>DSL</td>
-      <td>Yes</td>
-      <td>...</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>Two year</td>
-      <td>Yes</td>
-      <td>Bank transfer (automatic)</td>
-      <td>52.55</td>
-      <td>NaN</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>753</th>
-      <td>3115-CZMZD</td>
-      <td>Male</td>
-      <td>No</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>0</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No internet service</td>
-      <td>...</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>Two year</td>
-      <td>No</td>
-      <td>Mailed check</td>
-      <td>20.25</td>
-      <td>NaN</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>936</th>
-      <td>5709-LVOEQ</td>
-      <td>Female</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>0</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>DSL</td>
-      <td>Yes</td>
-      <td>...</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Two year</td>
-      <td>No</td>
-      <td>Mailed check</td>
-      <td>80.85</td>
-      <td>NaN</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>1082</th>
-      <td>4367-NUYAO</td>
-      <td>Male</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>0</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No internet service</td>
-      <td>...</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>Two year</td>
-      <td>No</td>
-      <td>Mailed check</td>
-      <td>25.75</td>
-      <td>NaN</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>1340</th>
-      <td>1371-DWPAZ</td>
-      <td>Female</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>0</td>
-      <td>No</td>
-      <td>No phone service</td>
-      <td>DSL</td>
-      <td>Yes</td>
-      <td>...</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>Two year</td>
-      <td>No</td>
-      <td>Credit card (automatic)</td>
-      <td>56.05</td>
-      <td>NaN</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>3331</th>
-      <td>7644-OMVMY</td>
-      <td>Male</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>0</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No internet service</td>
-      <td>...</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>Two year</td>
-      <td>No</td>
-      <td>Mailed check</td>
-      <td>19.85</td>
-      <td>NaN</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>3826</th>
-      <td>3213-VVOLG</td>
-      <td>Male</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>0</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No internet service</td>
-      <td>...</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>Two year</td>
-      <td>No</td>
-      <td>Mailed check</td>
-      <td>25.35</td>
-      <td>NaN</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>4380</th>
-      <td>2520-SGTTA</td>
-      <td>Female</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>0</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No internet service</td>
-      <td>...</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>Two year</td>
-      <td>No</td>
-      <td>Mailed check</td>
-      <td>20.00</td>
-      <td>NaN</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>5218</th>
-      <td>2923-ARZLG</td>
-      <td>Male</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>0</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No internet service</td>
-      <td>...</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>No internet service</td>
-      <td>One year</td>
-      <td>Yes</td>
-      <td>Mailed check</td>
-      <td>19.70</td>
-      <td>NaN</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>6670</th>
-      <td>4075-WKNIU</td>
-      <td>Female</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>0</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>DSL</td>
-      <td>No</td>
-      <td>...</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>Two year</td>
-      <td>No</td>
-      <td>Mailed check</td>
-      <td>73.35</td>
-      <td>NaN</td>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>6754</th>
-      <td>2775-SEFEE</td>
-      <td>Male</td>
-      <td>No</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>0</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>DSL</td>
-      <td>Yes</td>
-      <td>...</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No</td>
-      <td>Two year</td>
-      <td>Yes</td>
-      <td>Bank transfer (automatic)</td>
-      <td>61.90</td>
-      <td>NaN</td>
-      <td>No</td>
-    </tr>
-  </tbody>
-</table>
-<p>11 rows × 21 columns</p>
-</div>
-
-
-
-We could remove `TotalCharges` empty rows since is a small percentage of the dataset. However, these rows are legit as they correspond to new customers (`tenure == 0`). Even though there are values in `MonthlyCharges` column, there is no total values. As described in the data dictionary, the total charges are summed up quarterly, so new customers will not have entries. We could fill the gaps with zero or some reasonable value. Since the wide range, we will fill with the median value:
-
-Let's check if there are entries with *0* in other columns besides `tenure`:
-
-
-
-
-    customerID           0
-    gender               0
-    SeniorCitizen        0
-    Partner              0
-    Dependents           0
-    tenure              11
-    PhoneService         0
-    MultipleLines        0
-    InternetService      0
-    OnlineSecurity       0
-    OnlineBackup         0
-    DeviceProtection     0
-    TechSupport          0
-    StreamingTV          0
-    StreamingMovies      0
-    Contract             0
-    PaperlessBilling     0
-    PaymentMethod        0
-    MonthlyCharges       0
-    TotalCharges         0
-    Churn                0
-    dtype: int64
-
+As expected, `TotalCharges` has a broad range of values. 
 
 
 Now, we can check the unique values for each column. This is a great way to understand categorical features:
-
-
 
 
     customerID          7043
@@ -943,8 +469,7 @@ Now, we can check the unique values for each column. This is a great way to unde
 
 
 
-The demographics columns have two categories each, while most of the services related columns have three. We can use the `describe` method, configure to deal with non-numerical data, to extract more information of these columns:
-
+The demographics columns have two categories each, while most of the services related columns have three. We can extract more information of these columns:
 
 
 
@@ -962,7 +487,7 @@ The demographics columns have two categories each, while most of the services re
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -1098,28 +623,8 @@ It's time to get visual.
 We are interested in the churn rate, so let's start with the target column. Let's find out the proportion of churn:
 
 
-
-
-    Churn
-    No     5174
-    Yes    1869
-    dtype: int64
-
-
-
-
-
-
-    Churn
-    No     73.463013
-    Yes    26.536987
-    dtype: float64
-
-
-
-
     
-![png](project_churn_prediction_files/project_churn_prediction_47_0.png)
+![png](../project_churn_prediction_files/project_churn_prediction_47_0.png)
     
 
 
@@ -1129,7 +634,7 @@ First, we will look at the numerical features. Starting with histograms to searc
 
 
     
-![png](project_churn_prediction_files/project_churn_prediction_49_0.png)
+![png](../project_churn_prediction_files/project_churn_prediction_49_0.png)
     
 
 
@@ -1141,19 +646,17 @@ Let's check if the tenure distribution has some kind of relation with the kind o
 
 
     
-![png](project_churn_prediction_files/project_churn_prediction_52_0.png)
+![png](../project_churn_prediction_files/project_churn_prediction_52_0.png)
     
 
 
 As can be seen, most of the monthly contracts last for a few months, while the 2 years contracts tend to last for years, with a great increase towards the greater values of tenure in this dataset. This implies that customers with a great commitment at the beginning, like a 2-year contract, tend to stay with the company for a longer period of time. Long-term contracts usually have contractual fines. Therefore, customers have to wait until the end of the contract to churn. It is not clear if it is the case. A time-series data would be better to study this.
 
-As seem before, we have numerical and categorical columns. Below, we are going to create variables to these different columns and drop the `customerID` column:
-
-Let's start to see how our target variable relates with our numerical features.
+As seem before, we have numerical and categorical columns. Let's start to see how our target variable relates with our numerical features.
 
 
     
-![png](project_churn_prediction_files/project_churn_prediction_57_0.png)
+![png](../project_churn_prediction_files/project_churn_prediction_57_0.png)
     
 
 
@@ -1161,7 +664,7 @@ The above plot shows that short tenure (recent) customers have higher churn rate
 
 
     
-![png](project_churn_prediction_files/project_churn_prediction_59_0.png)
+![png](../project_churn_prediction_files/project_churn_prediction_59_0.png)
     
 
 
@@ -1175,7 +678,7 @@ Now the categorical features. Let's find out the proportion of each category:
 
 
     
-![png](project_churn_prediction_files/project_churn_prediction_62_0.png)
+![png](../project_churn_prediction_files/project_churn_prediction_62_0.png)
     
 
 
@@ -1192,7 +695,7 @@ We see that some categorical features have 'No' and 'No internet service' (or 'N
 
 
     
-![png](project_churn_prediction_files/project_churn_prediction_64_0.png)
+![png](../project_churn_prediction_files/project_churn_prediction_64_0.png)
     
 
 
@@ -1222,7 +725,7 @@ We can explore more details about the internet service:
 
 
     
-![png](project_churn_prediction_files/project_churn_prediction_66_0.png)
+![png](../project_churn_prediction_files/project_churn_prediction_66_0.png)
     
 
 
@@ -1232,293 +735,18 @@ The data suggest that the more people at the customers' places, the less churn. 
 
 For marketing reasons, we can see how many customers who have partners also have dependents. Assuming that, in most cases, "dependents" mean children, it is more likely that customers with partners will also have dependents. Let's check this assumption.
 
-First, let's group our data frame:
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Dependents</th>
-      <th>No</th>
-      <th>Yes</th>
-    </tr>
-    <tr>
-      <th>Partner</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>No</th>
-      <td>3280</td>
-      <td>361</td>
-    </tr>
-    <tr>
-      <th>Yes</th>
-      <td>1653</td>
-      <td>1749</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-The proportion is more informative than absolute numbers, so we are going to convert to fractions:
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th>Dependents</th>
-      <th>No</th>
-      <th>Yes</th>
-    </tr>
-    <tr>
-      <th>Partner</th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>No</th>
-      <td>0.900851</td>
-      <td>0.099149</td>
-    </tr>
-    <tr>
-      <th>Yes</th>
-      <td>0.485891</td>
-      <td>0.514109</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-Now, we can plot the data:
-
-
     
-![png](project_churn_prediction_files/project_churn_prediction_73_0.png)
+![png](../project_churn_prediction_files/project_churn_prediction_73_0.png)
     
 
 
 Almost half of the customers with partners have dependents. Again, assuming that in most cases "dependents" mean children, this means that marketing campaigns which aim at avoiding churn may focus on single people.
 
-To quantify correlation, we need to convert categorical variables into indicators. Below, the `get_dummies` Pandas method is used:
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>tenure</th>
-      <th>MonthlyCharges</th>
-      <th>TotalCharges</th>
-      <th>Churn</th>
-      <th>gender_Female</th>
-      <th>gender_Male</th>
-      <th>SeniorCitizen_No</th>
-      <th>SeniorCitizen_Yes</th>
-      <th>Partner_No</th>
-      <th>Partner_Yes</th>
-      <th>...</th>
-      <th>StreamingMovies_Yes</th>
-      <th>Contract_Month-to-month</th>
-      <th>Contract_One year</th>
-      <th>Contract_Two year</th>
-      <th>PaperlessBilling_No</th>
-      <th>PaperlessBilling_Yes</th>
-      <th>PaymentMethod_Bank transfer (automatic)</th>
-      <th>PaymentMethod_Credit card (automatic)</th>
-      <th>PaymentMethod_Electronic check</th>
-      <th>PaymentMethod_Mailed check</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>29.85</td>
-      <td>29.85</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>...</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>34</td>
-      <td>56.95</td>
-      <td>1889.50</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>2</td>
-      <td>53.85</td>
-      <td>108.15</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>45</td>
-      <td>42.30</td>
-      <td>1840.75</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>2</td>
-      <td>70.70</td>
-      <td>151.65</td>
-      <td>1</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 47 columns</p>
-</div>
-
-
-
-With the indicators, we can plot the correlation of each categorical and numerical feature with the target:
+To quantify correlation, we need to convert categorical variables into indicators. The `get_dummies` Pandas method was used to convert. With the indicators, we can plot the correlation of each categorical and numerical feature with the target:
 
 
     
-![png](project_churn_prediction_files/project_churn_prediction_77_0.png)
+![png](../project_churn_prediction_files/project_churn_prediction_77_0.png)
     
 
 
@@ -1547,337 +775,18 @@ Before evaluating some machine learning algorithms, we need to do some data tran
 - the target column will be encoded
     - we are going to use `LabelEncoder` from Scikit-Learn
 
+The `StandardScaler` and the `OneHotEncoder` will be part of a preprocessing step on a Scikit-Learn pipeline in all following procedures.
 
+After the transforms, the dataset will be split in two, one for features and the other for the target.
 
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>gender</th>
-      <th>SeniorCitizen</th>
-      <th>Partner</th>
-      <th>Dependents</th>
-      <th>tenure</th>
-      <th>PhoneService</th>
-      <th>MultipleLines</th>
-      <th>InternetService</th>
-      <th>OnlineSecurity</th>
-      <th>OnlineBackup</th>
-      <th>DeviceProtection</th>
-      <th>TechSupport</th>
-      <th>StreamingTV</th>
-      <th>StreamingMovies</th>
-      <th>Contract</th>
-      <th>PaperlessBilling</th>
-      <th>PaymentMethod</th>
-      <th>MonthlyCharges</th>
-      <th>TotalCharges</th>
-      <th>Churn</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Female</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>1</td>
-      <td>No</td>
-      <td>No phone service</td>
-      <td>DSL</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>Month-to-month</td>
-      <td>Yes</td>
-      <td>Electronic check</td>
-      <td>29.85</td>
-      <td>29.85</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Male</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>34</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>DSL</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>One year</td>
-      <td>No</td>
-      <td>Mailed check</td>
-      <td>56.95</td>
-      <td>1889.50</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Male</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>2</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>DSL</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>Month-to-month</td>
-      <td>Yes</td>
-      <td>Mailed check</td>
-      <td>53.85</td>
-      <td>108.15</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Male</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>45</td>
-      <td>No</td>
-      <td>No phone service</td>
-      <td>DSL</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No</td>
-      <td>One year</td>
-      <td>No</td>
-      <td>Bank transfer (automatic)</td>
-      <td>42.30</td>
-      <td>1840.75</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Female</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>2</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>Fiber optic</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>Month-to-month</td>
-      <td>Yes</td>
-      <td>Electronic check</td>
-      <td>70.70</td>
-      <td>151.65</td>
-      <td>1</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-Splitting the dataset in two, features and target:
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>gender</th>
-      <th>SeniorCitizen</th>
-      <th>Partner</th>
-      <th>Dependents</th>
-      <th>tenure</th>
-      <th>PhoneService</th>
-      <th>MultipleLines</th>
-      <th>InternetService</th>
-      <th>OnlineSecurity</th>
-      <th>OnlineBackup</th>
-      <th>DeviceProtection</th>
-      <th>TechSupport</th>
-      <th>StreamingTV</th>
-      <th>StreamingMovies</th>
-      <th>Contract</th>
-      <th>PaperlessBilling</th>
-      <th>PaymentMethod</th>
-      <th>MonthlyCharges</th>
-      <th>TotalCharges</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Female</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>1</td>
-      <td>No</td>
-      <td>No phone service</td>
-      <td>DSL</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>Month-to-month</td>
-      <td>Yes</td>
-      <td>Electronic check</td>
-      <td>29.85</td>
-      <td>29.85</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Male</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>34</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>DSL</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>One year</td>
-      <td>No</td>
-      <td>Mailed check</td>
-      <td>56.95</td>
-      <td>1889.50</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Male</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>2</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>DSL</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>Month-to-month</td>
-      <td>Yes</td>
-      <td>Mailed check</td>
-      <td>53.85</td>
-      <td>108.15</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Male</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>45</td>
-      <td>No</td>
-      <td>No phone service</td>
-      <td>DSL</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>Yes</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>No</td>
-      <td>One year</td>
-      <td>No</td>
-      <td>Bank transfer (automatic)</td>
-      <td>42.30</td>
-      <td>1840.75</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Female</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>2</td>
-      <td>Yes</td>
-      <td>No</td>
-      <td>Fiber optic</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>No</td>
-      <td>Month-to-month</td>
-      <td>Yes</td>
-      <td>Electronic check</td>
-      <td>70.70</td>
-      <td>151.65</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
+Full details with code can be seen on the [GitHub repository](https://github.com/chicolucio/customer-churn-prediction).
 
 
 ## Evaluate algorithms
 
 ![algorithms_image](https://github.com/Ciencia-Programada/articles-images/blob/master/churn/4.jpg?raw=true)
 
-We need a reference to begin our model evaluation. A `DummyClassifier` instance will be used to create a frame of reference. Below, we configured this classifier so that it will always classify as the minority class, 1 ('Churn') in our case, a common configuration with imbalanced datasets.
+We need a reference to begin our model evaluation. A `DummyClassifier` instance will be used to create a frame of reference. The classifier was configured so that it will always classify as the minority class, 1 ('Churn') in our case, a common configuration with imbalanced datasets.
 
 In order to test the efficiency of a given classifier, we need to:
 - split the data in a train and a test sets
@@ -1886,7 +795,7 @@ In order to test the efficiency of a given classifier, we need to:
     - the splits will be repeated with random samples
 - perform a cross-validation to avoid overfitting
 
-Since we are going to do these steps with our real models, they will be used with our reference too. The complete setup is:
+Since we are going to do these steps with our real models, they will be used with our reference too. The results for the dummy classifier:
 
         Metric      |    Mean    |  Std Dev  
     ----------------------------------------
@@ -1907,11 +816,30 @@ Since we have an imbalanced dataset, accuracy might not be the best metric. This
 
 A common metric to compare models is the area under the ROC curve. However, as described in the literature [[10](https://dx.plos.org/10.1371/journal.pone.0118432)], it is also a metric that can be misleading with imbalanced data.
 
-There are many approaches described in the literature. We don't have any information regarding costs (marketing costs, revenue lost due to churn) in this dataset, so we can't make a cost analysis. Then, remains the choice among metrics that deal with precision and recall like these metrics themselves, F-beta score and area under precision-recall curve (AUPRC). It will be considered that recall is more important than precision in this study, but we don't want low precision scores. This means that we are considering more important to predict real churn, minimizing false negatives, but we want to avoid increasing too much false positives. Considering these restrictions, we have F-beta score, with beta greater than one, and AUPRC. The values of all metrics will be shown but the chosen one is AUPRC.
+There are many approaches described in the literature. We don't have any information regarding costs (marketing costs, revenue lost due to churn) in this dataset, so we can't make a cost analysis. Then, remains the choice among metrics that deal with precision and recall like these metrics themselves, F-beta score and area under precision-recall curve (AUPRC). It will be considered that recall is more important than precision in this study, but we don't want low precision scores. This means that we are considering more important to predict real churn, minimizing false negatives, but we want to avoid increasing too much false positives. Considering these restrictions, we have F-beta score, with beta greater than one, and AUPRC. The values of all metrics will be shown, but the chosen one is AUPRC.
 
 The Scikit-Learn docs [[12](https://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics)] state that the `average_precision_score` function from the package can be used as a AUPRC value, so it was the chosen function in this study.
 
-Below, there are some models that will be tested. For the initial screening, there will be no modification of default parameters values, besides for those that have the option to set as a binary classifier. Those that have random behavior were seeded with a fixed value for reproducibility.
+Below, there are the models that will be tested. For the initial screening, there will be no modification of default parameters values, besides for those that have the option to set as a binary classifier. Those that have random behavior were seeded with a fixed value for reproducibility.
+
+
+    [('LR', LogisticRegression(max_iter=10000)),
+     ('LDA', LinearDiscriminantAnalysis()),
+     ('KNN', KNeighborsClassifier()),
+     ('CART', DecisionTreeClassifier(random_state=42)),
+     ('NB', GaussianNB()),
+     ('SVC', SVC(random_state=42)),
+     ('RF', RandomForestClassifier(random_state=42)),
+     ('SGD', SGDClassifier(loss='modified_huber', random_state=42)),
+     ('LGBM', LGBMClassifier(objective='binary', random_state=42)),
+     ('XGB',
+      XGBClassifier(tree_method='hist', objective='binary:logistic))]
+
+As previously stated, each model will be added to a pipeline after the preprocessing step (standardization and encoding).
+
+Full details with code can be seen on the [GitHub repository](https://github.com/chicolucio/customer-churn-prediction).
+
+Results:
 
     LR
         Metric      |    Mean    |  Std Dev  
@@ -2025,9 +953,8 @@ Below, there are some models that will be tested. For the initial screening, the
     
 
 
-
     
-![png](project_churn_prediction_files/project_churn_prediction_95_0.png)
+![png](../project_churn_prediction_files/project_churn_prediction_95_0.png)
     
 
 
@@ -2048,6 +975,10 @@ Since we have a static dataset, we can't collect more data. However, we can try 
 ### Undersampling
 
 Our first strategy is using `RandomUnderSampler` from the Imbalanced Learn library. This sampler applies a random undersampling technique, which randomly delete examples in the majority class. The sampler will be added to the pipeline of steps to be applied after the preprocessing and before the model. Importantly, the change to the class distribution is only applied to the training dataset. The intent is to influence the fit of the models. The sampling is not applied to the test or holdout datasets used to evaluate the performance of a model.
+
+Full details with code can be seen on the [GitHub repository](https://github.com/chicolucio/customer-churn-prediction).
+
+Results:
 
     LR
         Metric      |    Mean    |  Std Dev  
@@ -2163,7 +1094,7 @@ Our first strategy is using `RandomUnderSampler` from the Imbalanced Learn libra
 
 
     
-![png](project_churn_prediction_files/project_churn_prediction_101_0.png)
+![png](../project_churn_prediction_files/project_churn_prediction_101_0.png)
     
 
 
@@ -2173,178 +1104,11 @@ We have chosen the metric AUPRC. We are going to select 4 models with higher AUP
 
 #### Tuning hyperparameters - random undersampling
 
-A grid search will be performed to find the best combination of hyperparameters for each model. In the cell below, we can see the possible values that will be evaluated for each hyperparameter. For those interested, commented code is provided for each unselected model so that one can evaluate all the models, even those that performed badly in the previous section.
+A grid search will be performed to find the best combination of hyperparameters for each model. 
 
-    
-    Beginning for model LR_l1...
-    
-    Beginning for model LR_l2...
-    
-    Beginning for model LDA...
-    
-    Beginning for model SVC...
-    
-    Beginning for model LGBM...
-    End
+Full details with code can be seen on the [GitHub repository](https://github.com/chicolucio/customer-churn-prediction).
 
-
-
-
-
-    [Pipeline(steps=[('preprocessing',
-                      ColumnTransformer(transformers=[('std_scaler',
-                                                       StandardScaler(),
-                                                       ('tenure', 'MonthlyCharges',
-                                                        'TotalCharges')),
-                                                      ('ohe',
-                                                       OneHotEncoder(handle_unknown='ignore'),
-                                                       ['Contract', 'Dependents',
-                                                        'DeviceProtection',
-                                                        'InternetService',
-                                                        'MultipleLines',
-                                                        'OnlineBackup',
-                                                        'OnlineSecurity',
-                                                        'PaperlessBilling',
-                                                        'Partner', 'PaymentMethod',
-                                                        'PhoneService',
-                                                        'SeniorCitizen',
-                                                        'StreamingMovies',
-                                                        'StreamingTV', 'TechSupport',
-                                                        'gender'])])),
-                     ('under', RandomUnderSampler(random_state=42)),
-                     ('model',
-                      LogisticRegression(C=10, max_iter=10000, penalty='l1',
-                                         solver='saga'))]),
-     Pipeline(steps=[('preprocessing',
-                      ColumnTransformer(transformers=[('std_scaler',
-                                                       StandardScaler(),
-                                                       ('tenure', 'MonthlyCharges',
-                                                        'TotalCharges')),
-                                                      ('ohe',
-                                                       OneHotEncoder(handle_unknown='ignore'),
-                                                       ['Contract', 'Dependents',
-                                                        'DeviceProtection',
-                                                        'InternetService',
-                                                        'MultipleLines',
-                                                        'OnlineBackup',
-                                                        'OnlineSecurity',
-                                                        'PaperlessBilling',
-                                                        'Partner', 'PaymentMethod',
-                                                        'PhoneService',
-                                                        'SeniorCitizen',
-                                                        'StreamingMovies',
-                                                        'StreamingTV', 'TechSupport',
-                                                        'gender'])])),
-                     ('under', RandomUnderSampler(random_state=42)),
-                     ('model', LogisticRegression(C=10, max_iter=10000))]),
-     Pipeline(steps=[('preprocessing',
-                      ColumnTransformer(transformers=[('std_scaler',
-                                                       StandardScaler(),
-                                                       ('tenure', 'MonthlyCharges',
-                                                        'TotalCharges')),
-                                                      ('ohe',
-                                                       OneHotEncoder(handle_unknown='ignore'),
-                                                       ['Contract', 'Dependents',
-                                                        'DeviceProtection',
-                                                        'InternetService',
-                                                        'MultipleLines',
-                                                        'OnlineBackup',
-                                                        'OnlineSecurity',
-                                                        'PaperlessBilling',
-                                                        'Partner', 'PaymentMethod',
-                                                        'PhoneService',
-                                                        'SeniorCitizen',
-                                                        'StreamingMovies',
-                                                        'StreamingTV', 'TechSupport',
-                                                        'gender'])])),
-                     ('under', RandomUnderSampler(random_state=42)),
-                     ('model',
-                      LinearDiscriminantAnalysis(shrinkage=0.48, solver='lsqr'))]),
-     Pipeline(steps=[('preprocessing',
-                      ColumnTransformer(transformers=[('std_scaler',
-                                                       StandardScaler(),
-                                                       ('tenure', 'MonthlyCharges',
-                                                        'TotalCharges')),
-                                                      ('ohe',
-                                                       OneHotEncoder(handle_unknown='ignore'),
-                                                       ['Contract', 'Dependents',
-                                                        'DeviceProtection',
-                                                        'InternetService',
-                                                        'MultipleLines',
-                                                        'OnlineBackup',
-                                                        'OnlineSecurity',
-                                                        'PaperlessBilling',
-                                                        'Partner', 'PaymentMethod',
-                                                        'PhoneService',
-                                                        'SeniorCitizen',
-                                                        'StreamingMovies',
-                                                        'StreamingTV', 'TechSupport',
-                                                        'gender'])])),
-                     ('under', RandomUnderSampler(random_state=42)),
-                     ('model', SVC(C=0.75, kernel='linear', random_state=42))]),
-     Pipeline(steps=[('preprocessing',
-                      ColumnTransformer(transformers=[('std_scaler',
-                                                       StandardScaler(),
-                                                       ('tenure', 'MonthlyCharges',
-                                                        'TotalCharges')),
-                                                      ('ohe',
-                                                       OneHotEncoder(handle_unknown='ignore'),
-                                                       ['Contract', 'Dependents',
-                                                        'DeviceProtection',
-                                                        'InternetService',
-                                                        'MultipleLines',
-                                                        'OnlineBackup',
-                                                        'OnlineSecurity',
-                                                        'PaperlessBilling',
-                                                        'Partner', 'PaymentMethod',
-                                                        'PhoneService',
-                                                        'SeniorCitizen',
-                                                        'StreamingMovies',
-                                                        'StreamingTV', 'TechSupport',
-                                                        'gender'])])),
-                     ('under', RandomUnderSampler(random_state=42)),
-                     ('model',
-                      LGBMClassifier(colsample_bytree=0.7, max_depth=1,
-                                     min_child_samples=500, num_iterations=100,
-                                     objective='binary', random_state=42,
-                                     subsample=0.5, subsample_freq=5))])]
-
-
-
-
-
-
-    [LogisticRegression(C=10, max_iter=10000, penalty='l1', solver='saga'),
-     LogisticRegression(C=10, max_iter=10000),
-     LinearDiscriminantAnalysis(shrinkage=0.48, solver='lsqr'),
-     SVC(C=0.75, kernel='linear', random_state=42),
-     LGBMClassifier(colsample_bytree=0.7, max_depth=1, min_child_samples=500,
-                    num_iterations=100, objective='binary', random_state=42,
-                    subsample=0.5, subsample_freq=5)]
-
-
-
-
-
-
-    ['LR_l1', 'LR_l2', 'LDA', 'SVC', 'LGBM']
-
-
-
-
-
-
-    [('LR_l1',
-      LogisticRegression(C=10, max_iter=10000, penalty='l1', solver='saga')),
-     ('LR_l2', LogisticRegression(C=10, max_iter=10000)),
-     ('LDA', LinearDiscriminantAnalysis(shrinkage=0.48, solver='lsqr')),
-     ('SVC', SVC(C=0.75, kernel='linear', random_state=42)),
-     ('LGBM',
-      LGBMClassifier(colsample_bytree=0.7, max_depth=1, min_child_samples=500,
-                     num_iterations=100, objective='binary', random_state=42,
-                     subsample=0.5, subsample_freq=5))]
-
-
+Results:
 
     LR_l1
         Metric      |    Mean    |  Std Dev  
@@ -2405,7 +1169,7 @@ A grid search will be performed to find the best combination of hyperparameters 
 
 
     
-![png](project_churn_prediction_files/project_churn_prediction_114_0.png)
+![png](../project_churn_prediction_files/project_churn_prediction_114_0.png)
     
 
 
@@ -2414,281 +1178,8 @@ As can be seen, LGBM performed slightly better than LR considering the AUPRC met
 Let's take a look at the 10 most important features according to the tuned LGBM classifier:
 
 
-
-
-<style>#sk-container-id-1 {color: black;background-color: white;}#sk-container-id-1 pre{padding: 0;}#sk-container-id-1 div.sk-toggleable {background-color: white;}#sk-container-id-1 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-1 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-1 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-1 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-1 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-1 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-1 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-1 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-1 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-1 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-1 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-1 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-1 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-1 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-1 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-1 div.sk-item {position: relative;z-index: 1;}#sk-container-id-1 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-1 div.sk-item::before, #sk-container-id-1 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-1 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-1 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-1 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-1 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-1 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-1 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-1 div.sk-label-container {text-align: center;}#sk-container-id-1 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-1 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-1" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LGBMClassifier(colsample_bytree=0.7, max_depth=1, min_child_samples=500,
-               num_iterations=100, objective=&#x27;binary&#x27;, random_state=42,
-               subsample=0.5, subsample_freq=5)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-1" type="checkbox" checked><label for="sk-estimator-id-1" class="sk-toggleable__label sk-toggleable__label-arrow">LGBMClassifier</label><div class="sk-toggleable__content"><pre>LGBMClassifier(colsample_bytree=0.7, max_depth=1, min_child_samples=500,
-               num_iterations=100, objective=&#x27;binary&#x27;, random_state=42,
-               subsample=0.5, subsample_freq=5)</pre></div></div></div></div></div>
-
-
-
-
-
-
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Feature</th>
-      <th>Importance</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>std_scaler__tenure</td>
-      <td>25</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>ohe__InternetService_Fiber optic</td>
-      <td>9</td>
-    </tr>
-    <tr>
-      <th>29</th>
-      <td>ohe__PaymentMethod_Electronic check</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>std_scaler__MonthlyCharges</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>ohe__MultipleLines_No</td>
-      <td>8</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>std_scaler__TotalCharges</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>41</th>
-      <td>ohe__TechSupport_No</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>20</th>
-      <td>ohe__OnlineSecurity_No</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>ohe__Contract_Month-to-month</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>ohe__PaperlessBilling_No</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>ohe__OnlineBackup_No</td>
-      <td>4</td>
-    </tr>
-    <tr>
-      <th>40</th>
-      <td>ohe__StreamingTV_Yes</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>ohe__OnlineBackup_Yes</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>37</th>
-      <td>ohe__StreamingMovies_Yes</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>ohe__PaperlessBilling_Yes</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>ohe__PhoneService_Yes</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>33</th>
-      <td>ohe__SeniorCitizen_No</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>34</th>
-      <td>ohe__SeniorCitizen_Yes</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>35</th>
-      <td>ohe__StreamingMovies_No</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>36</th>
-      <td>ohe__StreamingMovies_No internet service</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>ohe__DeviceProtection_Yes</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>ohe__StreamingTV_No</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>ohe__PaymentMethod_Mailed check</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>ohe__StreamingTV_No internet service</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>ohe__Contract_One year</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>42</th>
-      <td>ohe__TechSupport_No internet service</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>43</th>
-      <td>ohe__TechSupport_Yes</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>44</th>
-      <td>ohe__gender_Female</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>ohe__PhoneService_No</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>ohe__PaymentMethod_Credit card (automatic)</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>ohe__Contract_Two year</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>ohe__InternetService_DSL</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>ohe__PaymentMethod_Bank transfer (automatic)</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>ohe__Partner_Yes</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>ohe__Partner_No</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>ohe__Dependents_No</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>ohe__OnlineSecurity_Yes</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>ohe__OnlineSecurity_No internet service</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>ohe__Dependents_Yes</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>ohe__OnlineBackup_No internet service</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>ohe__MultipleLines_Yes</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>ohe__MultipleLines_No phone service</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>ohe__DeviceProtection_No</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>ohe__InternetService_No</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>ohe__DeviceProtection_No internet service</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>45</th>
-      <td>ohe__gender_Male</td>
-      <td>0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
-
-
     
-![png](project_churn_prediction_files/project_churn_prediction_118_0.png)
+![png](../project_churn_prediction_files/project_churn_prediction_118_0.png)
     
 
 
@@ -2705,30 +1196,9 @@ The sampler will be added to the pipeline of steps to be applied after the prepr
 
 The same models from before will be tested. For the initial screening, there will be no modification of default parameters values, besides for those that have the option to set as a binary classifier.
 
+Full details with code can be seen on the [GitHub repository](https://github.com/chicolucio/customer-churn-prediction).
 
-
-
-
-    [('LR', LogisticRegression(max_iter=10000)),
-     ('LDA', LinearDiscriminantAnalysis()),
-     ('KNN', KNeighborsClassifier()),
-     ('CART', DecisionTreeClassifier(random_state=42)),
-     ('NB', GaussianNB()),
-     ('SVC', SVC(random_state=42)),
-     ('RF', RandomForestClassifier(random_state=42)),
-     ('SGD', SGDClassifier(loss='modified_huber', random_state=42)),
-     ('LGBM', LGBMClassifier(objective='binary', random_state=42)),
-     ('XGB',
-      XGBClassifier(base_score=0.5, booster='gbtree', colsample_bylevel=1,
-                    colsample_bynode=1, colsample_bytree=1, enable_categorical=False,
-                    gamma=0, gpu_id=-1, importance_type=None,
-                    interaction_constraints='', learning_rate=0.300000012,
-                    max_delta_step=0, max_depth=6, min_child_weight=1, missing=nan,
-                    monotone_constraints='()', n_estimators=100, n_jobs=12,
-                    num_parallel_tree=1, predictor='auto', random_state=0,
-                    reg_alpha=0, reg_lambda=1, scale_pos_weight=1, subsample=1,
-                    tree_method='hist', validate_parameters=1, verbosity=None))]
-
+Results:
 
 
     LR
@@ -2845,7 +1315,7 @@ The same models from before will be tested. For the initial screening, there wil
 
 
     
-![png](project_churn_prediction_files/project_churn_prediction_127_0.png)
+![png](../project_churn_prediction_files/project_churn_prediction_127_0.png)
     
 
 
@@ -2857,173 +1327,9 @@ We have chosen the metric AUPRC. We are going to select 4 models with higher AUP
 
 A grid search will be performed to find the best combination of hyperparameters for each model. The same hyperparameters evaluate for RUS will be evaluated here.
 
+Full details with code can be seen on the [GitHub repository](https://github.com/chicolucio/customer-churn-prediction).
 
-    
-    Beginning for model LR_l1...
-    
-    Beginning for model LR_l2...
-    
-    Beginning for model LDA...
-    
-    Beginning for model SVC...
-    
-    Beginning for model LGBM...
-    End
-
-
-
-
-
-    [Pipeline(steps=[('preprocessing',
-                      ColumnTransformer(transformers=[('std_scaler',
-                                                       StandardScaler(),
-                                                       ('tenure', 'MonthlyCharges',
-                                                        'TotalCharges')),
-                                                      ('ohe',
-                                                       OneHotEncoder(handle_unknown='ignore'),
-                                                       ['Contract', 'Dependents',
-                                                        'DeviceProtection',
-                                                        'InternetService',
-                                                        'MultipleLines',
-                                                        'OnlineBackup',
-                                                        'OnlineSecurity',
-                                                        'PaperlessBilling',
-                                                        'Partner', 'PaymentMethod',
-                                                        'PhoneService',
-                                                        'SeniorCitizen',
-                                                        'StreamingMovies',
-                                                        'StreamingTV', 'TechSupport',
-                                                        'gender'])])),
-                     ('over', SMOTE(random_state=42)),
-                     ('model',
-                      LogisticRegression(C=0.1, max_iter=10000, penalty='l1',
-                                         solver='liblinear'))]),
-     Pipeline(steps=[('preprocessing',
-                      ColumnTransformer(transformers=[('std_scaler',
-                                                       StandardScaler(),
-                                                       ('tenure', 'MonthlyCharges',
-                                                        'TotalCharges')),
-                                                      ('ohe',
-                                                       OneHotEncoder(handle_unknown='ignore'),
-                                                       ['Contract', 'Dependents',
-                                                        'DeviceProtection',
-                                                        'InternetService',
-                                                        'MultipleLines',
-                                                        'OnlineBackup',
-                                                        'OnlineSecurity',
-                                                        'PaperlessBilling',
-                                                        'Partner', 'PaymentMethod',
-                                                        'PhoneService',
-                                                        'SeniorCitizen',
-                                                        'StreamingMovies',
-                                                        'StreamingTV', 'TechSupport',
-                                                        'gender'])])),
-                     ('over', SMOTE(random_state=42)),
-                     ('model',
-                      LogisticRegression(C=1, class_weight='balanced',
-                                         max_iter=10000, solver='saga'))]),
-     Pipeline(steps=[('preprocessing',
-                      ColumnTransformer(transformers=[('std_scaler',
-                                                       StandardScaler(),
-                                                       ('tenure', 'MonthlyCharges',
-                                                        'TotalCharges')),
-                                                      ('ohe',
-                                                       OneHotEncoder(handle_unknown='ignore'),
-                                                       ['Contract', 'Dependents',
-                                                        'DeviceProtection',
-                                                        'InternetService',
-                                                        'MultipleLines',
-                                                        'OnlineBackup',
-                                                        'OnlineSecurity',
-                                                        'PaperlessBilling',
-                                                        'Partner', 'PaymentMethod',
-                                                        'PhoneService',
-                                                        'SeniorCitizen',
-                                                        'StreamingMovies',
-                                                        'StreamingTV', 'TechSupport',
-                                                        'gender'])])),
-                     ('over', SMOTE(random_state=42)),
-                     ('model',
-                      LinearDiscriminantAnalysis(shrinkage=0.5, solver='lsqr'))]),
-     Pipeline(steps=[('preprocessing',
-                      ColumnTransformer(transformers=[('std_scaler',
-                                                       StandardScaler(),
-                                                       ('tenure', 'MonthlyCharges',
-                                                        'TotalCharges')),
-                                                      ('ohe',
-                                                       OneHotEncoder(handle_unknown='ignore'),
-                                                       ['Contract', 'Dependents',
-                                                        'DeviceProtection',
-                                                        'InternetService',
-                                                        'MultipleLines',
-                                                        'OnlineBackup',
-                                                        'OnlineSecurity',
-                                                        'PaperlessBilling',
-                                                        'Partner', 'PaymentMethod',
-                                                        'PhoneService',
-                                                        'SeniorCitizen',
-                                                        'StreamingMovies',
-                                                        'StreamingTV', 'TechSupport',
-                                                        'gender'])])),
-                     ('over', SMOTE(random_state=42)),
-                     ('model', SVC(C=0.5, kernel='linear', random_state=42))]),
-     Pipeline(steps=[('preprocessing',
-                      ColumnTransformer(transformers=[('std_scaler',
-                                                       StandardScaler(),
-                                                       ('tenure', 'MonthlyCharges',
-                                                        'TotalCharges')),
-                                                      ('ohe',
-                                                       OneHotEncoder(handle_unknown='ignore'),
-                                                       ['Contract', 'Dependents',
-                                                        'DeviceProtection',
-                                                        'InternetService',
-                                                        'MultipleLines',
-                                                        'OnlineBackup',
-                                                        'OnlineSecurity',
-                                                        'PaperlessBilling',
-                                                        'Partner', 'PaymentMethod',
-                                                        'PhoneService',
-                                                        'SeniorCitizen',
-                                                        'StreamingMovies',
-                                                        'StreamingTV', 'TechSupport',
-                                                        'gender'])])),
-                     ('over', SMOTE(random_state=42)),
-                     ('model',
-                      LGBMClassifier(colsample_bytree=0.7, learning_rate=0.3,
-                                     max_depth=1, min_child_samples=500,
-                                     num_iterations=500, objective='binary',
-                                     random_state=42, subsample=0.5,
-                                     subsample_freq=5))])]
-
-
-
-
-
-
-    [LogisticRegression(C=0.1, max_iter=10000, penalty='l1', solver='liblinear'),
-     LogisticRegression(C=1, class_weight='balanced', max_iter=10000, solver='saga'),
-     LinearDiscriminantAnalysis(shrinkage=0.5, solver='lsqr'),
-     SVC(C=0.5, kernel='linear', random_state=42),
-     LGBMClassifier(colsample_bytree=0.7, learning_rate=0.3, max_depth=1,
-                    min_child_samples=500, num_iterations=500, objective='binary',
-                    random_state=42, subsample=0.5, subsample_freq=5)]
-
-
-
-
-
-
-    [('LR_l1',
-      LogisticRegression(C=0.1, max_iter=10000, penalty='l1', solver='liblinear')),
-     ('LR_l2',
-      LogisticRegression(C=1, class_weight='balanced', max_iter=10000, solver='saga')),
-     ('LDA', LinearDiscriminantAnalysis(shrinkage=0.5, solver='lsqr')),
-     ('SVC', SVC(C=0.5, kernel='linear', random_state=42)),
-     ('LGBM',
-      LGBMClassifier(colsample_bytree=0.7, learning_rate=0.3, max_depth=1,
-                     min_child_samples=500, num_iterations=500, objective='binary',
-                     random_state=42, subsample=0.5, subsample_freq=5))]
-
+Results:
 
 
     LR_l1
@@ -3085,7 +1391,7 @@ A grid search will be performed to find the best combination of hyperparameters 
 
 
     
-![png](project_churn_prediction_files/project_churn_prediction_137_0.png)
+![png](../project_churn_prediction_files/project_churn_prediction_137_0.png)
     
 
 
@@ -3097,20 +1403,15 @@ So, undersampling is better. Just for the sake of completeness, and since the LR
 
 
 
-
-<style>#sk-container-id-2 {color: black;background-color: white;}#sk-container-id-2 pre{padding: 0;}#sk-container-id-2 div.sk-toggleable {background-color: white;}#sk-container-id-2 label.sk-toggleable__label {cursor: pointer;display: block;width: 100%;margin-bottom: 0;padding: 0.3em;box-sizing: border-box;text-align: center;}#sk-container-id-2 label.sk-toggleable__label-arrow:before {content: "▸";float: left;margin-right: 0.25em;color: #696969;}#sk-container-id-2 label.sk-toggleable__label-arrow:hover:before {color: black;}#sk-container-id-2 div.sk-estimator:hover label.sk-toggleable__label-arrow:before {color: black;}#sk-container-id-2 div.sk-toggleable__content {max-height: 0;max-width: 0;overflow: hidden;text-align: left;background-color: #f0f8ff;}#sk-container-id-2 div.sk-toggleable__content pre {margin: 0.2em;color: black;border-radius: 0.25em;background-color: #f0f8ff;}#sk-container-id-2 input.sk-toggleable__control:checked~div.sk-toggleable__content {max-height: 200px;max-width: 100%;overflow: auto;}#sk-container-id-2 input.sk-toggleable__control:checked~label.sk-toggleable__label-arrow:before {content: "▾";}#sk-container-id-2 div.sk-estimator input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-label input.sk-toggleable__control:checked~label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 input.sk-hidden--visually {border: 0;clip: rect(1px 1px 1px 1px);clip: rect(1px, 1px, 1px, 1px);height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;width: 1px;}#sk-container-id-2 div.sk-estimator {font-family: monospace;background-color: #f0f8ff;border: 1px dotted black;border-radius: 0.25em;box-sizing: border-box;margin-bottom: 0.5em;}#sk-container-id-2 div.sk-estimator:hover {background-color: #d4ebff;}#sk-container-id-2 div.sk-parallel-item::after {content: "";width: 100%;border-bottom: 1px solid gray;flex-grow: 1;}#sk-container-id-2 div.sk-label:hover label.sk-toggleable__label {background-color: #d4ebff;}#sk-container-id-2 div.sk-serial::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: 0;}#sk-container-id-2 div.sk-serial {display: flex;flex-direction: column;align-items: center;background-color: white;padding-right: 0.2em;padding-left: 0.2em;position: relative;}#sk-container-id-2 div.sk-item {position: relative;z-index: 1;}#sk-container-id-2 div.sk-parallel {display: flex;align-items: stretch;justify-content: center;background-color: white;position: relative;}#sk-container-id-2 div.sk-item::before, #sk-container-id-2 div.sk-parallel-item::before {content: "";position: absolute;border-left: 1px solid gray;box-sizing: border-box;top: 0;bottom: 0;left: 50%;z-index: -1;}#sk-container-id-2 div.sk-parallel-item {display: flex;flex-direction: column;z-index: 1;position: relative;background-color: white;}#sk-container-id-2 div.sk-parallel-item:first-child::after {align-self: flex-end;width: 50%;}#sk-container-id-2 div.sk-parallel-item:last-child::after {align-self: flex-start;width: 50%;}#sk-container-id-2 div.sk-parallel-item:only-child::after {width: 0;}#sk-container-id-2 div.sk-dashed-wrapped {border: 1px dashed gray;margin: 0 0.4em 0.5em 0.4em;box-sizing: border-box;padding-bottom: 0.4em;background-color: white;}#sk-container-id-2 div.sk-label label {font-family: monospace;font-weight: bold;display: inline-block;line-height: 1.2em;}#sk-container-id-2 div.sk-label-container {text-align: center;}#sk-container-id-2 div.sk-container {/* jupyter's `normalize.less` sets `[hidden] { display: none; }` but bootstrap.min.css set `[hidden] { display: none !important; }` so we also need the `!important` here to be able to override the default hidden behavior on the sphinx rendered scikit-learn.org. See: https://github.com/scikit-learn/scikit-learn/issues/21755 */display: inline-block !important;position: relative;}#sk-container-id-2 div.sk-text-repr-fallback {display: none;}</style><div id="sk-container-id-2" class="sk-top-container"><div class="sk-text-repr-fallback"><pre>LogisticRegression(C=1, class_weight=&#x27;balanced&#x27;, max_iter=10000, solver=&#x27;saga&#x27;)</pre><b>In a Jupyter environment, please rerun this cell to show the HTML representation or trust the notebook. <br />On GitHub, the HTML representation is unable to render, please try loading this page with nbviewer.org.</b></div><div class="sk-container" hidden><div class="sk-item"><div class="sk-estimator sk-toggleable"><input class="sk-toggleable__control sk-hidden--visually" id="sk-estimator-id-2" type="checkbox" checked><label for="sk-estimator-id-2" class="sk-toggleable__label sk-toggleable__label-arrow">LogisticRegression</label><div class="sk-toggleable__content"><pre>LogisticRegression(C=1, class_weight=&#x27;balanced&#x27;, max_iter=10000, solver=&#x27;saga&#x27;)</pre></div></div></div></div></div>
-
-
-
 The way to get information about feature importance in logistic regression is different from the one we saw for LGBM in the undersampling section. In order to understand, we need to remember some math.
 
-Representing as $p_+(x)$ the model's estimate of the probability of class membership of a data item represented by feature vector **x**, we have the following equation that specifies that the log-odds of the class is equal to a linear function $f(x)$:
+Representing as $$p_+(x)$$ the model's estimate of the probability of class membership of a data item represented by feature vector **x**, we have the following equation that specifies that the log-odds of the class is equal to a linear function $$f(x)$$:
 
 $$
 \log \left( \frac{p_+(x)}{1 - p_+(x)} \right) = f(x) = w_0 + w_1 x_1 + w_2 x_2 + \cdots
 $$
 
-where $w_i$ are the coefficients, or weights, of each feature. Solving the equation for $p_+(x)$, it yields the logistic function [[13](https://amzn.to/3OgzzTJ)]:
+where $$w_i$$ are the coefficients, or weights, of each feature. Solving the equation for $$p_+(x)$$, it yields the logistic function [[13](https://amzn.to/3OgzzTJ)]:
 
 $$
 p_+(x) = \frac{1}{1+\exp(-f(x))}
@@ -3135,7 +1436,7 @@ This is a classification problem with classes 0 (no churn) and 1 (churn). The lo
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -3192,7 +1493,7 @@ This is a classification problem with classes 0 (no churn) and 1 (churn). The lo
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -3253,7 +1554,7 @@ We have seen that, mathematically, there is a relationship between these coeffic
         text-align: right;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="0" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -3288,184 +1589,14 @@ We have seen that, mathematically, there is a relationship between these coeffic
       <td>1.343853</td>
     </tr>
     <tr>
-      <th>20</th>
-      <td>ohe__OnlineSecurity_No</td>
-      <td>1.287837</td>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>40</th>
-      <td>ohe__StreamingTV_Yes</td>
-      <td>1.270943</td>
-    </tr>
-    <tr>
-      <th>37</th>
-      <td>ohe__StreamingMovies_Yes</td>
-      <td>1.260364</td>
-    </tr>
-    <tr>
-      <th>24</th>
-      <td>ohe__PaperlessBilling_Yes</td>
-      <td>1.210565</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>ohe__MultipleLines_Yes</td>
-      <td>1.172015</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>ohe__Dependents_No</td>
-      <td>1.126535</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>ohe__Contract_One year</td>
-      <td>1.078311</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>ohe__OnlineBackup_No</td>
-      <td>1.070480</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>ohe__DeviceProtection_Yes</td>
-      <td>1.066372</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>ohe__PhoneService_No</td>
-      <td>1.063448</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>ohe__MultipleLines_No phone service</td>
-      <td>1.063448</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>ohe__DeviceProtection_No</td>
-      <td>1.049058</td>
-    </tr>
-    <tr>
-      <th>19</th>
-      <td>ohe__OnlineBackup_Yes</td>
-      <td>1.045033</td>
-    </tr>
-    <tr>
-      <th>34</th>
-      <td>ohe__SeniorCitizen_Yes</td>
-      <td>1.027655</td>
-    </tr>
-    <tr>
-      <th>26</th>
-      <td>ohe__Partner_Yes</td>
-      <td>1.021482</td>
-    </tr>
-    <tr>
-      <th>44</th>
-      <td>ohe__gender_Female</td>
-      <td>0.988237</td>
-    </tr>
-    <tr>
-      <th>45</th>
-      <td>ohe__gender_Male</td>
-      <td>0.979559</td>
-    </tr>
-    <tr>
-      <th>25</th>
-      <td>ohe__Partner_No</td>
-      <td>0.947678</td>
-    </tr>
-    <tr>
-      <th>33</th>
-      <td>ohe__SeniorCitizen_No</td>
-      <td>0.941986</td>
-    </tr>
-    <tr>
-      <th>32</th>
-      <td>ohe__PhoneService_Yes</td>
-      <td>0.910281</td>
-    </tr>
-    <tr>
-      <th>35</th>
-      <td>ohe__StreamingMovies_No</td>
-      <td>0.887590</td>
-    </tr>
-    <tr>
-      <th>27</th>
-      <td>ohe__PaymentMethod_Bank transfer (automatic)</td>
-      <td>0.884040</td>
-    </tr>
-    <tr>
-      <th>30</th>
-      <td>ohe__PaymentMethod_Mailed check</td>
-      <td>0.883865</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>ohe__StreamingTV_No</td>
-      <td>0.880202</td>
-    </tr>
-    <tr>
-      <th>22</th>
-      <td>ohe__OnlineSecurity_Yes</td>
-      <td>0.868656</td>
-    </tr>
-    <tr>
-      <th>36</th>
-      <td>ohe__StreamingMovies_No internet service</td>
-      <td>0.865333</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>ohe__DeviceProtection_No internet service</td>
-      <td>0.865333</td>
-    </tr>
-    <tr>
-      <th>39</th>
-      <td>ohe__StreamingTV_No internet service</td>
-      <td>0.865333</td>
-    </tr>
-    <tr>
-      <th>21</th>
-      <td>ohe__OnlineSecurity_No internet service</td>
-      <td>0.865333</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>ohe__InternetService_No</td>
-      <td>0.865333</td>
-    </tr>
-    <tr>
-      <th>42</th>
-      <td>ohe__TechSupport_No internet service</td>
-      <td>0.865333</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>ohe__OnlineBackup_No internet service</td>
-      <td>0.865333</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>ohe__Dependents_Yes</td>
-      <td>0.859304</td>
-    </tr>
-    <tr>
-      <th>28</th>
-      <td>ohe__PaymentMethod_Credit card (automatic)</td>
-      <td>0.847905</td>
-    </tr>
-    <tr>
-      <th>43</th>
-      <td>ohe__TechSupport_Yes</td>
-      <td>0.832448</td>
-    </tr>
-    <tr>
-      <th>23</th>
-      <td>ohe__PaperlessBilling_No</td>
-      <td>0.799656</td>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>14</th>
@@ -3506,55 +1637,8 @@ We can visualize the odds through a colorized bar chart as follows:
 
 
     
-![png](project_churn_prediction_files/project_churn_prediction_147_0.png)
+![png](../project_churn_prediction_files/project_churn_prediction_147_0.png)
     
-
-
-    [22:00:02] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:00:06] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:01:18] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:45:21] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:45:28] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:00:02] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:01:18] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:45:21] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:00:02] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:01:18] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:45:21] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:45:28] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:00:02] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:01:18] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:01:23] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:45:22] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:00:02] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:00:06] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:01:18] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:45:22] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:00:02] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:00:06] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:01:18] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:45:22] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:00:02] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:01:18] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:01:22] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:45:21] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:45:28] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:00:02] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:01:18] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:01:23] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:45:22] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:00:02] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:01:18] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:45:22] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:00:02] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:00:07] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:01:18] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:45:22] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:45:28] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:00:02] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:01:18] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:01:23] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
-    [22:45:22] WARNING: /home/conda/feedstock_root/build_artifacts/xgboost-split_1645117766796/work/src/learner.cc:1115: Starting in XGBoost 1.3.0, the default evaluation metric used with the objective 'binary:logistic' was changed from 'error' to 'logloss'. Explicitly set eval_metric if you'd like to restore the old behavior.
 
 
 ## Conclusions and action plan
@@ -3600,10 +1684,11 @@ The results shown here give some background and ideas for future works exploring
 
 Anyway, I hope to have provided interesting insights, and a valuable project. Should you have any comments, questions or suggestions, don't hesitate to contact me:
 
+<center>
 <a href="https://www.linkedin.com/in/flsbustamante" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
 <br>
 <a href="https://franciscobustamante.com.br" target="_blank"><img src="https://img.shields.io/badge/portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white" target="_blank"></a>
-<br>
+</center>
 [<center><img alt="GitHub" width="10%" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png
 "></center>](https://github.com/chicolucio)
 
