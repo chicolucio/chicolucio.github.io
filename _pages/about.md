@@ -12,11 +12,31 @@ header:
 
 Science communicator and data scientist with a sound understanding of Python and
 packages such as Pandas, Scikit Learn, Matpltolib and Plotly. Currently working
-in the education industry solving educational problems with programming.
-Launched Ciência Programada, a science communication project in Brazilian
-Portuguese combining science and programming.
+as a data scientist on projects for Uber. I have worked in the education
+industry for 10 years solving educational problems with programming.  Launched
+Ciência Programada, a science communication project in Brazilian Portuguese
+combining science and programming. I've also worked as a laboratory manager, as
+an environmental analyst and as a scientific researcher.
 
 ## Professional Experience
+
+### 2022 - Present: Data Analyst at NECTO Systems
+
+Worked on projects for:
+- Uber
+
+Data related activities for the Brazilian Tax Team:
+- Data Pipelines 
+- Data Compliance 
+- Scripting 
+- Automations
+
+### 2022: Technical Support Specialist at Hashtag Treinamentos
+
+- Technical and educational support to the following courses: Data Science and
+Python
+- Review of the teaching materials of the following courses: Data Science and
+Python
 
 ### 2020 - Present: Science communicator at Ciência Programada
 
