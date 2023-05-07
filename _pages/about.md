@@ -12,8 +12,8 @@ header:
 
 Science communicator and data scientist with a sound understanding of Python and
 packages such as Pandas, Scikit Learn, Matpltolib and Plotly. Currently working
-as a data scientist on projects for Uber. I have worked in the education
-industry for 10 years solving educational problems with programming.  Launched
+as a data analyst on projects for Uber. I have worked in the education
+industry for 10 years, solving educational problems with programming.  Launched
 Ciência Programada, a science communication project in Brazilian Portuguese
 combining science and programming. I've also worked as a laboratory manager, as
 an environmental analyst and as a scientific researcher.
@@ -22,14 +22,24 @@ an environmental analyst and as a scientific researcher.
 
 ### 2022 - Present: Data Analyst at NECTO Systems
 
-Worked on projects for:
-- Uber
+I work as a data analyst at NECTO Systems, a company that develops custom software
+solutions, participating in a project for Uber seeking solutions for accounting
+reconciliation and improvement of fiscal processes. In this project, I use various
+technologies and skills to deliver efficient and reliable results.
 
-Data related activities for the Brazilian Tax Team:
-- Data Pipelines 
-- Data Compliance 
-- Scripting 
-- Automations
+- Cleaning and processing data from various sources, ensuring its quality and integrity
+- Reviewing and optimizing the existing data pipeline, aiming for greater efficiency and
+better performance
+- Validating reconciled data, ensuring compliance with international accounting
+standards and practices
+- Collaborating with the client in adopting compatible accounting practices and meeting
+fiscal obligations
+- Implementation of an automated data search and reconciliation pipeline, using data
+engineering techniques
+- Utilizing technologies such as SQL, Python, Pandas, Hive, and Presto for data analysis
+and processing
+
+[Click here](/portfolio/2023-accounting_reconcilliation_uber) for a more detailed description of the project.
 
 ### 2022: Technical Support Specialist at Hashtag Treinamentos
 
