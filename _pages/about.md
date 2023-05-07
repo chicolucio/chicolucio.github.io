@@ -43,10 +43,16 @@ and processing
 
 ### 2022: Technical Support Specialist at Hashtag Treinamentos
 
-- Technical and educational support to the following courses: Data Science and
-Python
-- Review of the teaching materials of the following courses: Data Science and
-Python
+As a Technical Support Specialist, I played a key role in supporting students and
+enhancing the learning experience for Data Science and Python courses.
+
+- Provided technical and educational support to hundreds of students per month,
+contributing to their success
+- Reviewed and created teaching materials, ensuring they were up-to-date and effective
+- Materials developed were utilized by thousands of students on the company's
+educational platform
+
+[Click here](/portfolio/2022-hashtag_treinamentos) for a more detailed description of the project.
 
 ### 2020 - Present: Science communicator at Ciência Programada
 

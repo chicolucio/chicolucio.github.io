@@ -3,7 +3,7 @@ name: Math projects
 title: Math projects
 image: https://github.com/chicolucio/fourier/raw/master/images/animation.gif
 period: 2019 - present
-position: 6
+position: 50
 description: |
   I'm a chemist and, besides test tubes and colorful compounds, I also really
   love math. So, here are some math related projects, like truth-table

@@ -2,7 +2,7 @@
 name: Global overview of COVID-19 - The omicron spread
 title: Panorama do COVID-19 no mundo
 image: /portfolio/projeto_covid_files_april_2022/covid_logo.jpg
-position: 3
+position: 8
 period: May 2022
 toc: true
 header:

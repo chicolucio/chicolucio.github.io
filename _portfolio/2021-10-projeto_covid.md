@@ -2,7 +2,7 @@
 name: Global overview of COVID-19
 title: Panorama do COVID-19 no mundo
 image: /portfolio/projeto_covid_files/covid_logo.jpg
-position: 9
+position: 90
 period: October 2021
 toc: true
 header:

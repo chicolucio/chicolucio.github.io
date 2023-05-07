@@ -2,7 +2,7 @@
 name: Customer churn prediction
 title: Customer churn prediction
 image: https://github.com/Ciencia-Programada/articles-images/blob/master/churn/1.jpg?raw=true
-position: 2
+position: 6
 period: June 2022
 toc: true
 mathjax: true

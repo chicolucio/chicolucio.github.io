@@ -2,7 +2,7 @@
 name: Statistical analysis of student grades with Python
 title: Statistical analysis of student grades with Python
 image: /assets/images/oiq_small.png
-position: 10
+position: 89
 period: 2019
 description: |
   Use of Python and Pandas package to evaluate the students' performance in a 
