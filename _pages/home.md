@@ -7,22 +7,26 @@ header:
   overlay_filter: 0.60 # same as adding an opacity of 0.5 to a black background
 ---
 
-I'm a science communicator and data scientist with a sound understanding of 
-Python and packages such as Pandas, Matplotlib, Scikit Learn and Plotly.
+I'm a science communicator and data scientist proficient in Python, with extensive
+experience in libraries such as Pandas, Matplotlib, Scikit-Learn and Plotly.
 
-I write regularly at [Ciência Programada](https://cienciaprogramada.com.br/){: .btn
-.btn--success}, a science communication project using Python programming
-I've launched. The project website is written in Brazilian Portuguese.
+I regularly contribute to [Ciência Programada](https://cienciaprogramada.com.br/){: .btn
+.btn--success}, a science communication project I launched that utilizes Python
+programming. The project website is written in Brazilian Portuguese.
 
-Currently, I'm a data scientist at NECTO Systems working on projects for Uber.
-Previously, I've worked in the education industry for 10 years solving
-educational problems with programming. I've also worked as a laboratory manager,
-as an environmental analyst and as a scientific researcher.
+I am currently a Python and Data Science instructor at Hashtag Treinamentos, a leading
+company in the online education sector in Brazil. In this role, I leverage my extensive
+experience in Python programming to facilitate impactful learning experiences. Prior to
+this, I was a data scientist at NECTO Systems, working on projects for Uber. I also
+spent a decade in the education industry, where I founded a research group with students
+to develop programs generating visualizations to aid the understanding of abstract
+chemical concepts. Additionally, I have held positions as a laboratory manager, an
+environmental analyst, and a scientific researcher in chemistry.
 
-Please take a look at [my portfolio](portfolio.md){: .btn .btn--info} for
+Explore [my portfolio](portfolio.md){: .btn .btn--info} for
 further details about my projects.
 
-For a more detailed description of my career, see my [curriculum](about.md){:
+For a deeper dive into my career, view my [resume](about.md){:
 .btn .btn--info}
 
 [Contact Me!](contact.md){: .btn .btn--warning .btn--large}
