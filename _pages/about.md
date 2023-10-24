@@ -10,36 +10,76 @@ header:
 
 ## Abstract 
 
-Science communicator and data scientist with a sound understanding of Python and
-packages such as Pandas, Scikit Learn, Matpltolib and Plotly. Currently working
-as a data analyst on projects for Uber. I have worked in the education
-industry for 10 years, solving educational problems with programming.  Launched
-Ciência Programada, a science communication project in Brazilian Portuguese
-combining science and programming. I've also worked as a laboratory manager, as
-an environmental analyst and as a scientific researcher.
+Proficient science communicator and data scientist with extensive experience in Python
+and associated libraries such as Pandas, Scikit-Learn, Matplotlib, and Plotly.
+Currently, I serve as a Python and Data Science instructor at Hashtag Treinamentos, a
+front-runner in Brazil's online education sector. In this role, I utilize my substantial
+Python programming expertise to deliver impactful learning experiences. Before this, I
+was a data scientist at NECTO Systems, engaged in projects for Uber. I spent a decade in
+the education sector, founding a research group to create programs that generate
+visualizations, aiding the comprehension of abstract chemical concepts. My professional
+journey also includes roles as a laboratory manager, an environmental analyst, and a
+scientific researcher in chemistry. I initiated Ciência Programada, a science
+communication project in Brazilian Portuguese that intertwines science and programming.
 
 ## Professional Experience
 
-### 2022 - Present: Data Analyst at NECTO Systems
 
-I work as a data analyst at NECTO Systems, a company that develops custom software
-solutions, participating in a project for Uber seeking solutions for accounting
-reconciliation and improvement of fiscal processes. In this project, I use various
-technologies and skills to deliver efficient and reliable results.
+### 2023 - Present: Python and Data Science Instructor at Hashtag Treinamentos
 
-- Cleaning and processing data from various sources, ensuring its quality and integrity
-- Reviewing and optimizing the existing data pipeline, aiming for greater efficiency and
-better performance
-- Validating reconciled data, ensuring compliance with international accounting
-standards and practices
-- Collaborating with the client in adopting compatible accounting practices and meeting
-fiscal obligations
-- Implementation of an automated data search and reconciliation pipeline, using data
-engineering techniques
-- Utilizing technologies such as SQL, Python, Pandas, Hive, and Presto for data analysis
-and processing
+Embraced a crucial role in advancing the educational journey for students enrolled in
+Python and Data Science courses, with a keen emphasis on bridging theoretical knowledge
+with real-world applications:
 
-[Click here](/portfolio/2023-accounting_reconcilliation_uber) for a more detailed description of the project.
+- Spearheaded the development and review of comprehensive teaching materials covering
+core Python libraries for data science, including NumPy, Pandas, Matplotlib, Seaborn,
+Scikit-Learn, TensorFlow, PyTorch, and Plotly, ensuring their relevance, effectiveness,
+and alignment with contemporary industry standards.
+- Produced and narrated insightful educational videos on Python, enriching the company's
+e-learning platform and social media channels with engaging, high-quality content.
+- Engineered materials that have been instrumental in facilitating the learning of
+thousands of students on the company’s educational platform, significantly contributing
+to the company's mission of delivering high-quality education.
+- Initiated the integration of real-world projects into the curriculum, mirroring
+practical market scenarios, thereby providing students with a pragmatic understanding
+and experience of industry-relevant challenges and solutions.
+- Fostered a stimulating learning environment, providing continuous support, feedback,
+and additional resources to students, ensuring their success and comprehension of
+complex topics.
+
+[Click here](/portfolio/2023-hashtag_treinamentos) for a more detailed description of
+this entry, with projects developed.
+
+### 2022 - 2023: Data Analyst at NECTO Systems
+
+During my tenure as a data analyst at NECTO Systems—a company specializing in bespoke
+software solutions—I played an integral role in a project commissioned by Uber aimed at
+streamlining accounting reconciliation and enhancing fiscal processes. This project
+required a blend of various technologies and skills to achieve efficient and reliable
+outcomes.
+
+- Managed the cleaning and processing of data from diverse sources, ensuring its quality
+and integrity for accurate analysis.
+- Conducted a thorough review and optimization of the existing data pipeline, targeting
+enhanced efficiency and improved performance.
+- Validated reconciled data to ensure compliance with international accounting standards
+and practices, bolstering the fiscal accuracy of the project.
+- Fostered a collaborative relationship with the client, aiding in the adoption of
+compatible accounting practices and ensuring the fulfillment of fiscal obligations.
+- Spearheaded the implementation of an automated data search and reconciliation pipeline
+by leveraging data engineering techniques, significantly expediting the reconciliation
+process.
+- Employed a range of technologies including SQL, Python, Pandas, Hive, and Presto for
+comprehensive data analysis and processing.
+
+In addition to my project responsibilities, I contributed to NECTO Systems' blog,
+authoring articles on the application of analysis and data science in industrial and
+business environments, thereby sharing insights on leveraging data for informed
+decision-making and operational efficiency.
+
+
+[Click here](/portfolio/2023-accounting_reconcilliation_uber) for a more detailed
+description of the project.
 
 ### 2022: Technical Support Specialist at Hashtag Treinamentos
 
@@ -52,7 +92,8 @@ contributing to their success
 - Materials developed were utilized by thousands of students on the company's
 educational platform
 
-[Click here](/portfolio/2022-hashtag_treinamentos) for a more detailed description of the project.
+<!-- [Click here](/portfolio/2022-hashtag_treinamentos) for a more detailed description of
+the project. -->
 
 ### 2020 - Present: Science communicator at Ciência Programada
 
