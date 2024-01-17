@@ -33,25 +33,59 @@ Systems and e-Learning</figcaption>
 
 **Solution**
 
-Upon embracing this pivotal role, my initial endeavor was to thoroughly understand the learning objectives and expectations of both the institution and the students. This entailed engaging in discussions with the curriculum development team and analyzing feedback from previous courses. With this foundational understanding, I commenced the development and rigorous review of teaching materials. This meticulous process involved not only crafting the content but ensuring it was pedagogically sound, engaging, and aligned with the latest industry standards.
+Upon embracing this pivotal role, my initial endeavor was to thoroughly understand the
+learning objectives and expectations of both the institution and the students. This
+entailed engaging in discussions with the curriculum development team and analyzing
+feedback from previous courses. With this foundational understanding, I commenced the
+development and rigorous review of teaching materials. This meticulous process involved
+not only crafting the content but ensuring it was pedagogically sound, engaging, and
+aligned with the latest industry standards.
 
-A significant portion of the teaching materials was dedicated to covering core Python libraries indispensable for data science pursuits, such as NumPy, Pandas, Matplotlib, Seaborn, Scikit-Learn, TensorFlow, PyTorch, and Plotly. The goal was to demystify complex concepts and provide a hands-on approach to learning through practical examples and real-world applications. 
+A significant portion of the teaching materials was dedicated to covering core Python
+libraries indispensable for data science pursuits, such as NumPy, Pandas, Matplotlib,
+Seaborn, Scikit-Learn, TensorFlow, PyTorch, and Plotly. The goal was to demystify
+complex concepts and provide a hands-on approach to learning through practical examples
+and real-world applications. 
 
-To augment the learning experience further, I produced and narrated a series of educational videos on Python. These videos were meticulously designed to break down complex topics into digestible segments, and were disseminated not only on the company's e-learning platform but also on various social media channels, expanding the reach and impact of the educational content.
+To augment the learning experience further, I produced and narrated a series of
+educational videos on Python. These videos were meticulously designed to break down
+complex topics into digestible segments, and were disseminated not only on the company's
+e-learning platform but also on various social media channels, expanding the reach and
+impact of the educational content.
 
 **Results**
 
-One of the hallmark initiatives was the integration of real-world projects into the curriculum. This was driven by the aspiration to bridge the gap between theoretical knowledge and practical market scenarios. By doing so, students were endowed with a pragmatic understanding and experience of industry-relevant challenges and solutions, which is quintessential for their career readiness and success.
+One of the hallmark initiatives was the integration of real-world projects into the
+curriculum. This was driven by the aspiration to bridge the gap between theoretical
+knowledge and practical market scenarios. By doing so, students were endowed with a
+pragmatic understanding and experience of industry-relevant challenges and solutions,
+which is quintessential for their career readiness and success.
 
-Furthermore, the materials I engineered proved to be instrumental in facilitating the learning journey for thousands of students on the company’s educational platform. This significant contribution resonates with the company's overarching mission of delivering high-quality education and has left a lasting impact on the educational trajectory of many aspiring data scientists and programmers.
+Furthermore, the materials I engineered proved to be instrumental in facilitating the
+learning journey for thousands of students on the company’s educational platform. This
+significant contribution resonates with the company's overarching mission of delivering
+high-quality education and has left a lasting impact on the educational trajectory of
+many aspiring data scientists and programmers.
 
-Throughout this journey, I continually fostered a stimulating learning environment. By providing continuous support, feedback, and additional resources to students, I ensured their success and comprehension of complex topics. The open channel of communication also allowed for the iterative improvement of the course materials, thereby elevating the overall learning experience.
+Throughout this journey, I continually fostered a stimulating learning environment. By
+providing continuous support, feedback, and additional resources to students, I ensured
+their success and comprehension of complex topics. The open channel of communication
+also allowed for the iterative improvement of the course materials, thereby elevating
+the overall learning experience.
 
-The endeavor at Hashtag Treinamentos not only honed my skills in curriculum development and educational content creation but also enriched my understanding of the diverse learning needs and aspirations of students in the realm of Python and Data Science.
+The endeavor at Hashtag Treinamentos not only honed my skills in curriculum development
+and educational content creation but also enriched my understanding of the diverse
+learning needs and aspirations of students in the realm of Python and Data Science.
 
 ### Project Showcase
 
-In my pursuit to provide a practical, hands-on learning experience, I've initiated a section dedicated to showcasing the real-world projects integrated into the curriculum. These projects are meticulously designed to emulate real-world scenarios, ensuring students gain pragmatic insights and hands-on experience essential for the modern job market. Although currently featuring a singular project, this section is earmarked for future expansion as more projects are under active development and will be linked here upon completion.
+In my pursuit to provide a practical, hands-on learning experience, I've initiated a
+section dedicated to showcasing the real-world projects integrated into the curriculum.
+These projects are meticulously designed to emulate real-world scenarios, ensuring
+students gain pragmatic insights and hands-on experience essential for the modern job
+market. Although currently featuring a singular project, this section is earmarked for
+future expansion as more projects are under active development and will be linked here
+upon completion.
 
 #### iFood Data Analyst Case Project
 
@@ -70,4 +104,5 @@ in Python, utilizing libraries like Scikit-Learn for building and optimizing mod
 
 
 
-Stay tuned as more projects are in the pipeline, aimed at further bridging the theoretical-practical gap, and will be shared here once finalized.
+Stay tuned as more projects are in the pipeline, aimed at further bridging the
+theoretical-practical gap, and will be shared here once finalized.
