@@ -14,14 +14,15 @@ I regularly contribute to [Ciência Programada](https://cienciaprogramada.com.br
 .btn--success}, a science communication project I launched that utilizes Python
 programming. The project website is written in Brazilian Portuguese.
 
-I am currently a Python and Data Science instructor at Hashtag Treinamentos, a leading
-company in the online education sector in Brazil. In this role, I leverage my extensive
-experience in Python programming to facilitate impactful learning experiences. Prior to
-this, I was a data scientist at NECTO Systems, working on projects for Uber. I also
-spent a decade in the education industry, where I founded a research group with students
-to develop programs generating visualizations to aid the understanding of abstract
-chemical concepts. Additionally, I have held positions as a laboratory manager, an
-environmental analyst, and a scientific researcher in chemistry.
+I am currently a **Python and Data Science instructor** at Hashtag Treinamentos, a
+leading company in the online education sector in Brazil. In this role, I leverage my
+extensive experience in Python programming to facilitate impactful learning experiences.
+
+Prior to this, I was a **Data Scientist** at NECTO Systems, working on projects for
+Uber. I also spent a decade in the education industry, where I founded a research group
+with students to develop programs generating visualizations to aid the understanding of
+abstract chemical concepts. Additionally, I have held positions as a laboratory manager,
+an environmental analyst, and a scientific researcher in chemistry.
 
 Explore [my portfolio](portfolio.md){: .btn .btn--info} for
 further details about my projects.
