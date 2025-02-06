@@ -52,8 +52,8 @@ this entry, with projects developed.
 
 ### 2022 - 2023: Data Analyst at NECTO Systems
 
-During my tenure as a data analyst at NECTO Systems—a company specializing in bespoke
-software solutions—I played an integral role in a project commissioned by Uber aimed at
+During my tenure as a data analyst at NECTO Systems — a company specializing in bespoke
+software solutions — I played an integral role in a project commissioned by Uber aimed at
 streamlining accounting reconciliation and enhancing fiscal processes. This project
 required a blend of various technologies and skills to achieve efficient and reliable
 outcomes.
@@ -72,14 +72,13 @@ process.
 - Employed a range of technologies including SQL, Python, Pandas, Hive, and Presto for
 comprehensive data analysis and processing.
 
-In addition to my project responsibilities, I contributed to NECTO Systems' blog,
-authoring articles on the application of analysis and data science in industrial and
-business environments, thereby sharing insights on leveraging data for informed
-decision-making and operational efficiency.
-
-
 [Click here](/portfolio/2023-accounting_reconcilliation_uber) for a more detailed
 description of the project.
+
+In addition to my project responsibilities, [I contributed to NECTO Systems'
+blog](/portfolio/2023-content-writer), authoring articles on the application of
+analysis and data science in industrial and business environments, thereby sharing
+insights on leveraging data for informed decision-making and operational efficiency.
 
 ### 2022: Technical Support Specialist at Hashtag Treinamentos
 
