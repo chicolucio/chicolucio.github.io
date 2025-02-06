@@ -40,25 +40,25 @@ Below are the main articles I wrote during the period. The articles were written
 Brazilian Portuguese. I have included the original title in Portuguese and a translation
 of the title in English.
 
-1. [Você confia nos dados e processos de sua empresa?](https://necto.com.br/2023/07/04/voce-confia-nos-dados-e-processos-de-sua-empresa/)
-> Do You Trust the Data and Processes of Your Company?
-2. [Análise de Dados, Ciência de Dados e Engenharia de Dados: Entenda as Diferenças Para
-o Seu Negócio](https://necto.com.br/2023/08/25/analise-de-dados-ciencia-de-dados-e-engenharia-de-dados-entenda-as-diferencas-para-o-seu-negocio/)
-> Data Analysis, Data Science, and Data Engineering: Understanding the
-Differences for Your Business
-3. [A Ponte entre Ciência de Dados e Sustentabilidade: Soluções de Software
-Personalizadas](https://necto.com.br/2023/06/14/a-ponte-entre-ciencia-de-dados-e-sustentabilidade-solucoes-de-software-personalizadas/)
-> The Bridge between Data Science and Sustainability: Customized Software
-Solutions
-4. [Abordagens de Tomada de Decisão Baseada em Dados para PMEs](https://necto.com.br/2023/08/22/abordagens-de-tomada-de-decisao-baseada-em-dados-para-pmes/)
-> Data-Driven Decision-Making Approaches for SMEs
-5. [Desmistificando a ciência de dados: uma introdução para empreendedores](https://necto.com.br/2023/10/19/desmistificando-a-ciencia-de-dados-uma-introducao-para-empreendedores/)
-> Demystifying Data Science: An Introduction for Entrepreneurs
-6. [O poder da análise descritiva: entendendo os dados do seu negócio](https://necto.com.br/2023/10/17/o-poder-da-analise-descritiva-entendendo-os-dados-do-seu-negocio/)
-> The Power of Descriptive Analysis: Understanding Your Business Data
-7. [Melhore o atendimento ao cliente com ciência de dados](https://necto.com.br/2023/10/12/melhore-o-atendimento-ao-cliente-com-ciencia-de-dados/)
-> Enhance Customer Service with Data Science
-8. [Como a ciência de dados pode melhorar seu marketing](https://necto.com.br/2023/10/10/como-a-ciencia-de-dados-pode-melhorar-seu-marketing/)
-> How Data Science Can Improve Your Marketing
-9. [Qualidade de dados em ambiente empresarial](https://necto.com.br/2023/10/05/qualidade-de-dados-em-ambiente-empresarial/)
-> Data Quality in a Business Environment
+1. Você confia nos dados e processos de sua empresa? — *Do You Trust the Data and
+Processes of Your Company?*
+2. Análise de Dados, Ciência de Dados e Engenharia de Dados: Entenda as Diferenças Para
+o Seu Negócio — *Data Analysis, Data Science, and Data Engineering: Understanding the
+Differences for Your Business*
+3. A Ponte entre Ciência de Dados e Sustentabilidade: Soluções de Software
+Personalizadas — *The Bridge between Data Science and Sustainability: Customized
+Software Solutions*
+4. Abordagens de Tomada de Decisão Baseada em Dados para PMEs — *Data-Driven
+Decision-Making Approaches for SMEs*
+5. Desmistificando a ciência de dados: uma introdução para empreendedores —
+*Demystifying Data Science: An Introduction for Entrepreneurs*
+6. O poder da análise descritiva: entendendo os dados do seu negócio — *The Power of
+Descriptive Analysis: Understanding Your Business Data*
+7. Melhore o atendimento ao cliente com ciência de dados — *Enhance Customer Service
+with Data Science*
+8. Como a ciência de dados pode melhorar seu marketing — *How Data Science Can Improve
+Your Marketing*
+9. Qualidade de dados em ambiente empresarial — *Data Quality in a Business Environment*
+
+You can access the articles [on the Necto Systems
+website](https://necto.com.br/articles-list/).
