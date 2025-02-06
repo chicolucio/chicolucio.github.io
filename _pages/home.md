@@ -7,16 +7,15 @@ header:
   overlay_filter: 0.60 # same as adding an opacity of 0.5 to a black background
 ---
 
-I'm a science communicator and data scientist proficient in Python, with extensive
-experience in libraries such as Pandas, Matplotlib, Scikit-Learn and Plotly.
-
-I regularly contribute to [Ciência Programada](https://cienciaprogramada.com.br/){: .btn
-.btn--success}, a science communication project I launched that utilizes Python
-programming. The project website is written in Brazilian Portuguese.
+I'm a data scientist and science communicator proficient in SQL and Python, with
+extensive experience in libraries such as Pandas, Matplotlib, Scikit-Learn and Plotly.
 
 I am currently a **Python and Data Science instructor** at Hashtag Treinamentos, a
 leading company in the online education sector in Brazil. In this role, I leverage my
 extensive experience in Python programming to facilitate impactful learning experiences.
+
+I regularly contribute to [Ciência Programada](https://cienciaprogramada.com.br/), a science communication project I launched that utilizes Python
+programming. The project website is written in Brazilian Portuguese.
 
 Prior to this, I was a **Data Scientist** at NECTO Systems, working on projects for
 Uber. I also spent a decade in the education industry, where I founded a research group
