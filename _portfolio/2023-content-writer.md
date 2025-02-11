@@ -2,7 +2,7 @@
 name: Content writer for Necto Systems
 title: Content writer for Necto Systems
 image: /assets/images/portfolio_content_writer.png
-position: 3
+position: 5
 period: 2023
 toc: false
 mathjax: true

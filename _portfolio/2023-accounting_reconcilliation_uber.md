@@ -2,7 +2,7 @@
 name: Accounting reconcilliation project for Uber
 title: Accounting reconcilliation project for Uber
 image: /assets/images/portfolio_uber.jpg
-position: 1
+position: 0
 period: 2023
 toc: false
 mathjax: true
