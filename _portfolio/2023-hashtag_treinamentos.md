@@ -18,10 +18,10 @@ description: |
 
 **Challenge**
 
-Working with one of the largest online education providers in Brazil, with over 80,000
-students trained in their courses, the challenge was to develop video and
-written materials for Python and Data Science courses to ensure a high-quality
-learning experience.
+Working with one of the largest online education providers in Brazil, Hashtag
+Treinamentos, with over 80,000 students trained in their courses, the challenge was to
+develop video and written materials for Python and Data Science courses to ensure a
+high-quality learning experience.
 
 
 <figure>
@@ -89,7 +89,7 @@ upon completion.
 
 #### iFood Data Analyst Case Project
 
-[Explore the project](https://github.com/chicolucio/ifood-case-data-analyst)
+[Explore the project](/portfolio/2025-marketing-case/)
 
 This project is rooted in a real recruitment challenge posed by iFood, a notable company
 in Brazil, simulating a scenario from a well-established retail food company. It
