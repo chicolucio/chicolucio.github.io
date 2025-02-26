@@ -20,9 +20,9 @@ Follow the links to more details about each one.
     </a>
   </h2>
   
-  <p style="padding:0; margin:0; color:gray; font-style:italic">
+  <!-- <p style="padding:0; margin:0; color:gray; font-style:italic">
     {{ project.period }}
-  </p>
+  </p> -->
 
   ![image-left]({{ project.image }}){: .align-left width="250"} {{ project.description }}
 
