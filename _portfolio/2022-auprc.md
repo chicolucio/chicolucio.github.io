@@ -189,10 +189,12 @@ sensitive to changes in the model's ability to distinguish between classes.
 Understanding these metrics is vital for assessing model performance and selecting the
 most appropriate evaluation criteria for a given context.
 
-<center>
+<div class="social-container">
+
 <a href="https://www.linkedin.com/in/flsbustamante" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
-<br>
-<a href="https://franciscobustamante.com.br" target="_blank"><img src="https://img.shields.io/badge/portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white" target="_blank"></a>
-</center>
-[<center><img alt="GitHub" width="10%" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png
-"></center>](https://github.com/chicolucio)
+
+<a href="https://github.com/chicolucio" target="_blank"><img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=GitHub&logoColor=white" target="_blank"></a>
+
+<a href="https://franciscobustamante.com.br" target="_blank"><img src="https://img.shields.io/badge/portfolio-333333?style=for-the-badge" target="_blank"></a>
+
+</div>

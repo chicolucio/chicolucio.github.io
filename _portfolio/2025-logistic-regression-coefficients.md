@@ -389,10 +389,12 @@ coefficients and how to interpret them. Check out the project on marketing campa
 success prediction for a practical application of these concepts. If you have any
 questions or feedback, feel free to reach out. Happy modeling!
 
-<center>
+<div class="social-container">
+
 <a href="https://www.linkedin.com/in/flsbustamante" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
-<br>
-<a href="https://franciscobustamante.com.br" target="_blank"><img src="https://img.shields.io/badge/portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white" target="_blank"></a>
-</center>
-[<center><img alt="GitHub" width="10%" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png
-"></center>](https://github.com/chicolucio)
+
+<a href="https://github.com/chicolucio" target="_blank"><img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=GitHub&logoColor=white" target="_blank"></a>
+
+<a href="https://franciscobustamante.com.br" target="_blank"><img src="https://img.shields.io/badge/portfolio-333333?style=for-the-badge" target="_blank"></a>
+
+</div>
