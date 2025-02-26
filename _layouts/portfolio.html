@@ -2,6 +2,32 @@
 layout: default
 ---
 
+<style type="text/css">
+    figure {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    figure figcaption {
+        font-size: "80%";
+        color: gray;
+        text-align: center;
+    }
+
+    .social-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .social-container img {
+        max-width: 200px;
+    }
+</style>
+
 {% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
   {% include page__hero.html %}
 {% elsif page.header.video.id and page.header.video.provider %}
