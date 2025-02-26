@@ -24,9 +24,9 @@ develop video and written materials for Python and Data Science courses to ensur
 high-quality learning experience.
 
 
-<figure>
-<img src="/assets/images/lms.jpg" alt="lms" style="width:100%"/>
-<figcaption align="center">Figure 1. Features usually related to Learning Management
+<figure style="width:60%">
+<img src="/assets/images/lms.jpg" alt="lms"/>
+<figcaption>Figure 1. Features usually related to Learning Management
 Systems and e-Learning</figcaption>
 </figure>
 
@@ -83,11 +83,9 @@ In my pursuit to provide a practical, hands-on learning experience, I've initiat
 section dedicated to showcasing the real-world projects integrated into the curriculum.
 These projects are meticulously designed to emulate real-world scenarios, ensuring
 students gain pragmatic insights and hands-on experience essential for the modern job
-market. Although currently featuring a singular project, this section is earmarked for
-future expansion as more projects are under active development and will be linked here
-upon completion.
+market.
 
-#### iFood Data Analyst Case Project
+#### Optimizing Marketing Campaigns Project
 
 [Explore the project](/portfolio/2025-marketing-case/)
 
@@ -101,6 +99,42 @@ to both technical and non-technical audiences. The repository is structured with
 images, notebooks, and reports folders, illustrating a well-organized data science
 project workflow. Through this project, students also learn good programming practices
 in Python, utilizing libraries like Scikit-Learn for building and optimizing models.
+
+#### Credit Card Fraud Detection Project
+
+[Explore the project](/portfolio/2022-01-project_credit_card_fraud/)
+
+This project is centered around the detection of fraudulent credit card transactions,
+which is a critical challenge faced by financial institutions worldwide. The project
+involves data preprocessing, exploratory data analysis, and the development of a
+classification model to identify fraudulent transactions. The dataset used in this
+project is highly imbalanced, reflecting the real-world scenario of credit card fraud
+detection. By working on this project, students gain a profound understanding of
+handling imbalanced datasets, feature engineering, and model evaluation techniques. The
+project is structured with a detailed notebooks and reports, guiding students through
+the entire data science project lifecycle.
+
+#### Customer Churn Prediction Project
+
+[Explore the project](/portfolio/2022-06-project_churn_prediction/)
+
+This project revolves around predicting customer churn, a critical challenge faced by
+companies across various industries. The project entails data preprocessing, exploratory
+data analysis, and the development of a classification model to predict customer churn.
+The dataset used in this project is sourced from a telecommunications company, providing
+students with a real-world scenario to work on. By engaging with this project, students
+gain practical experience dealing with categorical variables and their encoding,
+feature scaling, and model evaluation techniques. The project is structured with
+notebooks and reports, guiding students through the entire data science project lifecycle.
+
+### Some Lecture Notes
+
+While the projects above are designed to provide a hands-on learning experience, the
+following lecture notes are aimed at enhancing the theoretical understanding of key
+concepts in Machine Learning and Data Science.
+
+- [Metrics for Binary Classification with Imbalanced Datasets](/portfolio/2022-auprc/)
+- [Understanding Logistic Regression Coefficients](/portfolio/2025-logistic-regression-coefficients/)
 
 
 

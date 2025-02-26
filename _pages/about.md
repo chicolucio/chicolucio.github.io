@@ -48,7 +48,9 @@ and additional resources to students, ensuring their success and comprehension o
 complex topics.
 
 [Click here](/portfolio/2023-hashtag_treinamentos) for a more detailed description of
-this entry, with projects developed.
+this entry, with a list of projects specially tailored for educational purposes and
+that have a hands-on approach towards real-world applications.
+
 
 ### 2022 - 2023: Data Analyst at NECTO Systems
 
