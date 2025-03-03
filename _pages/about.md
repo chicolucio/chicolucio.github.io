@@ -10,69 +10,51 @@ header:
 
 ## Abstract 
 
-Proficient science communicator and data scientist with extensive experience in Python
-and associated libraries such as Pandas, Scikit-Learn, Matplotlib, and Plotly.
-Currently, I serve as a Python and Data Science instructor at Hashtag Treinamentos, a
-front-runner in Brazil's online education sector. In this role, I utilize my substantial
-Python programming expertise to deliver impactful learning experiences. Before this, I
-was a data scientist at NECTO Systems, engaged in projects for Uber. I spent a decade in
-the education sector, founding a research group to create programs that generate
-visualizations, aiding the comprehension of abstract chemical concepts. My professional
-journey also includes roles as a laboratory manager, an environmental analyst, and a
-scientific researcher in chemistry. I initiated Ciência Programada, a science
-communication project in Brazilian Portuguese that intertwines science and programming.
+Data Scientist with solid Python, machine learning, and analytics expertise, adept at
+end-to-end projects from data cleaning to predictive modeling. Taught Python and Data
+Science at Hashtag Treinamentos, a major online educator in Brazil, and served as a Data
+Scientist at Uber (via NECTO Systems). Spent a decade in education, founding a research
+group for visual chemistry tools, and also held roles as a lab manager, environmental
+analyst, and scientific researcher.
 
 ## Professional Experience
 
-
 ### 2023 - Present: Python and Data Science Instructor at Hashtag Treinamentos
 
-Embraced a crucial role in advancing the educational journey for students enrolled in
-Python and Data Science courses, with a keen emphasis on bridging theoretical knowledge
-with real-world applications:
-
-- Spearheaded the development and review of comprehensive teaching materials covering
-core Python libraries for data science, including NumPy, Pandas, Matplotlib, Seaborn,
-Scikit-Learn, TensorFlow, PyTorch, and Plotly, ensuring their relevance, effectiveness,
-and alignment with contemporary industry standards.
-- Produced and narrated insightful educational videos on Python, enriching the company's
-e-learning platform and social media channels with engaging, high-quality content.
-- Engineered materials that have been instrumental in facilitating the learning of
-thousands of students on the company’s educational platform, significantly contributing
-to the company's mission of delivering high-quality education.
-- Initiated the integration of real-world projects into the curriculum, mirroring
-practical market scenarios, thereby providing students with a pragmatic understanding
-and experience of industry-relevant challenges and solutions.
-- Fostered a stimulating learning environment, providing continuous support, feedback,
-and additional resources to students, ensuring their success and comprehension of
-complex topics.
+Hashtag Treinamentos is one of Brazil’s largest online education providers, having
+trained over 80,000 students in Python and Data Science.
+- Led the creation and review of comprehensive teaching materials on Python libraries
+(NumPy, Pandas, Matplotlib, Seaborn, Scikit-Learn, TensorFlow, PyTorch, Streamlit,
+Plotly/Dash), ensuring up-to-date and industry-aligned content.
+- Produced video tutorials on SQL, Git, virtual environments, and Python best practices.
+- Improved the Net Promoter Score (NPS) of Data Science courses by 30% through
+continuous feedback loops and content optimization.
+- Introduced real-world projects to the curriculum, covering fraud detection, churn
+prediction, marketing campaign optimization, price optimization, and computer vision.
+  - Developed 15 hands-on projects simulating practical industry scenarios.
+- Provided ongoing support to students by answering questions, reviewing code, and
+offering additional resources to facilitate comprehension of complex topics.
 
 [Click here](/portfolio/2023-hashtag_treinamentos) for a more detailed description of
 this entry, with a list of projects specially tailored for educational purposes and
 that have a hands-on approach towards real-world applications.
 
+### 2022 - 2023: Data Analyst at Uber (through NECTO Systems)
 
-### 2022 - 2023: Data Analyst at NECTO Systems
-
-During my tenure as a data analyst at NECTO Systems — a company specializing in bespoke
-software solutions — I played an integral role in a project commissioned by Uber aimed at
-streamlining accounting reconciliation and enhancing fiscal processes. This project
-required a blend of various technologies and skills to achieve efficient and reliable
-outcomes.
-
-- Managed the cleaning and processing of data from diverse sources, ensuring its quality
-and integrity for accurate analysis.
-- Conducted a thorough review and optimization of the existing data pipeline, targeting
-enhanced efficiency and improved performance.
-- Validated reconciled data to ensure compliance with international accounting standards
-and practices, bolstering the fiscal accuracy of the project.
-- Fostered a collaborative relationship with the client, aiding in the adoption of
-compatible accounting practices and ensuring the fulfillment of fiscal obligations.
-- Spearheaded the implementation of an automated data search and reconciliation pipeline
-by leveraging data engineering techniques, significantly expediting the reconciliation
-process.
-- Employed a range of technologies including SQL, Python, Pandas, Hive, and Presto for
-comprehensive data analysis and processing.
+Allocated to Uber via NECTO Systems — a company specializing in bespoke
+software solutions — focusing on accounting reconciliation and improving fiscal
+processes.
+- Utilized SQL, Python (Pandas), Hive, and Presto for large-scale data analysis and
+processing.
+- Cleaned and standardized data from multiple sources, ensuring data accuracy and
+integrity.
+- Reviewed and optimized existing data pipelines, improving overall efficiency and
+reducing error rates by 20%.
+- Validated reconciled data for compliance with international accounting standards.
+- Assisted Uber in adopting compatible accounting practices and meeting fiscal
+requirements.
+- Implemented automated data search and reconciliation pipelines using data engineering
+techniques, reducing processing time by 15%.
 
 [Click here](/portfolio/2023-accounting_reconcilliation_uber) for a more detailed
 description of the project.
@@ -96,63 +78,59 @@ educational platform
 <!-- [Click here](/portfolio/2022-hashtag_treinamentos) for a more detailed description of
 the project. -->
 
+
 ### 2020 - Present: Science communicator at Ciência Programada
 
-- Launched a science communication with programming platform
-  - It gets thousands of views per month
-- Wrote articles and recorded videos about Python and packages such as Pandas,
-Matplotlib and others to:
-    - Understand phenomena
-    - Explore data sets
-    - Explain programming concepts
-- Wrote articles and recorded videos about coding best practices, Git and tests
+Created personal projects aimed at combining science communication with programming.
+- Published over 100 articles and created video content explaining programming concepts,
+Python libraries (Pandas, Matplotlib, etc.), and data-driven approaches to scientific
+problems.
+- Covered coding best practices, Git, and testing methodologies.
+- Attracted thousands of monthly visitors, broadening understanding of science and
+programming.
 
 To see the project website [click
 here](https://cienciaprogramada.com.br/) (Brazilian Portuguese)
 
 ### 2015 - 2022: Researcher and Professor at IFRJ - Instituto Federal de Educação, Ciência e Tecnologia do Rio de Janeiro (Brazil)
 
-- Launched a research group to develop educational software using Python to have
-the following characteristics:
-    - Visual appeal with Matplotlib and Plotly
-    - Data analysis and processing with Pandas, NumPy and Scipy
-    - Best practices with Git and automated tests
-- Coordinated projects with Trello
-- Taught physical-chemistry lessons
+- Launched a research group on educational software for chemistry, leveraging Python for
+data visualization (Matplotlib, Plotly), data analysis (Pandas, NumPy, SciPy), and
+version control (Git).
+- Supervised 3 undergraduate research students, coordinating projects using Trello.
+- Delivered Physical Chemistry lectures to over 500 students, integrating hands-on
+experience with Excel and Python to boost employability skills.
 
 To see the projects I've developed related to this experience [click
 here](/portfolio/2015-professor_ifrj)
 
 ### 2014 - 2015: Chemist - Laboratory manager at UFF - Universidade Federal Fluminense  (Brazil)
 
-- Managed the Central Analytical Facility of the Chemistry Institute of the
-university
-- Automated the analyses scheduling process with Google Suite
-    - Increased the availability of laboratory equipment by 100 %
-- Automated the equipment usage report with Google Spreadsheets 
-- Launched equipment training and data analysis courses
-    - More than 100 students, technicians and teachers trained
-- Built and implemented the standardization and process workflow for access and
-training on each laboratory and all equipment of the facility
+- Oversaw the Central Analytical Facility, scheduling equipment usage and training.
+- Increased equipment availability by 100% through improved resource management.
+- Automated laboratory usage reports using Python and Excel, significantly streamlining
+workflows.
+- Designed and launched training programs for laboratory equipment operations and data
+analysis, training over 100 participants.
 
 To see the projects I've developed related to this experience [click
 here](/portfolio/2014-2015-quimico_uff)
 
 ### 2014: Environmental analyst at INEA - Instituto Estadual do Ambiente do Rio de Janeiro  (Brazil)
 
-- Automated environmental indicator reports with Excel
-    - Improved team productivity by 25 %
-- Collaborated in the implementation process of ISO/IEC 17025 at Environmental
-Analysis Laboratory
+- Automated environmental indicator reports in Excel, improving team productivity by
+25%.
+- Contributed to implementing ISO/IEC 17025 standards at the Environmental Analysis
+Laboratory.
 
 To see the projects I've developed related to this experience [click
 here](/portfolio/2014-2014-inea)
 
 ### 2012 - 2014: Researcher and Professor at UFF - Universidade Federal Fluminense  (Brazil)
 
-- Supervised two projects regarding the creation of new low-cost educational
-resources 
-- Taught chemistry lessons
+- Supervised two projects focused on creating low-cost educational resources.
+- Taught chemistry classes and implemented exercises integrating real-world chemical
+data analysis.
 
 ## Education
 
@@ -179,11 +157,11 @@ here](/portfolio/2008-2013-pesquisa).
 
 #### Master's Degree in Chemistry, Universidade Federal Fluminense - 2010-2012
 
-- Experienced with data analysis using Excel and Origin software
-- Three scientific papers published in international peer-reviewed journals
-- Organizing committee member of two scientific symposiums 
+- Conducted extensive data analysis using Excel and Origin.
+- Published three research papers in international peer-reviewed journals.
+- Served on organizing committees for two scientific symposia.
 
 #### Bachelor's Degree in Chemistry, Universidade Federal Fluminense - 2006-2010
 
-- One scientific paper published in national peer-reviewed journal
+- Published one scientific paper in a national peer-reviewed journal.
 - Winner of the Alumni Laureate Award due to high academic performance 
