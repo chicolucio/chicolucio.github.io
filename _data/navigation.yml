@@ -5,9 +5,9 @@ main:
   #   url: /categories/
   # - title: "Tags"
   #   url: /tags/
-  - title: "Portfolio"
-    url: /portfolio/
   - title: "CV"
     url: /about/
+  - title: "Portfolio"
+    url: /portfolio/
   - title: "Contact"
     url: /contact/
