@@ -17,6 +17,9 @@ Scientist at Uber (via NECTO Systems). Spent a decade in education, founding a r
 group for visual chemistry tools, and also held roles as a lab manager, environmental
 analyst, and scientific researcher.
 
+Detailed experience and education information can be found below. Or, if you prefer, you
+can [download my CV in PDF format](/assets/files/cv_eng_Francisco_Bustamante.pdf).
+
 ## Professional Experience
 
 ### 2023 - Present: Python and Data Science Instructor at Hashtag Treinamentos
