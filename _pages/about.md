@@ -10,8 +10,8 @@ header:
 
 ## Abstract 
 
-Data Scientist with solid Python, machine learning, and analytics expertise, adept at
-end-to-end projects from data cleaning to predictive modeling. Taught Python and Data
+Data Scientist with solid SQL, Python, machine learning, and analytics expertise, adept
+at end-to-end projects from data cleaning to predictive modeling. Taught Python and Data
 Science at Hashtag Treinamentos, a major online educator in Brazil, and served as a Data
 Scientist at Uber (via NECTO Systems). Spent a decade in education, founding a research
 group for visual chemistry tools, and also held roles as a lab manager, environmental

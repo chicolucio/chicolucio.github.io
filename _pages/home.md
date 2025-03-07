@@ -7,10 +7,10 @@ header:
   overlay_filter: 0.60 # same as adding an opacity of 0.5 to a black background
 ---
 
-Data Scientist with strong experience in Python, machine learning, and data analysis.
-Skilled at leading end-to-end projects (from data cleaning to predictive modeling) and
-improving processes through advanced analytics. Eager to leverage technical and
-communication skills in data-driven roles.
+Data Scientist with strong experience in SQL, Python, machine learning, and data
+analysis.  Skilled at leading end-to-end projects (from data cleaning to predictive
+modeling) and improving processes through advanced analytics. Eager to leverage
+technical and communication skills in data-driven roles.
 
 For a deeper dive into my career, view my [resume](about.md){:
 .btn .btn--info}
