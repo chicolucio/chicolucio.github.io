@@ -12,7 +12,7 @@ header:
 
 Data Scientist with solid SQL, Python, machine learning, and analytics expertise, adept
 at end-to-end projects from data cleaning to predictive modeling. Taught Python and Data
-Science at Hashtag Treinamentos, a major online educator in Brazil, and served as a Data
+Science at Hashtag Treinamentos, a major online educator in Brazil, and worked as a Data
 Scientist at Uber (via NECTO Systems). Spent a decade in education, founding a research
 group for visual chemistry tools, and also held roles as a lab manager, environmental
 analyst, and scientific researcher.
@@ -32,8 +32,9 @@ Plotly/Dash), ensuring up-to-date and industry-aligned content.
 - Produced video tutorials on SQL, Git, virtual environments, and Python best practices.
 - Improved the Net Promoter Score (NPS) of Data Science courses by 30% through
 continuous feedback loops and content optimization.
-- Introduced real-world projects to the curriculum, covering fraud detection, churn
-prediction, marketing campaign optimization, price optimization, and computer vision.
+- Introduced real-world projects to the curriculum, covering fraud detection, customer
+churn prediction, marketing campaign optimization, price optimization, and computer
+vision.
   - Developed 15 hands-on projects simulating practical industry scenarios.
 - Provided ongoing support to students by answering questions, reviewing code, and
 offering additional resources to facilitate comprehension of complex topics.
@@ -67,7 +68,7 @@ blog](/portfolio/2023-content-writer), authoring articles on the application of
 analysis and data science in industrial and business environments, thereby sharing
 insights on leveraging data for informed decision-making and operational efficiency.
 
-### 2022: Technical Support Specialist at Hashtag Treinamentos
+<!-- ### 2022: Technical Support Specialist at Hashtag Treinamentos
 
 As a Technical Support Specialist, I played a key role in supporting students and
 enhancing the learning experience for Data Science and Python courses.
@@ -76,7 +77,7 @@ enhancing the learning experience for Data Science and Python courses.
 contributing to their success
 - Reviewed and created teaching materials, ensuring they were up-to-date and effective
 - Materials developed were utilized by thousands of students on the company's
-educational platform
+educational platform -->
 
 <!-- [Click here](/portfolio/2022-hashtag_treinamentos) for a more detailed description of
 the project. -->

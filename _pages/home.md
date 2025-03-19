@@ -21,7 +21,7 @@ further details about my projects.
 [Contact Me!](contact.md){: .btn .btn--warning .btn--large}
 {: .text-center}
 
-I served as a Python and Data Science instructor at Hashtag Treinamentos, a leading
+I worked as a Python and Data Science instructor at Hashtag Treinamentos, a leading
 online education provider in Brazil, leveraging my Python expertise to deliver impactful
 learning experiences. Before that, I worked as a Data Scientist at Uber (through NECTO
 Systems), focusing on data-driven projects. I also spent a decade in the education
