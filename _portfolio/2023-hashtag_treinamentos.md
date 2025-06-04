@@ -26,7 +26,7 @@ high-quality learning experience.
 
 <figure style="width:60%">
 <img src="/assets/images/lms.jpg" alt="lms"/>
-<figcaption>Figure 1. Features usually related to Learning Management
+<figcaption>Features usually related to Learning Management
 Systems and e-Learning</figcaption>
 </figure>
 
@@ -126,6 +126,22 @@ students with a real-world scenario to work on. By engaging with this project, s
 gain practical experience dealing with categorical variables and their encoding,
 feature scaling, and model evaluation techniques. The project is structured with
 notebooks and reports, guiding students through the entire data science project lifecycle.
+
+#### California Housing Prices Project
+
+[Explore the project](https://github.com/chicolucio/california-housing)
+
+This project explores the use of machine learning to predict housing prices in
+California based on demographic, geographic, and real estate-related features.
+By combining regression models with geospatial analysis, the goal is to generate
+accurate, interpretable, and actionable predictions.
+The dataset comes from the 1990 California census and includes information about
+population, housing age, income levels, location coordinates, and proximity to
+the ocean. Although the original data is dated, it offers a rich context for
+building a complete data science workflow—from preprocessing to deployment.
+The model is deployed in a simple interactive Streamlit application that allows
+users to select a county, set demographic and housing parameters, and get
+real-time price estimates powered by the trained model.
 
 ### Some Lecture Notes
 
