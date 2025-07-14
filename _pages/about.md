@@ -19,7 +19,27 @@ analyst, and scientific researcher.
 
 ## Professional Experience
 
-### 2023 - Present: Python and Data Science Instructor at Hashtag Treinamentos
+### 2025 - Present: Data Scientist at Climatempo (through NECTO Systems)
+
+Worked at Climatempo, a major weather intelligence company in Brazil, via NECTO
+Systems — a company specializing in bespoke software solutions. Delivered a
+full-cycle data science solution:
+- Led the acquisition, cleaning, and exploratory analysis of meteorological and
+geospatial (GIS) data, including missing data treatment, temporal/spatial
+aggregation, and feature derivation
+- Designed and developed supervised machine learning models (Random Forest,
+ExtraTrees, among others) to forecast power grid incidents triggered by extreme
+weather events
+- Performed model training with cross-validation, and evaluated performance
+using F1-score, precision, recall, and confusion matrices
+- Conducted feature importance analysis and provided interpretable insights for
+domain experts
+- Validated model robustness using real weather forecast data for short-term
+prediction scenarios
+- Delivered reproducible code with full documentation, assisted in technical
+transfer, and supported initial deployment in internal pipelines
+
+### 2023 - 2025: Python and Data Science Instructor at Hashtag Treinamentos
 
 Hashtag Treinamentos is one of Brazil’s largest online education providers, having
 trained over 80,000 students in Python and Data Science.
@@ -64,21 +84,6 @@ In addition to my project responsibilities, [I contributed to NECTO Systems'
 blog](/portfolio/2023-content-writer), authoring articles on the application of
 analysis and data science in industrial and business environments, thereby sharing
 insights on leveraging data for informed decision-making and operational efficiency.
-
-<!-- ### 2022: Technical Support Specialist at Hashtag Treinamentos
-
-As a Technical Support Specialist, I played a key role in supporting students and
-enhancing the learning experience for Data Science and Python courses.
-
-- Provided technical and educational support to hundreds of students per month,
-contributing to their success
-- Reviewed and created teaching materials, ensuring they were up-to-date and effective
-- Materials developed were utilized by thousands of students on the company's
-educational platform -->
-
-<!-- [Click here](/portfolio/2022-hashtag_treinamentos) for a more detailed description of
-the project. -->
-
 
 ### 2020 - Present: Science communicator at Ciência Programada
 
