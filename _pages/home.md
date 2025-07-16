@@ -7,10 +7,10 @@ header:
   overlay_filter: 0.60 # same as adding an opacity of 0.5 to a black background
 ---
 
-Data Scientist with strong experience in SQL, Python, machine learning, and data
-analysis.  Skilled at leading end-to-end projects (from data cleaning to predictive
-modeling) and improving processes through advanced analytics. Eager to leverage
-technical and communication skills in data-driven roles.
+I'm a Data Scientist with solid experience in SQL, Python, machine learning, and
+data analysis. I specialize in building end-to-end data solutions — from
+acquisition and cleaning to modeling, evaluation, and deployment — with a strong
+focus on turning data into actionable insights.
 
 For a deeper dive into my career, view my [resume](about.md){:
 .btn .btn--info}
@@ -21,17 +21,20 @@ further details about my projects.
 [Contact Me!](contact.md){: .btn .btn--warning .btn--large}
 {: .text-center}
 
-I worked as a Python and Data Science instructor at Hashtag Treinamentos, a leading
-online education provider in Brazil, leveraging my Python expertise to deliver impactful
-learning experiences. Before that, I worked as a Data Scientist at Uber (through NECTO
-Systems), focusing on data-driven projects. I also spent a decade in the education
-sector, founding a research group that developed visual tools to clarify abstract
-chemical concepts. Additionally, I held roles as a laboratory manager, environmental
-analyst, and scientific researcher in chemistry.
+Currently, I develop predictive models and data pipelines for large-scale
+projects in meteorology and energy infrastructure at Necto Systems, including
+work with Climatempo. Previously, I supported accounting analytics initiatives
+at Uber (also via Necto), and taught Python and Data Science at Hashtag
+Treinamentos, a leading online education platform in Brazil.
 
-I regularly contribute to [Ciência Programada](https://cienciaprogramada.com.br/), a
-science communication project I launched that utilizes Python programming. The project
-website is written in Brazilian Portuguese.
+Before moving into the tech industry, I spent over a decade in academia. I
+founded a research group focused on developing visual tools to teach abstract
+chemistry concepts, and held roles as a lab manager, environmental analyst, and
+scientific researcher.
+
+I’m also the creator of [Ciência Programada](https://cienciaprogramada.com.br/),
+a science communication project (in Brazilian Portuguese) that uses Python to
+explain scientific ideas and methods.
 
 [![data_science_services](/assets/images/data_science_services.jpg)](/contact)
 {: .text-center}
