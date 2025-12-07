@@ -10,20 +10,46 @@ header:
 
 ## Abstract 
 
-Data Scientist with solid SQL, Python, machine learning, and analytics expertise, adept
-at end-to-end projects from data cleaning to predictive modeling. Taught Python and Data
-Science at Hashtag Treinamentos, a major online educator in Brazil, and worked as a Data
-Scientist at Uber (via NECTO Systems). Spent a decade in education, founding a research
-group for visual chemistry tools, and also held roles as a lab manager, environmental
-analyst, and scientific researcher.
+**Senior Data Scientist** specialized in building end-to-end ML solutions, from
+Big Data processing to deployment. Currently leveraging *Generative AI*
+to optimize recommendations at **LuizaLabs** (via Tecla T). Experience includes
+delivering analytics for **Uber**, predictive modeling for **Climatempo** (both via
+Necto Systems), and teaching Data Science. Former academic researcher with a
+strong scientific background.
 
 ## Professional Experience
 
-### 2025 - Present: Data Scientist at Climatempo (through NECTO Systems)
+### 2025 - Present: Senior Data Scientist at LuizaLabs (via Tecla T)
 
-Worked at Climatempo, a major weather intelligence company in Brazil, via NECTO
-Systems — a company specializing in bespoke software solutions. Delivered a
-full-cycle data science solution:
+Hired by Tecla T, a tech consultancy specializing in high-performance
+professionals, to work on assignment at LuizaLabs — the innovation powerhouse
+behind Magazine Luiza (Magalu), one of Brazil's largest omnichannel retail
+platforms.
+
+Role & Impact: I act as a Senior Data Scientist within the Recommendations
+squad, focusing on improving the discovery and shopping experience for millions
+of users. My core mission is to modernize the recommendation engine by
+integrating Generative AI into the data strategy.
+
+Key Contributions:
+
+- GenAI for Recommendations: Using vLLM, LangChain, and Llama to interpret
+customer intent and semantic interests, transforming these insights into
+features that feed core ranking and recommendation models.
+- Data Engineering & Pipelines: Navigating large-scale datasets within the
+Magalu ecosystem, using BigQuery and PySpark to explore, transform, and prepare
+data for modeling.
+- MLOps & Engineering Practices: Collaborating with engineers to integrate
+models into production, utilizing GitLab for versioning, Airflow for
+orchestration, MLflow for experiment tracking, and Docker for containerization.
+
+### 2025: Data Scientist at NECTO Systems
+
+Hired by NECTO Systems, a tech consultancy company, to work on assignment at
+Climatempo, a major weather intelligence company in Brazil.
+
+Delivered a full-cycle data science solution:
+
 - Led the acquisition, cleaning, and exploratory analysis of meteorological and
 geospatial (GIS) data, including missing data treatment, temporal/spatial
 aggregation, and feature derivation
@@ -38,6 +64,17 @@ domain experts
 prediction scenarios
 - Delivered reproducible code with full documentation, assisted in technical
 transfer, and supported initial deployment in internal pipelines
+
+Additionally, worked on a short-term assignment at Ball Corporation, a global
+leader in sustainable aluminum packaging, where I:
+
+- Designed an analytics solution to integrate packaging-material inventories,
+production capacity, and sales plans into a unified planning view
+- Developed Python (pandas) and SQL ETL pipelines plus advanced Excel automation
+to consolidate and standardize multiple data sources
+- Built Power BI dashboards to monitor stock coverage and capacity vs. demand,
+reducing manual reporting effort and supporting data-driven decisions
+
 
 ### 2023 - 2025: Python and Data Science Instructor at Hashtag Treinamentos
 

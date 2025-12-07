@@ -7,10 +7,10 @@ header:
   overlay_filter: 0.60 # same as adding an opacity of 0.5 to a black background
 ---
 
-I'm a Data Scientist with solid experience in SQL, Python, machine learning, and
-data analysis. I specialize in building end-to-end data solutions — from
-acquisition and cleaning to modeling, evaluation, and deployment — with a strong
-focus on turning data into actionable insights.
+I'm a **Senior Data Scientist** with solid experience in Python, SQL, machine
+learning, and Generative AI. I specialize in building end-to-end data solutions
+— from big data processing and cleaning to modeling and deployment — with a
+strong focus on turning data into actionable insights.
 
 For a deeper dive into my career, view my [resume](about.md){:
 .btn .btn--info}
@@ -21,11 +21,11 @@ further details about my projects.
 [Contact Me!](contact.md){: .btn .btn--warning .btn--large}
 {: .text-center}
 
-Currently, I develop predictive models and data pipelines for large-scale
-projects in meteorology and energy infrastructure at Necto Systems, including
-work with Climatempo. Previously, I supported accounting analytics initiatives
-at Uber (also via Necto), and taught Python and Data Science at Hashtag
-Treinamentos, a leading online education platform in Brazil.
+Currently, I am part of the *recommendations team at LuizaLabs* (via Tecla T),
+leveraging LLMs and BigQuery to enhance the e-commerce experience. Previously, I
+developed predictive models for meteorology and energy infrastructure at Necto
+Systems (including work with Climatempo), supported accounting analytics at
+Uber, and taught Python and Data Science at Hashtag Treinamentos.
 
 Before moving into the tech industry, I spent over a decade in academia. I
 founded a research group focused on developing visual tools to teach abstract
