@@ -2,7 +2,7 @@
 name: Optimizing marketing campaigns with data
 title: Optimizing marketing campaigns with data
 image: /assets/images/portfolio_marketing_case_intro.png
-position: 2
+position: 42
 period: 2025
 toc: true
 mathjax: true
@@ -474,14 +474,14 @@ The chosen model was then fine-tuned using grid search to optimize the hyperpara
 The final model had the following metrics:
 
 | Metric            | Mean  | Std Dev |
-|-------------------|-------|---------|
-| Accuracy          | 0.819 | 0.006 |
-| Balanced Accuracy | 0.817 | 0.020 |
-| F1                | 0.576 | 0.019 |
-| Precision         | 0.445 | 0.009 |
-| Recall            | 0.814 | 0.042 |
-| ROC AUC           | 0.898 | 0.011 |
-| Average Precision | 0.669 | 0.028 |
+| ----------------- | ----- | ------- |
+| Accuracy          | 0.819 | 0.006   |
+| Balanced Accuracy | 0.817 | 0.020   |
+| F1                | 0.576 | 0.019   |
+| Precision         | 0.445 | 0.009   |
+| Recall            | 0.814 | 0.042   |
+| ROC AUC           | 0.898 | 0.011   |
+| Average Precision | 0.669 | 0.028   |
 
 
 We see that our model highly favors recall in detriment of precision. This is because
@@ -522,13 +522,13 @@ $$
 
 Applying this to your data:
 
-| Segment  | Absolute Odds Ratio | Adjusted (Relative to Dormant) |
-|----------|---------------------|--------------------------------|
-| **Dormant** | 0.0619  | **1.00 (Baseline)** |
-| **Occasional** | 0.3161  | $$\frac{0.3161}{0.0619} = 5.11$$ |
-| **Engaged** | 1.2011  | $$\frac{1.2011}{0.0619} = 19.40$$ |
-| **Valuable** | 3.9805  | $$\frac{3.9805}{0.0619} = 64.28$$ |
-| **Elite** | 8.8405  | $$\frac{8.8405}{0.0619} = 142.76$$ |
+| Segment        | Absolute Odds Ratio | Adjusted (Relative to Dormant)     |
+| -------------- | ------------------- | ---------------------------------- |
+| **Dormant**    | 0.0619              | **1.00 (Baseline)**                |
+| **Occasional** | 0.3161              | $$\frac{0.3161}{0.0619} = 5.11$$   |
+| **Engaged**    | 1.2011              | $$\frac{1.2011}{0.0619} = 19.40$$  |
+| **Valuable**   | 3.9805              | $$\frac{3.9805}{0.0619} = 64.28$$  |
+| **Elite**      | 8.8405              | $$\frac{8.8405}{0.0619} = 142.76$$ |
 
 - **Occasional customers** are **5.1 times** more likely to convert compared to Dormant customers.
 - **Engaged customers** are **19.4 times** more likely than Dormant customers.
@@ -609,13 +609,13 @@ Using this threshold, we can have a look at the selected customers (those with a
 probability of buying equal or greater than 0.27) and see the segments they belong to.
 The table below shows the conversion rates per segment at the optimal threshold:
 
-| Segment   | Conv. Rate | Selected Cust. | Cum. % of Total | Converted Cust.|  Cum. % Converted |
-|-----------|------------|--------------- |-----------------|----------------|------------------|
-| Dormant   | 0.231      | 26             |  1.2            | 6              |  0.6             |
-| Occasional| 0.218      | 119            |  6.6            | 25             |  3.2             |
-| Engaged   | 0.275      | 309            |  20.6           | 84             |  11.9            |
-| Valuable  | 0.336      | 271            |  32.9           | 91             |  21.3            |
-| Elite     | 0.452      | 239            |  43.7           | 108            |  32.5            |
+| Segment    | Conv. Rate | Selected Cust. | Cum. % of Total | Converted Cust. | Cum. % Converted |
+| ---------- | ---------- | -------------- | --------------- | --------------- | ---------------- |
+| Dormant    | 0.231      | 26             | 1.2             | 6               | 0.6              |
+| Occasional | 0.218      | 119            | 6.6             | 25              | 3.2              |
+| Engaged    | 0.275      | 309            | 20.6            | 84              | 11.9             |
+| Valuable   | 0.336      | 271            | 32.9            | 91              | 21.3             |
+| Elite      | 0.452      | 239            | 43.7            | 108             | 32.5             |
 
 We see that this threshold takes 43.7% of the original customers of our dataset. This is
 good, as we are not targeting too few customers (which would decrease our revenue) or

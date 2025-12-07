@@ -2,7 +2,7 @@
 name: Understanding logistic regression coefficients  
 title: Understanding logistic regression coefficients  
 image: /assets/images/machine_learning_small.png
-position: 3
+position: 43
 period: 2025
 toc: true
 mathjax: true
@@ -210,33 +210,33 @@ offer or making a purchase.
 Scikit-Learn's `LogisticRegression` model was used to fit the data. The coefficients from
 the model are as follows:
 
-| Feature                                      | Coefficient |
-|----------------------------------------------|------------|
-| one_hot_encoding__Segment_Dormant           | -2.782     |
-| power_transformer__MntWines                 | -1.228     |
-| one_hot_encoding__Segment_Occasional        | -1.152     |
-| power_transformer__NumStorePurchases        | -1.126     |
-| power_transformer__MntRegularProds          | -0.806     |
-| one_hot_encoding__HasChildren_1             | -0.690     |
-| one_hot_encoding__Complain_1                | -0.548     |
-| power_transformer__MntFishProducts          | -0.434     |
-| ordinal_encoding__AgeGroup                  | -0.043     |
-| power_transformer__MntFruits                | -0.026     |
-| power_transformer__MntSweetProducts         | -0.019     |
-| standard_scaling__Income                    | -0.016     |
-| power_transformer__MntGoldProds             |  0.055     |
-| one_hot_encoding__Segment_Engaged           |  0.183     |
-| ordinal_encoding__Children                  |  0.212     |
-| power_transformer__NumWebPurchases          |  0.256     |
-| one_hot_encoding__HasAcceptedCmp_1          |  0.352     |
-| power_transformer__NumCatalogPurchases      |  0.446     |
-| ordinal_encoding__Education                 |  0.458     |
-| standard_scaling__MonthsSinceEnrolled       |  1.017     |
-| one_hot_encoding__Marital_Status_Single     |  1.142     |
-| one_hot_encoding__Segment_Valuable          |  1.381     |
-| power_transformer__MntMeatProducts          |  1.498     |
-| ordinal_encoding__AcceptedCmpTotal          |  1.573     |
-| one_hot_encoding__Segment_Elite             |  2.179     |
+| Feature                                 | Coefficient |
+| --------------------------------------- | ----------- |
+| one_hot_encoding__Segment_Dormant       | -2.782      |
+| power_transformer__MntWines             | -1.228      |
+| one_hot_encoding__Segment_Occasional    | -1.152      |
+| power_transformer__NumStorePurchases    | -1.126      |
+| power_transformer__MntRegularProds      | -0.806      |
+| one_hot_encoding__HasChildren_1         | -0.690      |
+| one_hot_encoding__Complain_1            | -0.548      |
+| power_transformer__MntFishProducts      | -0.434      |
+| ordinal_encoding__AgeGroup              | -0.043      |
+| power_transformer__MntFruits            | -0.026      |
+| power_transformer__MntSweetProducts     | -0.019      |
+| standard_scaling__Income                | -0.016      |
+| power_transformer__MntGoldProds         | 0.055       |
+| one_hot_encoding__Segment_Engaged       | 0.183       |
+| ordinal_encoding__Children              | 0.212       |
+| power_transformer__NumWebPurchases      | 0.256       |
+| one_hot_encoding__HasAcceptedCmp_1      | 0.352       |
+| power_transformer__NumCatalogPurchases  | 0.446       |
+| ordinal_encoding__Education             | 0.458       |
+| standard_scaling__MonthsSinceEnrolled   | 1.017       |
+| one_hot_encoding__Marital_Status_Single | 1.142       |
+| one_hot_encoding__Segment_Valuable      | 1.381       |
+| power_transformer__MntMeatProducts      | 1.498       |
+| ordinal_encoding__AcceptedCmpTotal      | 1.573       |
+| one_hot_encoding__Segment_Elite         | 2.179       |
 
 As can be seen, the categorical features underwent one-hot encoding or ordinal encoding,
 while the numerical features were scaled or transformed. The coefficients represent the
@@ -291,33 +291,33 @@ on the probability of conversion.
 
 Here are the odds ratios for the features in the model:
 
-| Feature                                      | Odds Ratio |
-|----------------------------------------------|------------|
-| one_hot_encoding__Segment_Dormant           | 0.062      |
-| power_transformer__MntWines                 | 0.293      |
-| one_hot_encoding__Segment_Occasional        | 0.316      |
-| power_transformer__NumStorePurchases        | 0.324      |
-| power_transformer__MntRegularProds          | 0.447      |
-| one_hot_encoding__HasChildren_1             | 0.502      |
-| one_hot_encoding__Complain_1                | 0.578      |
-| power_transformer__MntFishProducts          | 0.648      |
-| ordinal_encoding__AgeGroup                  | 0.958      |
-| power_transformer__MntFruits                | 0.975      |
-| power_transformer__MntSweetProducts         | 0.981      |
-| standard_scaling__Income                    | 0.984      |
-| power_transformer__MntGoldProds             | 1.056      |
-| one_hot_encoding__Segment_Engaged           | 1.201      |
-| ordinal_encoding__Children                  | 1.236      |
-| power_transformer__NumWebPurchases          | 1.292      |
-| one_hot_encoding__HasAcceptedCmp_1          | 1.422      |
-| power_transformer__NumCatalogPurchases      | 1.562      |
-| ordinal_encoding__Education                 | 1.582      |
-| standard_scaling__MonthsSinceEnrolled       | 2.765      |
-| one_hot_encoding__Marital_Status_Single     | 3.132      |
-| one_hot_encoding__Segment_Valuable          | 3.980      |
-| power_transformer__MntMeatProducts          | 4.472      |
-| ordinal_encoding__AcceptedCmpTotal          | 4.822      |
-| one_hot_encoding__Segment_Elite             | 8.840      |
+| Feature                                 | Odds Ratio |
+| --------------------------------------- | ---------- |
+| one_hot_encoding__Segment_Dormant       | 0.062      |
+| power_transformer__MntWines             | 0.293      |
+| one_hot_encoding__Segment_Occasional    | 0.316      |
+| power_transformer__NumStorePurchases    | 0.324      |
+| power_transformer__MntRegularProds      | 0.447      |
+| one_hot_encoding__HasChildren_1         | 0.502      |
+| one_hot_encoding__Complain_1            | 0.578      |
+| power_transformer__MntFishProducts      | 0.648      |
+| ordinal_encoding__AgeGroup              | 0.958      |
+| power_transformer__MntFruits            | 0.975      |
+| power_transformer__MntSweetProducts     | 0.981      |
+| standard_scaling__Income                | 0.984      |
+| power_transformer__MntGoldProds         | 1.056      |
+| one_hot_encoding__Segment_Engaged       | 1.201      |
+| ordinal_encoding__Children              | 1.236      |
+| power_transformer__NumWebPurchases      | 1.292      |
+| one_hot_encoding__HasAcceptedCmp_1      | 1.422      |
+| power_transformer__NumCatalogPurchases  | 1.562      |
+| ordinal_encoding__Education             | 1.582      |
+| standard_scaling__MonthsSinceEnrolled   | 2.765      |
+| one_hot_encoding__Marital_Status_Single | 3.132      |
+| one_hot_encoding__Segment_Valuable      | 3.980      |
+| power_transformer__MntMeatProducts      | 4.472      |
+| ordinal_encoding__AcceptedCmpTotal      | 4.822      |
+| one_hot_encoding__Segment_Elite         | 8.840      |
 
 
 When interpreting the odds ratios, we can say that:
@@ -355,13 +355,13 @@ $$
 
 Applying this to your data:
 
-| Segment  | Absolute Odds Ratio | Adjusted (Relative to Dormant) |
-|----------|---------------------|--------------------------------|
-| **Dormant** | 0.0619  | **1.00 (Baseline)** |
-| **Occasional** | 0.3161  | $$\frac{0.3161}{0.0619} = 5.11$$ |
-| **Engaged** | 1.2011  | $$\frac{1.2011}{0.0619} = 19.40$$ |
-| **Valuable** | 3.9805  | $$\frac{3.9805}{0.0619} = 64.28$$ |
-| **Elite** | 8.8405  | $$\frac{8.8405}{0.0619} = 142.76$$ |
+| Segment        | Absolute Odds Ratio | Adjusted (Relative to Dormant)     |
+| -------------- | ------------------- | ---------------------------------- |
+| **Dormant**    | 0.0619              | **1.00 (Baseline)**                |
+| **Occasional** | 0.3161              | $$\frac{0.3161}{0.0619} = 5.11$$   |
+| **Engaged**    | 1.2011              | $$\frac{1.2011}{0.0619} = 19.40$$  |
+| **Valuable**   | 3.9805              | $$\frac{3.9805}{0.0619} = 64.28$$  |
+| **Elite**      | 8.8405              | $$\frac{8.8405}{0.0619} = 142.76$$ |
 
 - **Occasional customers** are **5.1 times** more likely to convert compared to Dormant customers.
 - **Engaged customers** are **19.4 times** more likely than Dormant customers.

@@ -2,7 +2,7 @@
 name: Metrics for Binary Classification with Imbalanced Datasets
 title: Metrics for Binary Classification with Imbalanced Datasets
 image: /assets/images/imbalance_anim.gif
-position: 4
+position: 44
 period: 2022
 toc: true
 mathjax: true

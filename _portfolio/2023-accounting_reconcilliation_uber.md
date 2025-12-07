@@ -2,7 +2,7 @@
 name: Accounting reconcilliation project for Uber
 title: Accounting reconcilliation project for Uber
 image: /assets/images/portfolio_uber.jpg
-position: 0
+position: 9
 period: 2023
 toc: false
 mathjax: true
@@ -11,7 +11,7 @@ header:
   og_image: /assets/images/portfolio_uber.jpg
 description: |
   As a Data Analyst at NECTO Systems, I played a key role in a project focused on addressing
-  accounting reconciliation challenges for our client, Uber. I developed a customized
+  accounting reconciliation challenges for our client, **Uber**. I developed a customized
   data engineering solution, leveraging tools such as SQL, Python, Pandas, Hive, and
   Presto to create an automated pipeline for data retrieval and reconciliation. This
   project successfully reconciled financial reports for two of the Uber's business

@@ -2,7 +2,7 @@
 name: Enhancing Online Education - Data Science Instructor
 title: Enhancing Online Education - Python and Data Science Instructor
 image: /assets/images/portfolio_hashtag.jpg
-position: 1
+position: 10
 period: 2023 - 2025
 toc: false
 mathjax: true

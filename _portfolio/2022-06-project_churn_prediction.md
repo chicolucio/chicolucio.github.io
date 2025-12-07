@@ -2,7 +2,7 @@
 name: Customer churn prediction
 title: Customer churn prediction
 image: https://github.com/Ciencia-Programada/articles-images/blob/master/churn/1.jpg?raw=true
-position: 6
+position: 45
 period: June 2022
 toc: true
 mathjax: true
@@ -440,16 +440,16 @@ The logistic regression model was then fine-tuned using a grid search to maximiz
 
 The final model has the following metrics:
 
-| Metric             | Score    | Std Dev  |
-|--------------------|----------|----------|
-| Accuracy           | 0.752 | 0.007 |
-| Balanced Accuracy  | 0.766 | 0.009 |
-| F1                 | 0.630 | 0.011 |
-| Precision          | 0.521 | 0.009 |
-| Recall             | 0.795 | 0.018 |
-| ROC AUC            | 0.846 | 0.012 |
-| Average Precision  | 0.658 | 0.020 |
-| F1 Weighted        | 0.764 | 0.006 |
+| Metric            | Score | Std Dev |
+| ----------------- | ----- | ------- |
+| Accuracy          | 0.752 | 0.007   |
+| Balanced Accuracy | 0.766 | 0.009   |
+| F1                | 0.630 | 0.011   |
+| Precision         | 0.521 | 0.009   |
+| Recall            | 0.795 | 0.018   |
+| ROC AUC           | 0.846 | 0.012   |
+| Average Precision | 0.658 | 0.020   |
+| F1 Weighted       | 0.764 | 0.006   |
 
 We see that our model favors recall in detriment of precision. This is fine, as we are
 more interested in capturing all the customers that are likely to churn, even if we

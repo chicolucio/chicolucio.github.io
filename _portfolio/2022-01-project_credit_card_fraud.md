@@ -2,7 +2,7 @@
 name: Credit card fraud detection
 title: Credit Card Fraud Detection
 image: /portfolio/project_credit_card_fraud_files/fraud_logo.jpg
-position: 7
+position: 46
 period: January 2022
 toc: true
 toc_min_header: 2
@@ -377,17 +377,17 @@ The SVC model was fine-tuned using a grid search. The parameters `C`, `gamma` an
 
 The final model has the following metrics:
 
-| Metric              | Score    | Std Dev   |
-|---------------------|----------|-----------|
-| Accuracy            | 0.99968 | 0.00004  |
-| Balanced Accuracy   | 0.91 | 0.01  |
-| F1                  | 0.90 | 0.01  |
-| Precision           | 1.00 | 0.00  |
-| Recall              | 0.82 | 0.02  |
-| ROC AUC             | 0.941 | 0.008  |
-| Average Precision   | 0.86 | 0.02  |
-| Neg. Brier Score    | -0.009| 0.002  |
-| F1 Weighted         | 0.999665 | 0.00005  |
+| Metric            | Score    | Std Dev |
+| ----------------- | -------- | ------- |
+| Accuracy          | 0.99968  | 0.00004 |
+| Balanced Accuracy | 0.91     | 0.01    |
+| F1                | 0.90     | 0.01    |
+| Precision         | 1.00     | 0.00    |
+| Recall            | 0.82     | 0.02    |
+| ROC AUC           | 0.941    | 0.008   |
+| Average Precision | 0.86     | 0.02    |
+| Neg. Brier Score  | -0.009   | 0.002   |
+| F1 Weighted       | 0.999665 | 0.00005 |
 
 ## Model Interpretability
 

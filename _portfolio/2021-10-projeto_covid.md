@@ -2,7 +2,7 @@
 name: Global overview of COVID-19
 title: Panorama do COVID-19 no mundo
 image: /portfolio/projeto_covid_files/covid_logo.jpg
-position: 90
+position: 91
 period: October 2021
 toc: true
 header:
@@ -129,14 +129,14 @@ tempo depois que as primeiras amostras de cada variante são analisadas, conform
 a tabela:
 
 
-| Variante | Data da primeira amostra | Data do nome |
-|:------|:--------|:--------|
-| alfa | Setembro/2020 - Reino Unido | Dezembro de 2020  | 
-| beta | Maio/2020 - África do Sul | Dezembro de 2020  | 
-| gama | Novembro/2020 - Brasil | Janeiro de 2021 | 
-| delta | Outubro/2020 - Índia | Abril de 2021 | 
-| lambda | Dezembro/2020 - Peru | Junho de 2021 | 
-| mu | Janeiro/2021 - Colômbia | Agosto de 2021 | 
+| Variante | Data da primeira amostra    | Data do nome     |
+| :------- | :-------------------------- | :--------------- |
+| alfa     | Setembro/2020 - Reino Unido | Dezembro de 2020 |
+| beta     | Maio/2020 - África do Sul   | Dezembro de 2020 |
+| gama     | Novembro/2020 - Brasil      | Janeiro de 2021  |
+| delta    | Outubro/2020 - Índia        | Abril de 2021    |
+| lambda   | Dezembro/2020 - Peru        | Junho de 2021    |
+| mu       | Janeiro/2021 - Colômbia     | Agosto de 2021   |
 
 Neste estudo, optou-se por utilizar a data da primeira amostra nos gráficos,
 motivo pelo qual a beta aparece antes da alfa. Tal escolha se deve ao fato de a
@@ -156,18 +156,18 @@ Vamos agora olhar os países com mais casos até setembro de 2021.
 Em um primeiro momento, podemos supor que países com maiores populações
 apresentem mais casos. Vamos verificar as maiores populações mundiais:
 
-| País | População |
-|----|----|
-| China |1.444.216.102 |
-| Índia|1.393.409.033 |
-| Estados Unidos |332.915.074 |
-| Indonésia|276.361.788 |
-| Paquistão |225.199.929 |
-| Brasil|213.993.441 |
-| Nigéria|211.400.704 |
-| Bangladesh|166.303.494 |
-| Rússia|145.912.022 |
-| México|130.262.220 |
+| País           | População     |
+| -------------- | ------------- |
+| China          | 1.444.216.102 |
+| Índia          | 1.393.409.033 |
+| Estados Unidos | 332.915.074   |
+| Indonésia      | 276.361.788   |
+| Paquistão      | 225.199.929   |
+| Brasil         | 213.993.441   |
+| Nigéria        | 211.400.704   |
+| Bangladesh     | 166.303.494   |
+| Rússia         | 145.912.022   |
+| México         | 130.262.220   |
 
 
 
@@ -400,14 +400,14 @@ fatores relacionados ao microclima de cada país/região e, obviamente, aspectos
 políticos e econômicos muito distintos. Apenas de forma ilustrativa, vejamos a
 população de cada continente:
 
-|Continente | População |
-| ---- | ----- |
-|  Oceania | 43.219.954 | 
-|  América do Sul | 434.260.138 | 
-|  América do Norte | 596.581.283 | 
-|  Europa | 747.747.396 | 
-|  África | 1.373.486.472 | 
-|  Ásia | 4.679.660.580 | 
+| Continente       | População     |
+| ---------------- | ------------- |
+| Oceania          | 43.219.954    |
+| América do Sul   | 434.260.138   |
+| América do Norte | 596.581.283   |
+| Europa           | 747.747.396   |
+| África           | 1.373.486.472 |
+| Ásia             | 4.679.660.580 |
 
 Já vimos que aparentemente há um caráter sazonal nos casos de COVID-19. Vamos
 criar um mapa que apresente esse perfil para cada país.

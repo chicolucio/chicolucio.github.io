@@ -2,7 +2,7 @@
 name: Global overview of COVID-19 - The omicron spread
 title: Panorama do COVID-19 no mundo
 image: /portfolio/projeto_covid_files_april_2022/covid_logo.jpg
-position: 8
+position: 47
 period: May 2022
 toc: true
 header:
@@ -80,15 +80,15 @@ Vemos que, desde o surgimento em meados de janeiro de 2020, foram necessários c
 
 Muito se fala das variantes do vírus. A Organização Mundial da Saúde (OMS) em [seu site](https://www.who.int/en/activities/tracking-SARS-CoV-2-variants/) descreve os critérios para considerar uma determinada variante como sendo de interesse ou preocupante. A OMS também esclarece que os nomes são dados um certo tempo depois que as primeiras amostras de cada variante são analisadas, conforme a tabela:
 
-| Variante | Data da primeira amostra | Data do nome |
-|:------|:--------|:--------|
-| alfa | Setembro/2020 - Reino Unido | Dezembro de 2020 
-| beta | Maio/2020 - África do Sul | Dezembro de 2020 
-| gama | Novembro/2020 - Brasil | Janeiro de 2021
-| delta | Outubro/2020 - Índia | Abril de 2021
-| lambda | Dezembro/2020 - Peru | Junho de 2021
-| mu | Janeiro/2021 - Colômbia | Agosto de 2021
-| ômicron | Novembro/2021 - Diversos | Novembro de 2021
+| Variante | Data da primeira amostra    | Data do nome     |
+| :------- | :-------------------------- | :--------------- |
+| alfa     | Setembro/2020 - Reino Unido | Dezembro de 2020 |
+| beta     | Maio/2020 - África do Sul   | Dezembro de 2020 |
+| gama     | Novembro/2020 - Brasil      | Janeiro de 2021  |
+| delta    | Outubro/2020 - Índia        | Abril de 2021    |
+| lambda   | Dezembro/2020 - Peru        | Junho de 2021    |
+| mu       | Janeiro/2021 - Colômbia     | Agosto de 2021   |
+| ômicron  | Novembro/2021 - Diversos    | Novembro de 2021 |
 
 Neste estudo, *optou-se por utilizar a data da primeira amostra nos gráficos*, motivo pelo qual a beta aparece antes da alfa. Tal escolha se deve ao fato de a variante já estar se espalhando desde a data de amostra independentemente de ter recebido um nome. Vamos adicionar aos gráficos anteriores linhas indicando as datas de aparecimento de cada variante:
 
@@ -554,12 +554,12 @@ Como era de se esperar, vemos apenas países da Ásia e Europa.
 A base de dados possui entradas para agregados de países com base na classificação de renda do Banco Mundial. Tal classificação baseia-se na renda per capita da seguinte forma (dólares americanos):
 
 
-| Classifição | Limite inferior | Limite superior
-| --- | --- | --- 
-| Renda baixa (*low-income*) | - | 1045
-| Renda média baixa (*lower-middle-income*) | 1046 | 4095
-| Renda média alta (*upper-middle-income*) | 4096 | 12695
-| Renda alta (*high-income*) | 12696 | -
+| Classifição                               | Limite inferior | Limite superior |
+| ----------------------------------------- | --------------- | --------------- |
+| Renda baixa (*low-income*)                | -               | 1045            |
+| Renda média baixa (*lower-middle-income*) | 1046            | 4095            |
+| Renda média alta (*upper-middle-income*)  | 4096            | 12695           |
+| Renda alta (*high-income*)                | 12696           | -               |
 
 Para detalhes de classificação de cada país, [veja este link](https://datahelpdesk.worldbank.org/knowledgebase/articles/906519-world-bank-country-and-lending-groups). O Brasil, por exemplo, é considerado uma economia de renda média alta. Abordaremos com mais detalhes o caso brasileiro em uma seção específica mais adiante. 
 
