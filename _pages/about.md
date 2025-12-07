@@ -65,6 +65,9 @@ prediction scenarios
 - Delivered reproducible code with full documentation, assisted in technical
 transfer, and supported initial deployment in internal pipelines
 
+[Click here](/portfolio/2025-climatempo) for a more detailed
+description of the project.
+
 Additionally, worked on a short-term assignment at Ball Corporation, a global
 leader in sustainable aluminum packaging, where I:
 
