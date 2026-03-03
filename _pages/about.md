@@ -12,56 +12,55 @@ header:
 
 **Senior Data Scientist** specialized in building end-to-end ML solutions, from
 Big Data processing to deployment. Currently leveraging *Generative AI*
-to optimize recommendations at **LuizaLabs** (via Tecla T). Experience includes
-delivering analytics for **Uber**, predictive modeling for **Climatempo** (both via
-Necto Systems), and teaching Data Science. Former academic researcher with a
+to optimize recommendations at **LuizaLabs** (via TeclaT). Experience includes
+delivering analytics for **Uber**, predictive modeling for **Climatempo** (both
+via Necto Systems), and teaching Data Science. Former academic researcher with a
 strong scientific background.
 
 ## Professional Experience
 
-### 2025 - Present: Senior Data Scientist at LuizaLabs (via Tecla T)
+### 2025 - Present: Senior Data Scientist at LuizaLabs (via TeclaT)
 
-Hired by Tecla T, a tech consultancy specializing in high-performance
-professionals, to work on assignment at LuizaLabs — the innovation powerhouse
-behind Magazine Luiza (Magalu), one of Brazil's largest omnichannel retail
-platforms.
+TeclaT (Contract) — Assigned to LuizaLabs, the technology arm of Magazine Luiza
+(Magalu), a leading Brazilian omnichannel retailer, as a Senior Data Scientist
+in the Recommendations team, improving search and product discovery at scale.
 
-Role & Impact: I act as a Senior Data Scientist within the Recommendations
-squad, focusing on improving the discovery and shopping experience for millions
-of users. My core mission is to modernize the recommendation engine by
-integrating Generative AI into the data strategy.
+- Improved “Buy It Again” repurchase recommendations with up to ~10% Recall@10
+lift and up to ~20% coverage increase (category-dependent) by shifting to a
+curated, entity-based consumables scope.
+- Built a config-driven Airflow DAG orchestrating PySpark jobs over Parquet
+datasets in GCP Cloud Storage (GCS), enabling per-category processing via JSON
+allow/block lists.
+- Implemented a PySpark UDF for deterministic entity normalization
+(slugification) to prevent config-to-catalog mismatches (casing/accents) at
+scale.
+- Developed notebook-based pipeline replay and auditing on production snapshots
+to validate entity gaps and quantify share-of-category coverage before
+deployment.
+- Built GenAI intent/semantic feature extraction for ranking models using vLLM +
+LangChain + Llama.
+- Queried and prepared large-scale data using BigQuery and PySpark; tracked
+experiments with MLflow and packaged workloads with Docker; collaborated via
+GitLab.
 
-Key Contributions:
-
-- GenAI for Recommendations: Using vLLM, LangChain, and Llama to interpret
-customer intent and semantic interests, transforming these insights into
-features that feed core ranking and recommendation models.
-- Data Engineering & Pipelines: Navigating large-scale datasets within the
-Magalu ecosystem, using BigQuery and PySpark to explore, transform, and prepare
-data for modeling.
-- MLOps & Engineering Practices: Collaborating with engineers to integrate
-models into production, utilizing GitLab for versioning, Airflow for
-orchestration, MLflow for experiment tracking, and Docker for containerization.
 
 ### 2025: Data Scientist at NECTO Systems
 
-Hired by NECTO Systems, a tech consultancy company, to work on assignment at
-Climatempo, a major weather intelligence company in Brazil.
+Worked at Climatempo, a major weather intelligence company in Brazil, via NECTO
+Systems. Delivered a full-cycle data science solution:
 
-Delivered a full-cycle data science solution:
-
-- Led the acquisition, cleaning, and exploratory analysis of meteorological and
-geospatial (GIS) data, including missing data treatment, temporal/spatial
-aggregation, and feature derivation
-- Designed and developed supervised machine learning models (Random Forest,
-ExtraTrees, among others) to forecast power grid incidents triggered by extreme
-weather events
-- Performed model training with cross-validation, and evaluated performance
-using F1-score, precision, recall, and confusion matrices
-- Conducted feature importance analysis and provided interpretable insights for
-domain experts
-- Validated model robustness using real weather forecast data for short-term
-prediction scenarios
+- Replaced experience-based heuristics with a data-driven outage risk scoring
+framework, grounding decisions in meteorological signals rather than prior-year
+occurrence patterns alone.
+- Integrated weather time series (rainfall, wind, temperature) with grid/asset
+and historical incident data; engineered spatiotemporal features to capture
+storm intensity and exposure.
+- Trained and validated predictive models (e.g., tree-based ML) with time-based
+backtesting; delivered interpretable drivers to support operational
+decision-making.
+- Operationalized outputs into monitoring/decision workflows
+(dashboards/alerts), standardizing risk assessment and reducing subjectivity
+across shifts.
 - Delivered reproducible code with full documentation, assisted in technical
 transfer, and supported initial deployment in internal pipelines
 
