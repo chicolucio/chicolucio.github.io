@@ -25,24 +25,22 @@ TeclaT (Contract) — Assigned to LuizaLabs, the technology arm of Magazine Luiz
 (Magalu), a leading Brazilian omnichannel retailer, as a Senior Data Scientist
 in the Recommendations team, improving search and product discovery at scale.
 
-- Improved “Buy It Again” repurchase recommendations with up to ~10% Recall@10
-lift and up to ~20% coverage increase (category-dependent) by shifting to a
-curated, entity-based consumables scope.
-- Built a config-driven Airflow DAG orchestrating PySpark jobs over Parquet
-datasets in GCP Cloud Storage (GCS), enabling per-category processing via JSON
-allow/block lists.
-- Implemented a PySpark UDF for deterministic entity normalization
-(slugification) to prevent config-to-catalog mismatches (casing/accents) at
-scale.
-- Developed notebook-based pipeline replay and auditing on production snapshots
-to validate entity gaps and quantify share-of-category coverage before
-deployment.
+- Adapted and productionized a multi-interest two-tower deep learning
+  recommendation model generating user/item embeddings for approximate nearest
+  neighbor (ANN) retrieval. The model yielded a 33% lift in clicks, multiplying
+  generated orders by 2.5x and overall revenue by over 3x in a key personalized
+  interest recommendation showcase.
+- Improved “Buy It Again” repurchase recommendations with up to 10% Recall@10
+  lift and up to 20% coverage increase (category-dependent) by shifting to a
+  curated, entity-based consumables scope.
+- Designed full MLOps pipelines: PySpark feature engineering orchestrated via
+  Airflow DAGs, distributed PyTorch training on Kubernetes (GPU cluster,
+  Helm-charted CronJobs, deployed via ArgoCD/GitOps), model export, and
+  experiment/artifact tracking with MLflow.
+- Designed and launched online A/B tests to evaluate models' recommendation
+  performance.
 - Built GenAI intent/semantic feature extraction for ranking models using vLLM +
-LangChain + Llama.
-- Queried and prepared large-scale data using BigQuery and PySpark; tracked
-experiments with MLflow and packaged workloads with Docker; collaborated via
-GitLab.
-
+  LangChain + Llama.
 
 ### 2025: Data Scientist at NECTO Systems
 
@@ -209,4 +207,4 @@ here](/portfolio/2008-2013-pesquisa).
 #### Bachelor's Degree in Chemistry, Universidade Federal Fluminense - 2006-2010
 
 - Published one scientific paper in a national peer-reviewed journal.
-- Winner of the Alumni Laureate Award due to high academic performance 
+- Winner of the Alumni Laureate Award due to high academic performance
